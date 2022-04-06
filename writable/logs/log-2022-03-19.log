@@ -1,0 +1,1189 @@
+ERROR - 2022-03-19 09:34:23 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-19 09:34:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(20): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 09:35:52 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 155, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->delete_pasien('10')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 09:36:31 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 155, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->delete_pasien('11')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 09:40:43 --> syntax error, unexpected ';'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/login')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Home/login')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 09:41:26 --> Call to undefined function App\Controllers\where()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 09:41:42 --> Call to undefined function App\Controllers\where()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 09:41:55 --> Undefined variable: jabatan
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(9): view('include/header')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->daftar_pasien()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 09:48:05 --> Undefined index: Umur
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\daftar_pasien.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/daftar_p...', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(14): view('dokter/daftar_p...', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->daftar_pasien()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 09:48:19 --> Undefined variable: nama
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(35): view('include/header', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->data_pasien('1')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 09:48:22 --> Undefined variable: nama
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(35): view('include/header', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->data_pasien('1')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 10:29:27 --> Too few arguments to function App\Controllers\Dokter::Soap(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Soap()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 10:29:31 --> Too few arguments to function App\Controllers\Dokter::Soap(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Soap()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 10:37:42 --> Cannot declare class App\Models\M_Kontak, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-19 10:38:07 --> Undefined variable: jabatan
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Perawat.php(9): view('include/header')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Perawat->daftar_pasien()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perawat))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 10:42:22 --> Undefined variable: pasien
+#0 C:\xampp\htdocs\rekam-medis\app\Views\perawat\assesment.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('perawat/assesme...', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Perawat.php(24): view('perawat/assesme...')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Perawat->Assesment('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perawat))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 13:36:07 --> Undefined index: id
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Perawat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Perawat->Assesment('23')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perawat))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 13:36:13 --> Undefined index: id
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Perawat.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Perawat->daftar_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perawat))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 15:13:18 --> Too few arguments to function App\Controllers\Dokter::Soap(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Soap()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 15:15:50 --> Undefined variable: pasien
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(56): view('dokter/riwayat')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:17:10 --> Undefined variable: pasien
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(59): view('dokter/riwayat')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:20:54 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(60): view('dokter/riwayat', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:21:10 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(60): view('dokter/riwayat', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:21:18 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(60): view('dokter/riwayat', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:33:24 --> Undefined index: idDokter
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 15:33:34 --> Undefined index: idDokter
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 15:33:35 --> Undefined index: idDokter
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 15:33:36 --> Undefined index: idDokter
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 15:33:56 --> Undefined index: idDokter
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-19 15:40:13 --> Table 'rumahsakit.dokter' doesn't exist
+CRITICAL - 2022-03-19 15:40:13 --> Table 'rumahsakit.dokter' doesn't exist
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getDokter()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-03-19 15:40:33 --> Unknown column 'dokter.id' in 'on clause'
+CRITICAL - 2022-03-19 15:40:33 --> Unknown column 'dokter.id' in 'on clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getDokter()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-03-19 15:42:08 --> Too few arguments to function App\Controllers\Dokter::Riwayat(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 15:42:26 --> Too few arguments to function App\Controllers\Dokter::Soap(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Soap()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 15:44:01 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-03-19 15:44:58 --> Column 'idPasien' in where clause is ambiguous
+CRITICAL - 2022-03-19 15:44:58 --> Column 'idPasien' in where clause is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getDokter('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-03-19 15:45:17 --> Unknown column 'saop.idPasien' in 'where clause'
+CRITICAL - 2022-03-19 15:45:17 --> Unknown column 'saop.idPasien' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getDokter('23')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-03-19 15:53:13 --> Too few arguments to function App\Controllers\Dokter::edit_soap(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 15:54:20 --> Too few arguments to function App\Controllers\Dokter::edit_soap(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-19 15:55:08 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\soap.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/soap', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(74): view('dokter/soap', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap('4')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:55:44 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\edit_soap.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/edit_soa...', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(74): view('dokter/edit_soa...', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap('4')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:56:53 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\edit_soap.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/edit_soa...', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(74): view('dokter/edit_soa...', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap('4')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 15:58:31 --> Array to string conversion
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap('4')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-19 15:58:46 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap('4')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-19 16:14:44 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:14:44 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:14:58 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:14:58 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:15:00 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:15:00 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:16:10 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:16:10 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:16:12 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:16:12 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:16:41 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:16:41 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:17:32 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:17:32 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:17:50 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:17:50 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:18:10 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:18:10 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:18:56 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:18:56 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:18:58 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:18:58 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:19:00 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:19:00 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:19:01 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:19:01 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:19:06 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:19:06 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:19:21 --> Not unique table/alias: 'tb_dokter'
+CRITICAL - 2022-03-19 16:19:21 --> Not unique table/alias: 'tb_dokter'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:19:29 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:19:29 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:19:51 --> Not unique table/alias: 'tb_dokter'
+CRITICAL - 2022-03-19 16:19:51 --> Not unique table/alias: 'tb_dokter'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:22:16 --> Unknown column 'tb_dokter.id' in 'field list'
+CRITICAL - 2022-03-19 16:22:16 --> Unknown column 'tb_dokter.id' in 'field list'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:22:31 --> Unknown column 'tb_dokter.id' in 'on clause'
+CRITICAL - 2022-03-19 16:22:31 --> Unknown column 'tb_dokter.id' in 'on clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-19 16:25:41 --> Call to undefined method App\Models\M_Soap::innerjoin
+#0 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(17): CodeIgniter\Model->__call('innerjoin', Array)
+#1 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-19 16:27:49 --> Unknown column 'tbAssesment.id' in 'field list'
+CRITICAL - 2022-03-19 16:27:49 --> Unknown column 'tbAssesment.id' in 'field list'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(20): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:32:04 --> Unknown column 'tb_dokter.idPasien' in 'where clause'
+CRITICAL - 2022-03-19 16:32:04 --> Unknown column 'tb_dokter.idPasien' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(23): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:32:16 --> Unknown column 'tb_assesment.idPasien' in 'where clause'
+CRITICAL - 2022-03-19 16:32:16 --> Unknown column 'tb_assesment.idPasien' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(22): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:32:37 --> Unknown column 'assesment.idPasien' in 'where clause'
+CRITICAL - 2022-03-19 16:32:37 --> Unknown column 'assesment.idPasien' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(22): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:34:49 --> Column 'idPasien' in where clause is ambiguous
+CRITICAL - 2022-03-19 16:34:49 --> Column 'idPasien' in where clause is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `soap...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `soap...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `soap...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `soap...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('23')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('23')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:43:16 --> Unknown column 'tb_Dokter.id' in 'on clause'
+CRITICAL - 2022-03-19 16:43:16 --> Unknown column 'tb_Dokter.id' in 'on clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:43:26 --> Unknown column 'tb_dokter.id' in 'on clause'
+CRITICAL - 2022-03-19 16:43:26 --> Unknown column 'tb_dokter.id' in 'on clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:43:40 --> Unknown column 'tbDokter.id' in 'field list'
+CRITICAL - 2022-03-19 16:43:40 --> Unknown column 'tbDokter.id' in 'field list'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:44:29 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:44:29 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:44:44 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:44:44 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:46:14 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:46:14 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:46:47 --> Unknown column 'assesment.id' in 'field list'
+CRITICAL - 2022-03-19 16:46:47 --> Unknown column 'assesment.id' in 'field list'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(20): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 16:49:15 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:49:15 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.*...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.*...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.*...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.*...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getAll('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-19 16:58:33 --> Call to undefined method App\Models\M_Soap::getData
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): CodeIgniter\Model->__call('getData', Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-19 16:58:43 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 16:58:43 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:00:03 --> Not unique table/alias: 'soap'
+CRITICAL - 2022-03-19 17:00:03 --> Not unique table/alias: 'soap'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:00:35 --> Column 'idPasien' in field list is ambiguous
+CRITICAL - 2022-03-19 17:00:35 --> Column 'idPasien' in field list is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:00:51 --> Column 'idAssesment' in field list is ambiguous
+CRITICAL - 2022-03-19 17:00:51 --> Column 'idAssesment' in field list is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:00:59 --> Column 'idDokter' in field list is ambiguous
+CRITICAL - 2022-03-19 17:00:59 --> Column 'idDokter' in field list is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:01:44 --> Column 'tanggal' in field list is ambiguous
+CRITICAL - 2022-03-19 17:01:44 --> Column 'tanggal' in field list is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:01:52 --> Column 'subjective' in field list is ambiguous
+CRITICAL - 2022-03-19 17:01:52 --> Column 'subjective' in field list is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(21): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-19 17:03:03 --> Column 'tanggal' in field list is ambiguous
+CRITICAL - 2022-03-19 17:03:03 --> Column 'tanggal' in field list is ambiguous
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `soap`.`...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soap`.`...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soap`.`...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `soap`.`...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\app\Models\M_Soap.php(20): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(58): App\Models\M_Soap->getData('22')
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('22')
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-19 17:05:58 --> Undefined variable: assesment
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\edit_soap.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 27, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/edit_soa...', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(74): view('dokter/edit_soa...', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->edit_soap('3')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 17:12:28 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(61): view('dokter/riwayat', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('3')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 17:13:22 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\riwayat.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/riwayat', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(61): view('dokter/riwayat', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->Riwayat('3')
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 17:56:31 --> Undefined variable: template
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(99): view('dokter/template')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 17:59:46 --> Cannot declare class App\Models\M_User, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-19 17:59:58 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:16:27 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 120, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_template()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-19 18:16:42 --> Column 'subjective' cannot be null
+CRITICAL - 2022-03-19 18:16:42 --> Column 'subjective' cannot be null
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(126): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_template()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-03-19 18:17:19 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:18:57 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 36, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:19:36 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:20:31 --> Illegal string offset 'subjective'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:20:39 --> Illegal string offset 'assesment'
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:39:44 --> Undefined variable: soap
+#0 C:\xampp\htdocs\rekam-medis\app\Views\dokter\template.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('dokter/template', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(101): view('dokter/template', Array)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->template()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-19 18:47:19 --> Cannot redeclare App\Controllers\Dokter::insert_template()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

@@ -1,0 +1,31 @@
+CRITICAL - 2022-03-21 01:38:54 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 71, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-21 01:41:06 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 69, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-21 01:44:42 --> Undefined property: App\Controllers\Admin::$session
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-21 02:03:02 --> Call to undefined method CodeIgniter\Session\Session::set_flashdata()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_pasien()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

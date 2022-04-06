@@ -1,0 +1,58 @@
+CRITICAL - 2022-04-04 00:02:50 --> There is no data to insert.
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(66): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_soap('45')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-04 00:03:24 --> There is no data to insert.
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(66): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_soap('45')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-04 00:03:39 --> There is no data to insert.
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(66): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_soap('45')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-04 00:04:12 --> There is no data to insert.
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(67): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_soap('45')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-04 00:06:05 --> There is no data to insert.
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(67): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_soap('45')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-04 00:06:28 --> Undefined property: App\Controllers\Dokter::$M_Resep
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Dokter.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Dokter->insert_soap('45')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokter))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

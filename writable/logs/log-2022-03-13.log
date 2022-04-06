@@ -1,0 +1,523 @@
+CRITICAL - 2022-03-13 05:02:55 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:03:15 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:03:31 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:03:33 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:03:39 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:09:21 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:11:06 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:11:17 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:19:19 --> Undefined property: App\Controllers\Home::$db
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 05:34:29 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(790): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-13 05:34:31 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(790): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-13 05:37:22 --> Class 'App\Controllers\Login' not found
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 05:38:22 --> Class 'App\Controllers\Login' not found
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-03-13 05:39:18 --> Table 'rumahsakit.tb_login' doesn't exist
+CRITICAL - 2022-03-13 05:39:18 --> Table 'rumahsakit.tb_login' doesn't exist
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-13 05:39:24 --> Table 'rumahsakit.tb_login' doesn't exist
+CRITICAL - 2022-03-13 05:39:24 --> Table 'rumahsakit.tb_login' doesn't exist
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#8 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-13 06:31:54 --> Cannot declare class App\Models\Admin, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-13 06:32:11 --> Class 'App\Controllers\M_Admin' not found
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 07:15:30 --> Cannot declare class App\Models\Admin, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-13 07:31:40 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Admin/insert_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Admin/insert_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:31:41 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('admin/tambah_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('admin/tambah_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:31:47 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('admin/daftar_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('admin/daftar_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:31:52 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('admin/daftar_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('admin/daftar_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:33:28 --> Cannot declare class App\Models\Admin, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-13 07:33:55 --> Undefined property: App\Controllers\Admin::$M_Model
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 94, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:34:18 --> Undefined property: App\Controllers\Admin::$M_Admin
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 94, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:40:35 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::last()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 07:42:24 --> Call to undefined method App\Models\M_Admin::insert_id
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(118): CodeIgniter\Model->__call('insert_id', Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 07:47:35 --> syntax error, unexpected '}', expecting ']'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Admin/insert_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Admin/insert_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-13 07:48:15 --> Duplicate entry 'admin1' for key 'PRIMARY'
+CRITICAL - 2022-03-13 07:48:15 --> Duplicate entry 'admin1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(122): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-03-13 07:52:05 --> Duplicate entry 'admin1' for key 'PRIMARY'
+CRITICAL - 2022-03-13 07:52:05 --> Duplicate entry 'admin1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-03-13 08:36:45 --> Call to undefined method App\Models\M_Admin::insert_id
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(117): CodeIgniter\Model->__call('insert_id', Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 08:37:21 --> Call to undefined method App\Models\M_Admin::insert_id
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(117): CodeIgniter\Model->__call('insert_id', Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-13 08:39:17 --> Unknown column 'tb_user.id' in 'where clause'
+CRITICAL - 2022-03-13 08:39:17 --> Unknown column 'tb_user.id' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_user...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_user...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_user...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->update(32, Array)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(122): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-03-13 08:39:24 --> Unknown column 'tb_user.id' in 'where clause'
+CRITICAL - 2022-03-13 08:39:24 --> Unknown column 'tb_user.id' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_user...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_user...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_user...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->update(33, Array)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(122): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-03-13 08:39:38 --> Unknown column 'tb_user.id' in 'where clause'
+CRITICAL - 2022-03-13 08:39:38 --> Unknown column 'tb_user.id' in 'where clause'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_user...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_user...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_user...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_user...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->update(34, Array)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(122): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-03-13 08:45:31 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Admin/insert_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Admin/insert_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-13 08:46:21 --> Duplicate entry 'admin1' for key 'PRIMARY'
+CRITICAL - 2022-03-13 08:46:21 --> Duplicate entry 'admin1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(124): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#10 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-03-13 08:59:43 --> Undefined property: App\Controllers\Admin::$id
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 97, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:03:47 --> syntax error, unexpected '$M_User' (T_VARIABLE)
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Admin/insert_ad...')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Admin/insert_ad...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:04:01 --> Call to undefined function App\Controllers\_error_message()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:04:33 --> Call to undefined function App\Controllers\db_debug()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:05:47 --> Call to undefined function App\Controllers\db_debug()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:07:42 --> Call to undefined function App\Controllers\db_debug()
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->insert_admin()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:18:49 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): view('include/header')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-13 09:27:34 --> Too few arguments to function App\Controllers\Admin::tambah_pasien(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:28:01 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): view('include/header')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-13 09:29:13 --> Undefined variable: jabatan
+#0 C:\xampp\htdocs\rekam-medis\app\Views\include\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('include/header', Array, true)
+#4 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): view('include/header')
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#6 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-13 09:31:07 --> Too few arguments to function App\Controllers\Admin::tambah_pasien(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:31:41 --> Too few arguments to function App\Controllers\Admin::tambah_pasien(), 0 passed in C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:31:47 --> Array to string conversion
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:37:36 --> Undefined property: App\Controllers\Admin::$data
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 13, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:42:10 --> Undefined property: App\Controllers\Admin::$data
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 13, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:44:28 --> Cannot call constructor
+#0 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Admin->__construct()
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-13 09:50:49 --> Undefined property: App\Controllers\Admin::$session
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 13, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:52:26 --> Undefined property: App\Controllers\Admin::$session
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:53:44 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php on line 13
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Admin.php(13): view('include/header', 'data')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Admin->tambah_pasien('data')
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 09:54:57 --> Array to string conversion
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 42, Array)
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-13 10:04:27 --> Argument 2 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type int or null, string given, called in C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php on line 40
+#0 C:\xampp\htdocs\rekam-medis\app\Controllers\Home.php(40): CodeIgniter\HTTP\RedirectResponse->to('admin/tambah_pa...', '')
+#1 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#2 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rekam-medis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\rekam-medis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
