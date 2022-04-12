@@ -42,7 +42,7 @@ function input_tempalte($data)
                         } else {
                             echo 'Perempuan';
                         } ?></h6>
-                    <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?> Tahun</h6>
+                    <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
                 </div>
                 <div class="col ">
                     <h6 class="fw-bold">Berat Badan</h6>

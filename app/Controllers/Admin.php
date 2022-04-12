@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use DateTime;
 
 class Admin extends BaseController
 {
@@ -17,6 +18,7 @@ class Admin extends BaseController
     }
     public function daftar_pasien()
     {
+        date_default_timezone_set('Asia/Jakarta');
         $session = session();
         $user = $this->M_Admin->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "ADMINISTRATOR";
@@ -47,6 +49,10 @@ class Admin extends BaseController
         $user["jabatan"] = "ADMINISTRATOR";
 
         $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
+        $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['kontak'] = $this->M_Kontak->where(["idPasien" => $id])->first();
         echo view('include/header', $user);
         echo view('admin/data_pasien', $data);
@@ -56,7 +62,6 @@ class Admin extends BaseController
     public function insert_pasien()
     {
         $session = session();
-        date_default_timezone_set('Asia/Jakarta');
         $this->M_Pasien->insert([
             'nama' => $this->request->getVar('nama'),
             'nik' => $this->request->getVar('nik'),
@@ -65,7 +70,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'statusAsuransi' => $this->request->getVar('statusAsuransi'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
@@ -130,7 +135,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'statusAsuransi' => $this->request->getVar('statusAsuransi'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
@@ -234,6 +239,10 @@ class Admin extends BaseController
         $user["jabatan"] = "ADMINISTRATOR";
 
         $data['dokter'] = $this->M_Dokter->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['dokter']['tanggalLahir']);
+        $data['dokter']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         echo view('include/header', $user);
         echo view('admin/data_dokter', $data);
         echo view('include/footer');
@@ -251,7 +260,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -303,7 +312,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -375,6 +384,10 @@ class Admin extends BaseController
         $user["jabatan"] = "ADMINISTRATOR";
 
         $data['perawat'] = $this->M_Perawat->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['perawat']['tanggalLahir']);
+        $data['perawat']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         echo view('include/header', $user);
         echo view('admin/data_perawat', $data);
         echo view('include/footer');
@@ -392,7 +405,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -443,7 +456,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -512,9 +525,11 @@ class Admin extends BaseController
         $session = session();
         $user = $this->M_Admin->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "ADMINISTRATOR";
-
-
         $data['admin'] = $this->M_Admin->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['admin']['tanggalLahir']);
+        $data['admin']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         echo view('include/header', $user);
         echo view('admin/data_admin', $data);
         echo view('include/footer');
@@ -531,7 +546,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -582,7 +597,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -653,8 +668,11 @@ class Admin extends BaseController
         $session = session();
         $user = $this->M_Admin->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "ADMINISTRATOR";
-
         $data['apoteker'] = $this->M_Apoteker->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['apoteker']['tanggalLahir']);
+        $data['apoteker']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         echo view('include/header', $user);
         echo view('admin/data_apoteker', $data);
         echo view('include/footer');
@@ -672,7 +690,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),
@@ -723,7 +741,7 @@ class Admin extends BaseController
             'jenisKelamin' => $this->request->getVar('jenisKelamin'),
             'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
             'agama' => $this->request->getVar('agama'),
-            'umur' => $this->request->getVar('umur'),
+            // 'umur' => $this->request->getVar('umur'),
             'statusPernikahan' => $this->request->getVar('statusPernikahan'),
             'golonganDarah' => $this->request->getVar('golonganDarah'),
             'pendidikan' => $this->request->getVar('pendidikan'),

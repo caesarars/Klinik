@@ -78,10 +78,6 @@
                         <input type="text" class="form-control" name="agama" id="agama" autocomplete="off">
                     </div>
                     <div class="row">
-                        <p>Umur</p>
-                        <input type="text" class="form-control" name="umur" id="umur" autocomplete="off">
-                    </div>
-                    <div class="row">
                         <p>Status Pernikahan</p>
                         <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off">
                     </div>

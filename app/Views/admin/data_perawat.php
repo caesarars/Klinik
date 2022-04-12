@@ -59,7 +59,7 @@
                     </div>
                     <div class="col pe-0">
                         <p class="fw-bold mb-0">Umur</p>
-                        <p><?= $perawat['umur']; ?> Tahun</p>
+                        <p><?= $perawat['umur']; ?></p>
                     </div>
                 </div>
                 <br>

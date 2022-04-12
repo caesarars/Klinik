@@ -91,10 +91,6 @@
                         <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $apoteker['agama']; ?>">
                     </div>
                     <div class="row">
-                        <p>Umur</p>
-                        <input type="text" class="form-control" name="umur" id="umur" autocomplete="off" value="<?= $apoteker['umur']; ?>">
-                    </div>
-                    <div class="row">
                         <p>Status Pernikahan</p>
                         <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $apoteker['statusPernikahan']; ?>">
                     </div>

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use DateTime;
+
 class Perawat extends BaseController
 {
     public function daftar_pasien()
@@ -22,6 +24,11 @@ class Perawat extends BaseController
         $user["jabatan"] = "PERAWAT";
 
         $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
+        $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
+        $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         echo view('include/header', $user);
         echo view('perawat/assesment', $data);
         echo view('include/footer');

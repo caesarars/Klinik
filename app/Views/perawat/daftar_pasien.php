@@ -68,6 +68,10 @@
                                 <?php
                                 $index = 1;
                                 foreach ($pasien as $ps) :
+                                    date_default_timezone_set('Asia/Jakarta');
+                                    $currentDate = new DateTime();
+                                    $tanggalLahir = new DateTime($ps['tanggalLahir']);
+                                    $umur = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
                                 ?>
                                     <tr class="row100 body" data-href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'>
                                         <td class="cell100 column1"><?php
@@ -78,7 +82,7 @@
                                         <td class="cell100 column2"><?= $ps['nama']; ?></td>
                                         <td class="cell100 column3"><?= $ps['nik']; ?></td>
                                         <td class="cell100 column4"><?= $ps['jenisKelamin']; ?></td>
-                                        <td class="cell100 column5"><?= $ps['umur']; ?> Tahun</td>
+                                        <td class="cell100 column5"><?= $umur; ?></td>
                                         <td class="cell100 column6"><?= $ps['terakhirDaftar']; ?></td>
                                     </tr>
                                 <?php endforeach; ?>

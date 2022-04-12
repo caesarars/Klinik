@@ -24,7 +24,7 @@
                         } else {
                             echo 'Perempuan';
                         } ?></h6>
-                    <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?> Tahun</h6>
+                    <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
                 </div>
             </div>
             <div class="row p-3 bg-white mt-3">
