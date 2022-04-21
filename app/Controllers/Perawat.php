@@ -9,9 +9,13 @@ class Perawat extends BaseController
     public function daftar_pasien()
     {
         $session = session();
+        date_default_timezone_set('Asia/Jakarta');
         $user = $this->M_Perawat->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "PERAWAT";
-        $data['pasien'] = $this->M_Pasien->orderBy('terakhirDaftar', 'desc')->findAll();
+        // dd(date("Y-m-d"));
+        $data['pasien'] = $this->M_Pasien
+            ->where('terakhirDaftar >=', date("Y-m-d"))
+            ->orderBy('terakhirDaftar', 'desc')->findAll();
         echo view('include/header', $user);
         echo view('perawat/daftar_pasien', $data);
         echo view('include/footer');

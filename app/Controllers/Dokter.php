@@ -9,9 +9,13 @@ class Dokter extends BaseController
     public function daftar_pasien()
     {
         $session = session();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
         $user = $this->M_Dokter->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "DOKTER";
-        $data['pasien'] = $this->M_Pasien->orderBy('terakhirDaftar', 'desc')->findAll();
+        $data['pasien'] = $this->M_Pasien
+            ->where('terakhirDaftar >=', date("Y-m-d"))
+            ->orderBy('terakhirDaftar', 'desc')->findAll();
         echo view('include/header', $user);
         echo view('dokter/daftar_pasien', $data);
         echo view('include/footer');

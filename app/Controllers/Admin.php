@@ -22,7 +22,9 @@ class Admin extends BaseController
         $session = session();
         $user = $this->M_Admin->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "ADMINISTRATOR";
-        $data['pasien'] = $this->M_Pasien->orderBy('terakhirDaftar', 'desc')->findAll();
+        $data['pasien'] = $this->M_Pasien
+            ->where('terakhirDaftar >=', date("Y-m-d"))
+            ->orderBy('terakhirDaftar', 'desc')->findAll();
         echo view('include/header', $user);
         echo view('admin/daftar_pasien', $data);
         echo view('include/footer');
@@ -148,7 +150,6 @@ class Admin extends BaseController
             'noTelp' => $this->request->getVar('noTelp'),
             'noHP' => $this->request->getVar('noHP'),
             'email' => $this->request->getVar('email'),
-            'terakhirDaftar' => date("Y-m-d H:i:s")
         ]);
 
         $kontak = $this->M_Kontak->where(["idPasien" => $id])->first();

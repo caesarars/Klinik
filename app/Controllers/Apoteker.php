@@ -9,9 +9,12 @@ class Apoteker extends BaseController
     public function daftar_pasien()
     {
         $session = session();
+        date_default_timezone_set('Asia/Jakarta');
         $user = $this->M_Apoteker->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "APOTEKER";
-        $data['pasien'] = $this->M_Pasien->orderBy('terakhirDaftar', 'desc')->findAll();
+        $data['pasien'] = $this->M_Pasien
+            ->where('terakhirDaftar >=', date("Y-m-d"))
+            ->orderBy('terakhirDaftar', 'desc')->findAll();
         echo view('include/header', $user);
         echo view('apoteker/daftar_pasien', $data);
         echo view('include/footer');
