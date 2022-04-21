@@ -64,9 +64,8 @@ class Perawat extends BaseController
         $user = $this->M_Perawat->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "PERAWAT";
         $keyword =  $this->request->getVar('keyword');
-        $data['pasien'] = $this->M_Pasien->like('nama', $keyword)
-            ->orLike('nik', $keyword)
-            ->orderBy('terakhirDaftar', 'desc')->findAll();
+
+        $data['pasien'] = $this->M_Pasien->getSearch($keyword);
         echo view('include/header', $user);
         echo view('perawat/daftar_pasien', $data);
         echo view('include/footer');

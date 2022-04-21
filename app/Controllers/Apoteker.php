@@ -23,9 +23,8 @@ class Apoteker extends BaseController
         $user = $this->M_Apoteker->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "APOTEKER";
         $keyword =  $this->request->getVar('keyword');
-        $data['pasien'] = $this->M_Pasien->like('nama', $keyword)
-            ->orLike('nik', $keyword)
-            ->orderBy('terakhirDaftar', 'desc')->findAll();
+
+        $data['pasien'] = $this->M_Pasien->getSearch($keyword);
         echo view('include/header', $user);
         echo view('apoteker/daftar_pasien', $data);
         echo view('include/footer');
@@ -44,7 +43,7 @@ class Apoteker extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['resep'] = $this->M_Resep->where(["idPasien" => $id])->first();
-        dd($data['resep']);
+        // dd($data['resep']);
         echo view('include/header', $user);
         echo view('apoteker/resep', $data);
         echo view('include/footer');

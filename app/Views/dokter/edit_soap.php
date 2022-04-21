@@ -1,3 +1,21 @@
+<?php
+$keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $keyword = input_tempalte($_POST['keyword']);
+    $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
+    $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
+    $selectedAssesment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
+    $selectedPlanning = $template[array_search($keyword, array_column($template, 'id'))]['planning'];
+}
+
+function input_tempalte($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
 <div class="container mt-1 ms-4 me-0 mw-100">
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
@@ -28,7 +46,42 @@
                     <h5 class="font-weight-bold m-0" style="color: B02525;">SOAP</h5>
                 </div>
                 <div class="col text-right">
-                    <a href="" type="submit" class="btn btn-primary text-center px-3 py-2" name="template">Template SOAP</a>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSOAP">
+                        Template SOAP
+                    </button>
+
+                    <!-- Modal SOAP -->
+                    <div class="modal fade" id="ModalSOAP" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">Pilih template yang ingin dipakai</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                                        <div class="row g-3 align-items-center mb-3">
+                                            <div class="col-auto align-self-center">
+                                                <label class="mb-0" for="jenisKelamin">Kata Kunci</label>
+                                            </div>
+                                            <div class="col-auto align-self-center">
+                                                <select name="keyword" id="keyword" class="custom-select">
+                                                    <?php foreach ($template as $template) : ?>
+                                                        <option value="<?= $template['id']; ?>"><?= $template['keyword']; ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="submit" class="btn btn-primary" onclick="getKeyword();" value="Pakai Template">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="row px-0 bg-white">
@@ -54,6 +107,30 @@
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="planning">PLANNING</label>
                         <textarea class="form-control border-2" id="planning" name="planning" rows="10"><?= $soap['planning']; ?></textarea>
+                        <div class="col text-right pe-0 mt-2">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResep">
+                                Tambah Resep
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Resep -->
+                <div class="modal fade" id="ModalResep" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalLabel">Tambah Resep</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row g-3 align-items-center m-3">
+                                    <textarea class="form-control border-2" id="resep" name="resep" rows="10"><?= $resep['resep']; ?></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="" class="btn btn-primary" data-bs-dismiss="modal" value="Tambah Resep">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row justify-content-center py-4 bg-white">

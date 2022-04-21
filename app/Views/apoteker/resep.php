@@ -24,14 +24,42 @@
                 </div>
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
-                <h5 class="font-weight-bold" style="color: B02525;">Resep Obat</h5>
+                <div class="col align-self-center">
+                    <h5 class="font-weight-bold m-0" style="color: B02525;">Resep Obat</h5>
+                </div>
+                <div class="col text-right">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSOAP">
+                        Cetak Resep
+                    </button>
+                </div>
             </div>
             <div class="row px-0 bg-white">
                 <div class="col-100">
                     <hr style="color: #2269D2; height: 2px;">
                 </div>
             </div>
-
+            <div class="row bg-white justify-content-center py-1">
+                <div class="col-5" style="background-color: #E5E5E5;" align="center">
+                    <h6 class="fw-bold" style="color: #2269D2;">Resep Obat</h6>
+                </div>
+            </div>
+            <div class="row bg-white justify-content-center py-1">
+                <div class="col-5" align="left">
+                    <h6 class="fw-bold" style="color: #000;">Tanggal : <?= $resep['tanggal']; ?></h6>
+                </div>
+            </div>
+            <div class="row bg-white justify-content-center py-1">
+                <div class="col-5" align="left">
+                    <h6 class="fw-bold" style="color: #000;">Resep :</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row bg-white justify-content-center py-1">
+                <div class="col-5" align="left">
+                    <h6 style="color: #000;"><?= $resep['resep']; ?></h6>
+                </div>
+            </div>
         </div>
     </div>
 </div>
