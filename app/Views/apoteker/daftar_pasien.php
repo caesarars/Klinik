@@ -51,7 +51,7 @@
                         <table>
                             <thead>
                                 <tr class="row100 head">
-                                    <th class="cell100 column1">No</th>
+                                    <th class="cell100 column1">No. RM</th>
                                     <th class="cell100 column2">Nama Pasien</th>
                                     <th class="cell100 column3">NIK</th>
                                     <th class="cell100 column4">Jenis Kelamin</th>
@@ -75,11 +75,8 @@
                                     $umur = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
                                 ?>
                                     <tr class="row100 body" data-href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'>
-                                        <td class="cell100 column1"><?php
-                                                                    echo $index;
-                                                                    $index++;
-                                                                    ?>
-                                        </td>
+
+                                        <td class="cell100 column1"><?= $ps['id']; ?></td>
                                         <td class="cell100 column2"><?= $ps['nama']; ?></td>
                                         <td class="cell100 column3"><?= $ps['nik']; ?></td>
                                         <td class="cell100 column4"><?= $ps['jenisKelamin']; ?></td>

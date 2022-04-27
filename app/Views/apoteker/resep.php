@@ -21,6 +21,7 @@
                             echo 'Perempuan';
                         } ?></h6>
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
+                    <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
                 </div>
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
@@ -28,10 +29,9 @@
                     <h5 class="font-weight-bold m-0" style="color: B02525;">Resep Obat</h5>
                 </div>
                 <div class="col text-right">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSOAP">
+                    <a href="<?= base_url('apoteker/printResep/' . $pasien['id']) ?>" class="btn btn-primary" style="color: #E79E5A;">
                         Cetak Resep
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="row px-0 bg-white">

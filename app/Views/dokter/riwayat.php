@@ -25,6 +25,7 @@
                             echo 'Perempuan';
                         } ?></h6>
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
+                    <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
                 </div>
             </div>
             <div class="row p-3 bg-white mt-3">

@@ -43,6 +43,7 @@ function input_tempalte($data)
                             echo 'Perempuan';
                         } ?></h6>
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
+                    <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
                 </div>
                 <div class="col ">
                     <h6 class="fw-bold">Berat Badan</h6>

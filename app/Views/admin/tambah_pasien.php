@@ -59,7 +59,7 @@
                         </div>
                         <div class="col pe-0">
                             <p>Tanggal Lahir</p>
-                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off">
+                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" placeholder="dd/mm/yyyy" autocomplete="off">
                         </div>
                     </div>
                     <div class="row">

@@ -44,6 +44,13 @@
                 </div>
                 <div class="row">
                     <div class="col-4 ps-0">
+                        <p class="fw-bold mb-0">Nomor Rekam Medis</p>
+                        <p><?= $pasien['id']; ?></p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Nama Lengkap</p>
                         <p><?= $pasien['nama']; ?></p>
                     </div>
