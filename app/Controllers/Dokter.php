@@ -74,6 +74,7 @@ class Dokter extends BaseController
             'idDokter' => $_SESSION['id'],
             'idSOAP' => $id_soap,
             'resep' => $this->request->getVar('resep'),
+            'tanggal' => date("Y-m-d H:i:s"),
         ]);
 
         $session->setFlashdata('msg', 'Data Rekam Medis Berhasil Ditambahkan!');

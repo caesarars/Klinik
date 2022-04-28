@@ -46,7 +46,9 @@ class Apoteker extends BaseController
         $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
-        $data['resep'] = $this->M_Resep->where(["idPasien" => $id])->first();
+        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
+            ->orderBy("id", 'DESC')->first();
         // dd($data['resep']);
         echo view('include/header', $user);
 
@@ -81,13 +83,29 @@ class Apoteker extends BaseController
 
     public function printResep($id)
     {
+
+        $session = session();
+        $user = $this->M_Apoteker->where('id', $_SESSION['id'])->first();
+        $user["jabatan"] = "APOTEKER";
+
+        $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
+        $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
+        $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
+        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
+            ->orderBy("id", 'DESC')->first();
+
+        $data['resep']['resep'] =  explode("\n", $data['resep']['resep']);
         // create new PDF document
         $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-
+        $pdf->setId($id);
         // set document information
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Nicola Asuni');
-        $pdf->SetTitle('TCPDF Example 003');
+        $pdf->SetAuthor('Klinik dr. Farabi');
+        $pdf->SetTitle("Resep " . $data['pasien']['nama']);
         $pdf->SetSubject('TCPDF Tutorial');
         $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
@@ -121,22 +139,20 @@ class Apoteker extends BaseController
         // ---------------------------------------------------------
 
         // set font
-        $pdf->SetFont('times', 'BI', 12);
+        $pdf->SetFont('times', '', 10);
+        $pdf->setCellHeightRatio(0.8);
+        $pdf->SetMargins(2, 5, 2, 5,  false);
+        //load the html
+        $html =  view('apoteker/resepHTML', $data);
 
         // add a page
-        $pdf->AddPage();
+        $pdf->AddPage('P', 'A6');
 
-        // set some text to print
-        $txt = <<<EOD
-       
-        
-TCPDF Example 003
+        // print the HTML
+        $pdf->writeHTML($html, true, true, true, true, '');
 
-Custom page header and footer are defined by extending the TCPDF class and overriding the Header() and Footer() methods.
-EOD;
-
-        // print a block of text using Write()
-        $pdf->Write(0, $txt, '', 0, 'C', true, 0, false, false, 0);
+        // // print a block of text using Write()
+        // $pdf->Write(0, $txt, '', 0, 'C', true, 0, false, false, 0);
 
         // ---------------------------------------------------------
 
@@ -153,33 +169,56 @@ EOD;
 // Extend the TCPDF class to create custom Header and Footer
 class MYPDF extends TCPDF
 {
+    private $id;
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
     //Page header
     public function Header()
     {
         // Logo
         // $image_file = K_PATH_IMAGES . 'logo_example.jpg';
-        $this->Image('images/Old_Nike_logo.jpg', 10, 10, 40, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+        $this->Image('images/Old_Nike_logo.jpg', 5, 10, 20, '', 'JPG', '', 'T', false, 100, '', false, false, 0, false, false, false);
         // Set font
-        $this->SetFont('helvetica', 'B', 15);
+        $this->SetFont('helvetica', 'B', 10);
         // Title
-        $this->Cell(0, 15, 'Klinik dr. Farabi', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Klinik dr. Farabi', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
         // Set font
-        $this->SetFont('helvetica', '', 15);
+        $this->SetFont('helvetica', '', 10);
         // Title
-        $this->Cell(0, 15, 'Ruko Peson View Blok i no 3', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
-        $this->Cell(0, 15, 'Jl. Ir. H Juanda Mekarjaya SUkmajaya Depok', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
-        $this->Cell(0, 15, 'Telephone : 08-11111-6504', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Ruko Peson View Blok i no 3', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Jl. Ir. H Juanda Mekarjaya Sukmajaya Depok', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Telephone : 08-11111-6504', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
     }
 
     // Page footer
     public function Footer()
     {
+        $M_Pasien = model('App\Models\M_pasien');
+        $M_Assesment = model('App\Models\M_Assesment');
+
+        $pasien = $M_Pasien->where(["id" => $this->id])->first();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
+        $tanggalLahir = new DateTime($pasien['tanggalLahir']);
+        $pasien['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
+        $assesment = $M_Assesment->where(["idPasien" => $this->id])->orderBy('tanggal', 'desc')->first();
+
         // Position at 15 mm from bottom
-        $this->SetY(-15);
+        $this->SetY(-25);
+        // Set font
+        $this->SetFont('helvetica', '', 10);
+
+        $style = array('width' => 0.8, 'color' => array(0, 0, 0));
+        $this->Line(3, 115, 102, 115, $style);
+        $this->Cell(0, 8, "Pro              : " . $pasien['id'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Umur /BB    : ' . $pasien['umur'] . " /" . $assesment['beratBadan'] . " Kg", 0, 2, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 20, 'Alamat         : ' . $pasien['alamat'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
+
         // Set font
         $this->SetFont('helvetica', 'I', 8);
-        // Page number
-        $this->Cell(0, 10, 'Page ' . $this->getAliasNumPage() . '/' . $this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
+        $this->Cell(0, 15, 'Klinik dr. Farabi - www.klinikdokterfarabi.com', 0, 2, 'R', 0, '', 0, false, 'M', 'M');
     }
 }

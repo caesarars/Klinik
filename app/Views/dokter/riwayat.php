@@ -35,23 +35,23 @@
                         <div class="col">
                             <h5 class="fw-bold" style="color: 2269D2;">SUBJECTIVE</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $soap['subjective']; ?>
+                                <?= nl2br($soap['subjective']); ?>
                             </div>
                             <br>
                             <h5 class="fw-bold" style="color: 2269D2;">ASSESMENT</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $soap['assesment']; ?>
+                                <?= nl2br($soap['assesment']); ?>
                             </div>
                         </div>
                         <div class="col">
                             <h5 class="fw-bold" style="color: 2269D2;">OBJECTIVE</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $soap['objective']; ?>
+                                <?= nl2br($soap['objective']); ?>
                             </div>
                             <br>
                             <h5 class="fw-bold" style="color: 2269D2;">PLANNING</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $soap['planning']; ?>
+                                <?= nl2br($soap['planning']); ?>
                             </div>
                         </div>
                         <div class="col text-right">

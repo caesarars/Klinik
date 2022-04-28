@@ -60,20 +60,20 @@
                     <br> -->
                     <div class="row form-group">
                         <p>Nama Lengkap</p>
-                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="<?= $pasien['nama']; ?>">
+                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="<?= $pasien['nama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>NIK</p>
-                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" value="<?= $pasien['nik']; ?>">
+                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" value="<?= $pasien['nik']; ?>" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Tempat Lahir</p>
-                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" value="<?= $pasien['tempatLahir']; ?>">
+                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" value="<?= $pasien['tempatLahir']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Tanggal Lahir</p>
-                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" value="<?= $pasien['tanggalLahir']; ?>">
+                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" value="<?= $pasien['tanggalLahir']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
@@ -85,68 +85,68 @@
                     </div>
                     <div class="row">
                         <p>Kewarganegaraan</p>
-                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" value="<?= $pasien['kewarganegaraan']; ?>">
+                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" value="<?= $pasien['kewarganegaraan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Agama</p>
-                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $pasien['agama']; ?>">
+                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $pasien['agama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Status Pernikahan</p>
-                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $pasien['statusPernikahan']; ?>">
+                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $pasien['statusPernikahan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Golongan Darah</p>
-                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" value="<?= $pasien['golonganDarah']; ?>">
+                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" value="<?= $pasien['golonganDarah']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Pendidikan Terakhir</p>
-                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" value="<?= $pasien['pendidikan']; ?>">
+                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" value="<?= $pasien['pendidikan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Status Asuransi</p>
-                        <input type="text" class="form-control" name="statusAsuransi" id="statusAsuransi" autocomplete="off" value="<?= $pasien['statusAsuransi']; ?>">
+                        <input type="text" class="form-control" name="statusAsuransi" id="statusAsuransi" autocomplete="off" value="<?= $pasien['statusAsuransi']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Alamat</p>
-                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" value="<?= $pasien['alamat']; ?>">
+                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" value="<?= $pasien['alamat']; ?>" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Kelurahan</p>
-                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" value="<?= $pasien['kelurahan']; ?>">
+                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" value="<?= $pasien['kelurahan']; ?>" required>
                         </div>
                         <div class="col">
                             <p>kecamatan</p>
-                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" value="<?= $pasien['kecamatan']; ?>">
+                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" value="<?= $pasien['kecamatan']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kabupaten/Kota</p>
-                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" value="<?= $pasien['kabupaten']; ?>">
+                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" value="<?= $pasien['kabupaten']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Provinsi</p>
-                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" value="<?= $pasien['provinsi']; ?>">
+                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" value="<?= $pasien['provinsi']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kode Pos</p>
-                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" value="<?= $pasien['kodePos']; ?>">
+                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" value="<?= $pasien['kodePos']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Nomor Telepon</p>
-                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" value="<?= $pasien['noTelp']; ?>">
+                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" value="<?= $pasien['noTelp']; ?>" required>
                         </div>
                         <div class="col">
                             <p>Nomor Handphone</p>
-                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" value="<?= $pasien['noHP']; ?>">
+                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" value="<?= $pasien['noHP']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Email</p>
-                            <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="<?= $pasien['email']; ?>">
+                            <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="<?= $pasien['email']; ?>" required>
                         </div>
                     </div>
                     <div class="row mt-5">
@@ -169,52 +169,52 @@
                     </div>
                     <div class="row">
                         <p>Nama Lengkap</p>
-                        <input type="text" class="form-control" name="namaKontak" id="namaKontak" autocomplete="off" value="<?= $kontak['nama']; ?>">
+                        <input type="text" class="form-control" name="namaKontak" id="namaKontak" autocomplete="off" value="<?= $kontak['nama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Hubungan</p>
-                        <input type="text" class="form-control" name="hubunganKontak" id="hubunganKontak" autocomplete="off" value="<?= $kontak['hubungan']; ?>">
+                        <input type="text" class="form-control" name="hubunganKontak" id="hubunganKontak" autocomplete="off" value="<?= $kontak['hubungan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Alamat</p>
-                        <input type="text" class="form-control" name="alamatKontak" id="alamatKontak" autocomplete="off" value="<?= $kontak['alamat']; ?>">
+                        <input type="text" class="form-control" name="alamatKontak" id="alamatKontak" autocomplete="off" value="<?= $kontak['alamat']; ?>" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Kelurahan</p>
-                            <input type="text" class="form-control" name="kelurahanKontak" id="kelurahanKontak" autocomplete="off" value="<?= $kontak['kelurahan']; ?>">
+                            <input type="text" class="form-control" name="kelurahanKontak" id="kelurahanKontak" autocomplete="off" value="<?= $kontak['kelurahan']; ?>" required>
                         </div>
                         <div class="col">
                             <p>kecamatan</p>
-                            <input type="text" class="form-control" name="kecamatanKontak" id="kecamatanKontak" autocomplete="off" value="<?= $kontak['kecamatan']; ?>">
+                            <input type="text" class="form-control" name="kecamatanKontak" id="kecamatanKontak" autocomplete="off" value="<?= $kontak['kecamatan']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kabupaten/Kota</p>
-                            <input type="text" class="form-control" name="kabupatenKontak" id="kabupatenKontak" autocomplete="off" value="<?= $kontak['kabupaten']; ?>">
+                            <input type="text" class="form-control" name="kabupatenKontak" id="kabupatenKontak" autocomplete="off" value="<?= $kontak['kabupaten']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Provinsi</p>
-                            <input type="text" class="form-control" name="provinsiKontak" id="provinsiKontak" autocomplete="off" value="<?= $kontak['provinsi']; ?>">
+                            <input type="text" class="form-control" name="provinsiKontak" id="provinsiKontak" autocomplete="off" value="<?= $kontak['provinsi']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kode Pos</p>
-                            <input type="text" class="form-control" name="kodePosKontak" id="kodePosKontak" autocomplete="off" value="<?= $kontak['kodePos']; ?>">
+                            <input type="text" class="form-control" name="kodePosKontak" id="kodePosKontak" autocomplete="off" value="<?= $kontak['kodePos']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Nomor Telepon</p>
-                            <input type="text" class="form-control" name="noTelpKontak" id="noTelpKontak" autocomplete="off" value="<?= $kontak['noTelp']; ?>">
+                            <input type="text" class="form-control" name="noTelpKontak" id="noTelpKontak" autocomplete="off" value="<?= $kontak['noTelp']; ?>" required>
                         </div>
                         <div class="col">
                             <p>Nomor Handphone</p>
-                            <input type="text" class="form-control" name="noHPKontak" id="noHPKontak" autocomplete="off" value="<?= $kontak['noHP']; ?>">
+                            <input type="text" class="form-control" name="noHPKontak" id="noHPKontak" autocomplete="off" value="<?= $kontak['noHP']; ?>" required>
                         </div>
                         <div class="col pe-0 mb-3">
                             <p>Email</p>
-                            <input type="text" class="form-control" name="emailKontak" id="emailKontak" autocomplete="off" value="<?= $kontak['email']; ?>">
+                            <input type="text" class="form-control" name="emailKontak" id="emailKontak" autocomplete="off" value="<?= $kontak['email']; ?>" required>
                         </div>
                     </div>
                     <div class="row justify-content-end">

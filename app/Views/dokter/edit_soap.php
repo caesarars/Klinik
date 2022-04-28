@@ -94,19 +94,19 @@ function input_tempalte($data)
                 <div class="form-row bg-white justify-content-center pt-2">
                     <div class="form-group col-5">
                         <label class="fw-bold" style="color: 2269D2;" for="subjective">SUBJECTIVE</label>
-                        <textarea class="form-control border-2" id="subjective" name="subjective" rows="10"><?= $soap['subjective']; ?></textarea>
+                        <textarea class="form-control border-2" id="subjective" name="subjective" rows="10" required><?= $soap['subjective']; ?></textarea>
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESMENT</label>
-                        <textarea class="form-control border-2" id="assesment" name="assesment" rows="10"><?= $soap['assesment']; ?></textarea>
+                        <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required><?= $soap['assesment']; ?></textarea>
                     </div>
                     <div class="col-sm-1">
                     </div>
                     <div class="form-group col-5">
                         <label class="fw-bold" style="color: 2269D2;" for="objective">OBJECTIVE</label>
-                        <textarea class="form-control border-2" id="objective" name="objective" rows="10"><?= $soap['objective']; ?></textarea>
+                        <textarea class="form-control border-2" id="objective" name="objective" rows="10" required><?= $soap['objective']; ?></textarea>
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="planning">PLANNING</label>
-                        <textarea class="form-control border-2" id="planning" name="planning" rows="10"><?= $soap['planning']; ?></textarea>
+                        <textarea class="form-control border-2" id="planning" name="planning" rows="10" required><?= $soap['planning']; ?></textarea>
                         <div class="col text-right pe-0 mt-2">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResep">
                                 Tambah Resep

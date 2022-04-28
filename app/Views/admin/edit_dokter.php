@@ -61,11 +61,11 @@
                     <br> -->
                     <div class="row form-group">
                         <p>Nama Lengkap</p>
-                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="<?= $dokter['nama']; ?>">
+                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="<?= $dokter['nama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>NIK</p>
-                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" value="<?= $dokter['nik']; ?>">
+                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" value="<?= $dokter['nik']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Jenis Dokter</p>
@@ -77,11 +77,11 @@
                     <div class="row">
                         <div class="col ps-0">
                             <p>Tempat Lahir</p>
-                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" value="<?= $dokter['tempatLahir']; ?>">
+                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" value="<?= $dokter['tempatLahir']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Tanggal Lahir</p>
-                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" value="<?= $dokter['tanggalLahir']; ?>">
+                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" value="<?= $dokter['tanggalLahir']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
@@ -93,71 +93,70 @@
                     </div>
                     <div class="row">
                         <p>Kewarganegaraan</p>
-                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" value="<?= $dokter['kewarganegaraan']; ?>">
+                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" value="<?= $dokter['kewarganegaraan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Agama</p>
-                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $dokter['agama']; ?>">
+                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $dokter['agama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Status Pernikahan</p>
-                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $dokter['statusPernikahan']; ?>">
+                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $dokter['statusPernikahan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Golongan Darah</p>
-                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" value="<?= $dokter['golonganDarah']; ?>">
+                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" value="<?= $dokter['golonganDarah']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Pendidikan Terakhir</p>
-                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" value="<?= $dokter['pendidikan']; ?>">
-                    </div>
-                    <div class="row">
-                        <p>Alamat</p>
-                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" value="<?= $dokter['alamat']; ?>">
-                    </div>
-                    <div class="row">
-                        <div class="col ps-0">
-                            <p>Kelurahan</p>
-                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" value="<?= $dokter['kelurahan']; ?>">
+                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" value="<?= $dokter['pendidikan']; ?>" required </div>
+                        <div class="row">
+                            <p>Alamat</p>
+                            <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" value="<?= $dokter['alamat']; ?>" required>
                         </div>
-                        <div class="col">
-                            <p>kecamatan</p>
-                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" value="<?= $dokter['kecamatan']; ?>">
+                        <div class="row">
+                            <div class="col ps-0">
+                                <p>Kelurahan</p>
+                                <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" value="<?= $dokter['kelurahan']; ?>" required>
+                            </div>
+                            <div class="col">
+                                <p>kecamatan</p>
+                                <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" value="<?= $dokter['kecamatan']; ?>" required>
+                            </div>
+                            <div class="col pe-0">
+                                <p>Kabupaten/Kota</p>
+                                <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" value="<?= $dokter['kabupaten']; ?>" required>
+                            </div>
                         </div>
-                        <div class="col pe-0">
-                            <p>Kabupaten/Kota</p>
-                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" value="<?= $dokter['kabupaten']; ?>">
+                        <div class="row">
+                            <div class="col ps-0">
+                                <p>Provinsi</p>
+                                <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" value="<?= $dokter['provinsi']; ?>" required>
+                            </div>
+                            <div class="col pe-0">
+                                <p>Kode Pos</p>
+                                <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" value="<?= $dokter['kodePos']; ?>" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col ps-0">
-                            <p>Provinsi</p>
-                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" value="<?= $dokter['provinsi']; ?>">
+                        <div class="row">
+                            <div class="col ps-0">
+                                <p>Nomor Telepon</p>
+                                <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" value="<?= $dokter['noTelp']; ?>" required>
+                            </div>
+                            <div class="col">
+                                <p>Nomor Handphone</p>
+                                <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" value="<?= $dokter['noHP']; ?>" required>
+                            </div>
+                            <div class="col pe-0">
+                                <p>Email</p>
+                                <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="<?= $dokter['email']; ?>" required>
+                            </div>
                         </div>
-                        <div class="col pe-0">
-                            <p>Kode Pos</p>
-                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" value="<?= $dokter['kodePos']; ?>">
+                        <div class="row justify-content-end mt-4">
+                            <div class="col text-right pe-0">
+                                <button type="submit" class="btn btn-primary text-center px-3 py-2" name="simpan">SIMPAN</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col ps-0">
-                            <p>Nomor Telepon</p>
-                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" value="<?= $dokter['noTelp']; ?>">
-                        </div>
-                        <div class="col">
-                            <p>Nomor Handphone</p>
-                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" value="<?= $dokter['noHP']; ?>">
-                        </div>
-                        <div class="col pe-0">
-                            <p>Email</p>
-                            <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="<?= $dokter['email']; ?>">
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-4">
-                        <div class="col text-right pe-0">
-                            <button type="submit" class="btn btn-primary text-center px-3 py-2" name="simpan">SIMPAN</button>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>

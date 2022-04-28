@@ -46,11 +46,11 @@
                 <form action="<?= base_url('Admin/insert_perawat') ?>" method="POST">
                     <div class="row form-group">
                         <p>Username</p>
-                        <input type="text" class="form-control" name="username" id="username" autocomplete="off">
+                        <input type="text" class="form-control" name="username" id="username" autocomplete="off" required>
                     </div>
                     <div class="row form-group">
                         <p>Password</p>
-                        <input type="password" class="form-control" name="password" id="password" autocomplete="off">
+                        <input type="password" class="form-control" name="password" id="password" autocomplete="off" required>
                         <!-- An element to toggle between password visibility -->
 
                     </div>
@@ -60,20 +60,20 @@
                     <br>
                     <div class="row">
                         <p>Nama Lengkap</p>
-                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off">
+                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <p>NIK</p>
-                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off">
+                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Tempat Lahir</p>
-                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off">
+                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" required>
                         </div>
                         <div class="col pe-0">
                             <p>Tanggal Lahir</p>
-                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off">
+                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="row">
@@ -85,64 +85,64 @@
                     </div>
                     <div class="row">
                         <p>Kewarganegaraan</p>
-                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off">
+                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <p>Agama</p>
-                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off">
+                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <p>Status Pernikahan</p>
-                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off">
+                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <p>Golongan Darah</p>
-                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off">
+                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <p>Pendidikan Terakhir</p>
-                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off">
+                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <p>Alamat</p>
-                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off">
+                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Kelurahan</p>
-                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off">
+                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" required>
                         </div>
                         <div class="col">
                             <p>kecamatan</p>
-                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off">
+                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kabupaten/Kota</p>
-                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off">
+                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Provinsi</p>
-                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off">
+                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kode Pos</p>
-                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off">
+                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Nomor Telepon</p>
-                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off">
+                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" required>
                         </div>
                         <div class="col">
                             <p>Nomor Handphone</p>
-                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off">
+                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" required>
                         </div>
                         <div class="col pe-0">
                             <p>Email</p>
-                            <input type="text" class="form-control" name="email" id="email" autocomplete="off">
+                            <input type="text" class="form-control" name="email" id="email" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="row justify-content-end mt-4">

@@ -23,13 +23,19 @@
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
                     <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
                 </div>
+                <div class="col ">
+                    <h6 class="fw-bold">Berat Badan</h6>
+                    <p><?= $assesment['beratBadan']; ?> Kg</p>
+                    <h6 class="fw-bold">Tinggi Badan</h6>
+                    <p class="mb-0"><?= $assesment['tinggiBadan']; ?> Cm</p>
+                </div>
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
                     <h5 class="font-weight-bold m-0" style="color: B02525;">Resep Obat</h5>
                 </div>
                 <div class="col text-right">
-                    <a href="<?= base_url('apoteker/printResep/' . $pasien['id']) ?>" class="btn btn-primary" style="color: #E79E5A;">
+                    <a href="<?= base_url('apoteker/printResep/' . $pasien['id']) ?>" class="btn btn-primary" style="color: #fff;">
                         Cetak Resep
                     </a>
                 </div>
@@ -54,10 +60,9 @@
                     <h6 class="fw-bold" style="color: #000;">Resep :</h6>
                 </div>
             </div>
-            <br>
             <div class="row bg-white justify-content-center py-1">
                 <div class="col-5" align="left">
-                    <h6 style="color: #000;"><?= $resep['resep']; ?></h6>
+                    <h6 style="color: #000;"><?= nl2br($resep['resep']); ?></h6>
                 </div>
             </div>
         </div>

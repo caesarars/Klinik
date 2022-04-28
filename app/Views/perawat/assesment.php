@@ -46,7 +46,7 @@
                         <p class="fw-bold mb-0">Tekanan Darah</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="tekananDarah" id="tekananDarah" autocomplete="off">
+                                <input type="text" class="form-control" name="tekananDarah" id="tekananDarah" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>MmHg</p>
@@ -55,7 +55,7 @@
                         <p class="fw-bold mb-0">Frekuensi Nadi</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="frekuensiNadi" id="frekuensiNadi" autocomplete="off">
+                                <input type="text" class="form-control" name="frekuensiNadi" id="frekuensiNadi" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>X/Menit</p>
@@ -64,7 +64,7 @@
                         <p class="fw-bold mb-0">Suhu</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="suhu" id="suhu" autocomplete="off">
+                                <input type="text" class="form-control" name="suhu" id="suhu" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>C</p>
@@ -73,7 +73,7 @@
                         <p class="fw-bold mb-0">Frekuensi Nafas</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="frekuensiNafas" id="frekuensiNafas" autocomplete="off">
+                                <input type="text" class="form-control" name="frekuensiNafas" id="frekuensiNafas" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>X/Menit</p>
@@ -82,7 +82,7 @@
                         <p class="fw-bold mb-0">Skor Nyeri</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="skorNyeri" id="skorNyeri" autocomplete="off">
+                                <input type="text" class="form-control" name="skorNyeri" id="skorNyeri" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                             </div>
@@ -94,7 +94,7 @@
                         <p class="fw-bold mb-0">Berat Badan</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="beratBadan" id="beratBadan" autocomplete="off">
+                                <input type="text" class="form-control" name="beratBadan" id="beratBadan" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>Gr/Kg</p>
@@ -103,7 +103,7 @@
                         <p class="fw-bold mb-0">Tinggi Badan</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="tinggiBadan" id="tinggiBadan" autocomplete="off">
+                                <input type="text" class="form-control" name="tinggiBadan" id="tinggiBadan" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>Cm</p>
@@ -112,7 +112,7 @@
                         <p class="fw-bold mb-0">IMT</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="imt" id="imt" autocomplete="off">
+                                <input type="text" class="form-control" name="imt" id="imt" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>Kg/M2</p>
@@ -121,7 +121,7 @@
                         <p class="fw-bold mb-0">Khusus Pediatri</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="pediatri" id="pediatri" autocomplete="off">
+                                <input type="text" class="form-control" name="pediatri" id="pediatri" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                             </div>
@@ -129,7 +129,7 @@
                         <p class="fw-bold mb-0">Lingkar Kepala</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="lingkarKepala" id="lingkarKepala" autocomplete="off">
+                                <input type="text" class="form-control" name="lingkarKepala" id="lingkarKepala" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                                 <p>Cm</p>
