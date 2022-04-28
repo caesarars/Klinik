@@ -29,9 +29,15 @@ class Apoteker extends BaseController
         $keyword =  $this->request->getVar('keyword');
 
         $data['pasien'] = $this->M_Pasien->getSearch($keyword);
-        echo view('include/header', $user);
-        echo view('apoteker/daftar_pasien', $data);
-        echo view('include/footer');
+        if ($data['pasien']) {
+
+            echo view('include/header', $user);
+            echo view('apoteker/daftar_pasien', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            return redirect()->to('apoteker/daftar_pasien');
+        }
     }
 
     public function resep($id)

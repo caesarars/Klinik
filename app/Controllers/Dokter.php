@@ -28,9 +28,14 @@ class Dokter extends BaseController
         $user["jabatan"] = "DOKTER";
         $keyword =  $this->request->getVar('keyword');
         $data['pasien'] = $this->M_Pasien->getSearch($keyword);
-        echo view('include/header', $user);
-        echo view('dokter/daftar_pasien', $data);
-        echo view('include/footer');
+        if ($data['pasien']) {
+            echo view('include/header', $user);
+            echo view('dokter/daftar_pasien', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            return redirect()->to('Dokter/daftar_pasien');
+        }
     }
 
     public function Soap($id)
@@ -47,9 +52,14 @@ class Dokter extends BaseController
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
-        echo view('include/header', $user);
-        echo view('dokter/soap', $data);
-        echo view('include/footer');
+        if ($data['assesment']) {
+            echo view('include/header', $user);
+            echo view('dokter/soap', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Pasien Belum Melakukan Assesment Perawat');
+            return redirect()->to('Dokter/daftar_pasien');
+        }
     }
 
     public function insert_soap($id)

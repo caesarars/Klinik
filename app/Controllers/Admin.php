@@ -37,9 +37,15 @@ class Admin extends BaseController
         $user["jabatan"] = "ADMINISTRATOR";
         $keyword =  $this->request->getVar('keyword');
         $data['pasien'] = $this->M_Pasien->getSearch($keyword);
-        echo view('include/header', $user);
-        echo view('admin/daftar_pasien', $data);
-        echo view('include/footer');
+        if ($data['pasien']) {
+
+            echo view('include/header', $user);
+            echo view('admin/daftar_pasien', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            return redirect()->to('admin/daftar_pasien');
+        }
     }
 
     public function data_pasien($id)
@@ -62,6 +68,7 @@ class Admin extends BaseController
     public function insert_pasien()
     {
         $session = session();
+        date_default_timezone_set('Asia/Jakarta');
         $this->M_Pasien->insert([
             'nama' => $this->request->getVar('nama'),
             'nik' => $this->request->getVar('nik'),
@@ -216,9 +223,14 @@ class Admin extends BaseController
         $keyword =  $this->request->getVar('keyword');
         $data['dokter'] = $this->M_Dokter->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
-        echo view('include/header', $user);
-        echo view('admin/daftar_dokter', $data);
-        echo view('include/footer');
+        if ($data['dokter']) {
+            echo view('include/header', $user);
+            echo view('admin/daftar_dokter', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Dokter Tidak Ditemukan!');
+            return redirect()->to('admin/daftar_dokter');
+        }
     }
 
     public function tambah_dokter()
@@ -360,9 +372,14 @@ class Admin extends BaseController
         $keyword =  $this->request->getVar('keyword');
         $data['perawat'] = $this->M_Perawat->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
-        echo view('include/header', $user);
-        echo view('admin/daftar_perawat', $data);
-        echo view('include/footer');
+        if ($data['perawat']) {
+            echo view('include/header', $user);
+            echo view('admin/daftar_perawat', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Perawat Tidak Ditemukan!');
+            return redirect()->to('admin/daftar_perawat');
+        }
     }
 
     public function tambah_perawat()
@@ -514,9 +531,14 @@ class Admin extends BaseController
         $keyword =  $this->request->getVar('keyword');
         $data['admin'] = $this->M_Admin->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
-        echo view('include/header', $user);
-        echo view('admin/daftar_admin', $data);
-        echo view('include/footer');
+        if ($data['admin']) {
+            echo view('include/header', $user);
+            echo view('admin/daftar_admin', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Admin Tidak Ditemukan!');
+            return redirect()->to('admin/daftar_admin');
+        }
     }
 
     public function data_admin($id)
@@ -646,9 +668,14 @@ class Admin extends BaseController
         $keyword =  $this->request->getVar('keyword');
         $data['apoteker'] = $this->M_Apoteker->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
-        echo view('include/header', $user);
-        echo view('admin/daftar_apoteker', $data);
-        echo view('include/footer');
+        if ($data['apoteker']) {
+            echo view('include/header', $user);
+            echo view('admin/daftar_apoteker', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Apoteker Tidak Ditemukan!');
+            return redirect()->to('admin/daftar_apoteker');
+        }
     }
 
     public function tambah_apoteker()
