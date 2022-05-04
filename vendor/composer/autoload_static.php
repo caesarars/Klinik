@@ -38,6 +38,10 @@ class ComposerStaticInit193ca7ff257b1007cbe07b75c3a4f274
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
         ),
+        'M' => 
+        array (
+            'Myth\\Auth\\' => 10,
+        ),
         'L' => 
         array (
             'Laminas\\Escaper\\' => 16,
@@ -100,6 +104,10 @@ class ComposerStaticInit193ca7ff257b1007cbe07b75c3a4f274
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Myth\\Auth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myth/auth/src',
         ),
         'Laminas\\Escaper\\' => 
         array (

@@ -32,6 +32,19 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+// $routes->get('/admin/tambah_pasien/', 'Admin::tambah_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/search_pasien/(:any)', 'Admin::search_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/data_pasien/(:num)', 'Admin::data_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/edit_pasien/(:num)', 'Admin::edit_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/delete_pasien/', 'Admin::delete_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
+// $routes->get('/admin/daftar_pasien/', 'Admin::daftar_pasien', ['filter' => 'filterAdmin']);
 
 /*
  * --------------------------------------------------------------------

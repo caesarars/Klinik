@@ -62,6 +62,6 @@ class Home extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('');
+        return redirect()->to('/');
     }
 }

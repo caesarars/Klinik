@@ -10,6 +10,7 @@ class Admin extends BaseController
     public function tambah_pasien()
     {
         $session = session();
+        // dd(session()->get('logged_in'));
         $user = $this->M_Admin->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "ADMINISTRATOR";
         echo view('include/header', $user);
