@@ -221,7 +221,7 @@ class MYPDF extends TCPDF
 
         $style = array('width' => 0.8, 'color' => array(0, 0, 0));
         $this->Line(3, 115, 102, 115, $style);
-        $this->Cell(0, 8, "Pro              : " . $pasien['id'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, "Pro              : " . $pasien['nama'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 8, 'Umur /BB    : ' . $pasien['umur'] . " /" . $assesment['beratBadan'] . " Kg", 0, 2, 'L', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 20, 'Alamat         : ' . $pasien['alamat'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
 
