@@ -56,10 +56,12 @@ class Apoteker extends BaseController
         $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
             ->orderBy("id", 'DESC')->first();
         // dd($data['resep']);
+        if (!$data['resep']) {
+            $session->setFlashdata('msg', 'Belum ada resep');
+            return redirect()->to('/apoteker/daftar_pasien');
+        }
         echo view('include/header', $user);
-
         echo view('apoteker/resep', $data);
-
         echo view('include/footer');
     }
 

@@ -78,14 +78,18 @@ class Dokter extends BaseController
             'assesment' => $this->request->getVar('assesment'),
             'planning' => $this->request->getVar('planning'),
         ]);
-        $id_soap = $this->M_Soap->getInsertID();
-        $this->M_Resep->insert([
-            'idPasien' => $id,
-            'idDokter' => $_SESSION['id'],
-            'idSOAP' => $id_soap,
-            'resep' => $this->request->getVar('resep'),
-            'tanggal' => date("Y-m-d H:i:s"),
-        ]);
+        if ($this->request->getVar('resep') != '') {
+
+            $id_soap = $this->M_Soap->getInsertID();
+            $this->M_Resep->insert([
+                'idPasien' => $id,
+                'idDokter' => $_SESSION['id'],
+                'idSOAP' => $id_soap,
+                'resep' => $this->request->getVar('resep'),
+                'tanggal' => date("Y-m-d H:i:s"),
+            ]);
+        }
+
 
         $session->setFlashdata('msg', 'Data Rekam Medis Berhasil Ditambahkan!');
         return redirect()->to('dokter/daftar_pasien/');
