@@ -130,7 +130,7 @@ class Dokter extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
-        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->where(["id" => $data['soap']['idAssesment']])->orderBy('tanggal', 'desc')->first();
         echo view('include/header', $user);
         echo view('dokter/edit_soap', $data);
         echo view('include/footer');

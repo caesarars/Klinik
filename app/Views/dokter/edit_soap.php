@@ -40,6 +40,46 @@ function input_tempalte($data)
                         } ?></h6>
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?> Tahun</h6>
                 </div>
+
+                <div class="col ">
+                    <h6 class="fw-bold">Berat Badan</h6>
+                    <p><?= $assesment['beratBadan']; ?> Kg</p>
+                    <h6 class="fw-bold">Tinggi Badan</h6>
+                    <p class="mb-0"><?= $assesment['tinggiBadan']; ?> Cm</p>
+
+                </div>
+            </div>
+            <div class="row pt-3 p-0 bg-white mt-3">
+                <div class="col align-self-center">
+                    <h5 class="font-weight-bold m-0" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: B02525;">
+                        ASSESMENT
+                    </h5>
+                </div>
+            </div>
+            <div class="row px-0 bg-white">
+                <div class="col-100">
+                    <hr style="color: #2269D2; height: 2px;">
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="row px-0 bg-white justify-content-center">
+                                <div class="col-4">
+                                    <h6 class="">Tekanan Darah :<?= $assesment['tekananDarah']; ?> MmHg</h6>
+                                    <h6 class="">Frekuensi Nadi :<?= $assesment['frekuensiNadi']; ?> X/Menit</h6>
+                                    <h6 class="">Suhu :<?= $assesment['suhu']; ?> C</h6>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="">Frekuensi Nafas :<?= $assesment['frekuensiNafas']; ?></h6>
+                                    <h6 class="">Skor Nyeri :<?= $assesment['skorNyeri']; ?> MmHg</h6>
+                                    <h6 class="">IMT :<?= $assesment['IMT']; ?> Kg/M2</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
@@ -68,7 +108,7 @@ function input_tempalte($data)
                                             <div class="col-auto align-self-center">
                                                 <select name="keyword" id="keyword" class="custom-select">
                                                     <?php foreach ($template as $template) : ?>
-                                                        <option value="<?= $template['id']; ?>"><?= $template['keyword']; ?></option>
+                                                        <option value="<?= $template['id']; ?>"><?= $template['id']; ?><?= $template['keyword']; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -94,22 +134,46 @@ function input_tempalte($data)
                 <div class="form-row bg-white justify-content-center pt-2">
                     <div class="form-group col-5">
                         <label class="fw-bold" style="color: 2269D2;" for="subjective">SUBJECTIVE</label>
-                        <textarea class="form-control border-2" id="subjective" name="subjective" rows="10" required><?= $soap['subjective']; ?></textarea>
+                        <textarea class="form-control border-2" id="subjective" name="subjective" rows="10" required><?php
+                                                                                                                        if ($selectedSubjective == '') {
+                                                                                                                            echo $soap['subjective'];
+                                                                                                                        } else {
+                                                                                                                            echo $selectedSubjective;
+                                                                                                                        }
+                                                                                                                        ?></textarea>
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESMENT</label>
-                        <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required><?= $soap['assesment']; ?></textarea>
+                        <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required><?php
+                                                                                                                    if ($selectedSubjective == '') {
+                                                                                                                        echo $soap['assesment'];
+                                                                                                                    } else {
+                                                                                                                        echo $selectedAssesment;
+                                                                                                                    }
+                                                                                                                    ?></textarea>
                     </div>
                     <div class="col-sm-1">
                     </div>
                     <div class="form-group col-5">
                         <label class="fw-bold" style="color: 2269D2;" for="objective">OBJECTIVE</label>
-                        <textarea class="form-control border-2" id="objective" name="objective" rows="10" required><?= $soap['objective']; ?></textarea>
+                        <textarea class="form-control border-2" id="objective" name="objective" rows="10" required><?php
+                                                                                                                    if ($selectedSubjective == '') {
+                                                                                                                        echo $soap['objective'];
+                                                                                                                    } else {
+                                                                                                                        echo $selectedObjective;
+                                                                                                                    }
+                                                                                                                    ?></textarea>
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="planning">PLANNING</label>
-                        <textarea class="form-control border-2" id="planning" name="planning" rows="10" required><?= $soap['planning']; ?></textarea>
+                        <textarea class="form-control border-2" id="planning" name="planning" rows="10" required><?php
+                                                                                                                    if ($selectedSubjective == '') {
+                                                                                                                        echo $soap['planning'];
+                                                                                                                    } else {
+                                                                                                                        echo $selectedPlanning;
+                                                                                                                    }
+                                                                                                                    ?></textarea>
                         <div class="col text-right pe-0 mt-2">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResep">
-                                Tambah Resep
+                                Edit Resep
                             </button>
                         </div>
                     </div>
@@ -119,7 +183,7 @@ function input_tempalte($data)
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="ModalLabel">Tambah Resep</h5>
+                                <h5 class="modal-title" id="ModalLabel">Edit Resep</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -127,7 +191,7 @@ function input_tempalte($data)
                                     <textarea class="form-control border-2" id="resep" name="resep" rows="10"><?= $resep['resep']; ?></textarea>
                                 </div>
                                 <div class="modal-footer">
-                                    <input type="" class="btn btn-primary" data-bs-dismiss="modal" value="Tambah Resep">
+                                    <input type="" class="btn btn-primary" data-bs-dismiss="modal" value="Edit Resep">
                                 </div>
                             </div>
                         </div>

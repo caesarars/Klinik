@@ -2,7 +2,6 @@
 $keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keyword = input_tempalte($_POST['keyword']);
-    // dd($keyword);
     $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
     $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
     $selectedAssesment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
@@ -45,8 +44,6 @@ function input_tempalte($data)
                         } ?></h6>
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
                     <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
-                    <!-- <h6 class="fw-bold">Berat Badan :<?= $assesment['beratBadan']; ?> Kg</h6>
-                    <h6 class="fw-bold">Tinggi Badan :<?= $assesment['tinggiBadan']; ?> Cm</h6> -->
                 </div>
                 <div class="col ">
                     <h6 class="fw-bold">Berat Badan</h6>
@@ -58,10 +55,6 @@ function input_tempalte($data)
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
-                    <!-- <h5 class="font-weight-bold m-0" style="color: B02525;">ASSESMENT
-                        <button data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button>
-
-                    </h5> -->
                     <h5 class="font-weight-bold m-0" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: B02525;">
                         ASSESMENT
                     </h5>
