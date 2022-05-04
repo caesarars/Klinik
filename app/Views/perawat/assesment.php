@@ -97,7 +97,7 @@
                                 <input type="text" class="form-control" name="beratBadan" id="beratBadan" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
-                                <p>Gr/Kg</p>
+                                <p>Kg</p>
                             </div>
                         </div>
                         <p class="fw-bold mb-0">Tinggi Badan</p>
@@ -109,7 +109,7 @@
                                 <p>Cm</p>
                             </div>
                         </div>
-                        <p class="fw-bold mb-0">IMT</p>
+                        <!-- <p class="fw-bold mb-0">IMT</p>
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control" name="imt" id="imt" autocomplete="off" required>
@@ -117,15 +117,15 @@
                             <div class="col-2 px-0">
                                 <p>Kg/M2</p>
                             </div>
-                        </div>
-                        <p class="fw-bold mb-0">Khusus Pediatri</p>
+                        </div> -->
+                        <!-- <p class="fw-bold mb-0">Khusus Pediatri</p>
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control" name="pediatri" id="pediatri" autocomplete="off" required>
                             </div>
                             <div class="col-2 px-0">
                             </div>
-                        </div>
+                        </div> -->
                         <p class="fw-bold mb-0">Lingkar Kepala</p>
                         <div class="row">
                             <div class="col">

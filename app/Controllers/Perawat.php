@@ -42,6 +42,11 @@ class Perawat extends BaseController
     {
         $session = session();
         date_default_timezone_set('Asia/Jakarta');
+
+        // $beratBadan = $this->request->getVar('beratBadan');
+        // $tinggiBadan = $this->request->getVar('tinggiBadan');
+        // $imt = floatval($beratBadan) / floatval($tinggiBadan);
+        // dd($imt);
         $this->M_Assesment->save([
             'idPasien' => $id,
             'idPerawat' => $_SESSION['id'],
@@ -53,8 +58,8 @@ class Perawat extends BaseController
             'skorNyeri' => $this->request->getVar('skorNyeri'),
             'beratBadan' => $this->request->getVar('beratBadan'),
             'tinggiBadan' => $this->request->getVar('tinggiBadan'),
-            'IMT' => $this->request->getVar('imt'),
-            'khususPediatri' => $this->request->getVar('pediatri'),
+            // 'IMT' => $this->request->getVar('imt'),
+            // 'khususPediatri' => $this->request->getVar('pediatri'),
             'lingkarKepala' => $this->request->getVar('lingkarKepala'),
         ]);
 

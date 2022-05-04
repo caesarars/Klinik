@@ -2,6 +2,7 @@
 $keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keyword = input_tempalte($_POST['keyword']);
+    // dd($keyword);
     $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
     $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
     $selectedAssesment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
@@ -35,7 +36,7 @@ function input_tempalte($data)
                 <div class="col-2">
                     <img src=" <?= base_url('images/profile.png') ?>" class="img-thumbnail border-0 p-0">
                 </div>
-                <div class="col ">
+                <div class="col">
                     <h5><?= $pasien['nama']; ?></h5>
                     <h6><?php if ($pasien['jenisKelamin'] == 'L') {
                             echo 'Laki-laki';
@@ -44,14 +45,54 @@ function input_tempalte($data)
                         } ?></h6>
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
                     <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
+                    <!-- <h6 class="fw-bold">Berat Badan :<?= $assesment['beratBadan']; ?> Kg</h6>
+                    <h6 class="fw-bold">Tinggi Badan :<?= $assesment['tinggiBadan']; ?> Cm</h6> -->
                 </div>
                 <div class="col ">
                     <h6 class="fw-bold">Berat Badan</h6>
                     <p><?= $assesment['beratBadan']; ?> Kg</p>
                     <h6 class="fw-bold">Tinggi Badan</h6>
                     <p class="mb-0"><?= $assesment['tinggiBadan']; ?> Cm</p>
+
                 </div>
             </div>
+            <div class="row pt-3 p-0 bg-white mt-3">
+                <div class="col align-self-center">
+                    <!-- <h5 class="font-weight-bold m-0" style="color: B02525;">ASSESMENT
+                        <button data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button>
+
+                    </h5> -->
+                    <h5 class="font-weight-bold m-0" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: B02525;">
+                        ASSESMENT
+                    </h5>
+                </div>
+            </div>
+            <div class="row px-0 bg-white">
+                <div class="col-100">
+                    <hr style="color: #2269D2; height: 2px;">
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="row px-0 bg-white justify-content-center">
+                                <div class="col-4">
+                                    <h6 class="">Tekanan Darah :<?= $assesment['tekananDarah']; ?> MmHg</h6>
+                                    <h6 class="">Frekuensi Nadi :<?= $assesment['frekuensiNadi']; ?> X/Menit</h6>
+                                    <h6 class="">Suhu :<?= $assesment['suhu']; ?> C</h6>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="">Frekuensi Nafas :<?= $assesment['frekuensiNafas']; ?></h6>
+                                    <h6 class="">Skor Nyeri :<?= $assesment['skorNyeri']; ?> MmHg</h6>
+                                    <h6 class="">IMT :<?= $assesment['IMT']; ?> Kg/M2</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
                     <h5 class="font-weight-bold m-0" style="color: B02525;">SOAP</h5>
