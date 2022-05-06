@@ -18,7 +18,7 @@
                         </a>
                     </div>
                     <div class="col-3">
-                        <a href="<?= base_url('admin/delete_apoteker/' . $apoteker['id']) ?>" class="btn-primary p-2">
+                        <a class="btn-edit" class="btn-delete" href="<?= base_url('admin/delete_apoteker/' . $apoteker['id']) ?>" class="btn-primary p-2">
                             <img src="<?= base_url('images/delete-white.png') ?>" class="img-thumbnail bg-transparent border-0" style="height: 30px;" alt="">
                             Hapus Apoteker
                         </a>

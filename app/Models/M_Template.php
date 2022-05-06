@@ -7,5 +7,5 @@ use CodeIgniter\Model;
 class M_Template extends Model
 {
     protected $table = 'template_soap';
-    protected $allowedFields = ['id', 'idDokter', 'keyword', 'subjective', 'objective', 'assesment', 'planning'];
+    protected $allowedFields = ['id', 'idDokter', 'keyword', 'subjective', 'objective', 'assesment', 'planning', 'resep'];
 }

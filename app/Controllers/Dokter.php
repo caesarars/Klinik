@@ -33,7 +33,7 @@ class Dokter extends BaseController
             echo view('dokter/daftar_pasien', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Pasien Tidak Ditemukan');
             return redirect()->to('Dokter/daftar_pasien');
         }
     }
@@ -66,7 +66,7 @@ class Dokter extends BaseController
             echo view('dokter/soap', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Pasien Belum Melakukan Assesment Perawat');
+            $session->setFlashdata('error', 'Pasien Belum Melakukan Assesment Perawat');
             return redirect()->to('Dokter/daftar_pasien');
         }
     }
@@ -100,7 +100,7 @@ class Dokter extends BaseController
         }
 
 
-        $session->setFlashdata('msg', 'Data Rekam Medis Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Data Rekam Medis Berhasil Ditambahkan');
         return redirect()->to('dokter/daftar_pasien/');
     }
 
@@ -160,7 +160,7 @@ class Dokter extends BaseController
             echo view('dokter/edit_soap', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Riwayat Assesment Tidak Ada!');
+            $session->setFlashdata('error', 'Riwayat Assesment Tidak Ada');
             return redirect()->to('Dokter/daftar_pasien');
         }
     }
@@ -185,7 +185,7 @@ class Dokter extends BaseController
             'idSOAP' => $id,
             'resep' => $this->request->getVar('resep'),
         ]);
-        $session->setFlashdata('msg', 'Data Rekam Medis Berhasil Diubah!');
+        $session->setFlashdata('success', 'Data Rekam Medis Berhasil Diubah');
         return redirect()->to('dokter/riwayat/' . $soap['idPasien']);
     }
 
@@ -223,9 +223,10 @@ class Dokter extends BaseController
             'objective' => $this->request->getVar('objective'),
             'assesment' => $this->request->getVar('assesment'),
             'planning' => $this->request->getVar('planning'),
+            'resep' => $this->request->getVar('resep'),
         ]);
 
-        $session->setFlashdata('msg', 'Template Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Template Berhasil Ditambahkan');
         return redirect()->to('dokter/template');
     }
 
@@ -252,9 +253,19 @@ class Dokter extends BaseController
             'objective' => $this->request->getVar('objective'),
             'assesment' => $this->request->getVar('assesment'),
             'planning' => $this->request->getVar('planning'),
+            'resep' => $this->request->getVar('resep'),
         ]);
 
-        $session->setFlashdata('msg', 'Template Berhasil Diubah!');
+        $session->setFlashdata('success', 'Template Berhasil Diubah');
+        return redirect()->to('dokter/template');
+    }
+
+    public function delete_template($id)
+    {
+        $session = session();
+        $this->M_Template->delete($id);
+
+        $session->setFlashdata('success', 'Template Berhasil Dihapus');
         return redirect()->to('dokter/template');
     }
 }

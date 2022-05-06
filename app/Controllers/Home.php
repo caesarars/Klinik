@@ -43,11 +43,11 @@ class Home extends BaseController
                     return redirect()->to('apoteker/daftar_pasien/');
                 }
             } else {
-                $session->setFlashdata('msg', 'Password Anda Salah!');
+                $session->setFlashdata('msg', 'Password Anda Salah');
                 return redirect()->to('');
             }
         } else {
-            $session->setFlashdata('msg', 'Akun Tidak Ditemukan!');
+            $session->setFlashdata('msg', 'Akun Tidak Ditemukan');
             return redirect()->to('');
         }
         // print_r($user);

@@ -46,6 +46,10 @@
                         <label class="fw-bold" style="color: 2269D2;" for="planning">PLANNING</label>
                         <textarea class="form-control border-2" id="planning" name="planning" rows="10" required><?= $template['planning']; ?></textarea>
                     </div>
+                    <div class="form-group col-11 text-center">
+                        <label class="fw-bold " style="color: 2269D2;" for="resep">RESEP</label>
+                        <textarea class="form-control border-2" id="resep" name="resep" rows="10" required><?= $template['resep']; ?></textarea>
+                    </div>
                 </div>
                 <div class="row justify-content-center py-4 bg-white">
                     <div class="col text-center">

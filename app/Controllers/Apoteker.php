@@ -33,7 +33,7 @@ class Apoteker extends BaseController
             echo view('apoteker/daftar_pasien', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Pasien Tidak Ditemukan');
             return redirect()->to('apoteker/daftar_pasien');
         }
     }
@@ -63,7 +63,7 @@ class Apoteker extends BaseController
             ->orderBy("id", 'DESC')->first();
         // dd($data['resep']);
         if (!$data['resep']) {
-            $session->setFlashdata('msg', 'Belum ada resep');
+            $session->setFlashdata('error', 'Belum Ada Resep');
             return redirect()->to('/apoteker/daftar_pasien');
         }
         echo view('include/header', $user);

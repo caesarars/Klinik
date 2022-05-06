@@ -64,7 +64,7 @@ class Perawat extends BaseController
             'lingkarKepala' => $this->request->getVar('lingkarKepala'),
         ]);
 
-        $session->setFlashdata('msg', 'Assesment Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan!');
         return redirect()->to('perawat/daftar_pasien/');
     }
 
@@ -82,7 +82,7 @@ class Perawat extends BaseController
             echo view('perawat/daftar_pasien', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Pasien Tidak Ditemukan');
             return redirect()->to('perawat/daftar_pasien');
         }
     }

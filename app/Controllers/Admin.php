@@ -44,7 +44,7 @@ class Admin extends BaseController
             echo view('admin/daftar_pasien', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Pasien Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Pasien Tidak Ditemukan');
             return redirect()->to('admin/daftar_pasien');
         }
     }
@@ -111,7 +111,7 @@ class Admin extends BaseController
             'noHP' => $this->request->getVar('noHPKontak'),
             'email' => $this->request->getVar('emailKontak')
         ]);
-        $session->setFlashdata('msg', 'Data Pasien Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Data Pasien Berhasil Ditambahkan');
         return redirect()->to('admin/daftar_pasien/');
     }
 
@@ -178,7 +178,7 @@ class Admin extends BaseController
             'email' => $this->request->getVar('emailKontak')
         ]);
 
-        $session->setFlashdata('msg', 'Data Pasien Berhasil Diubah!');
+        $session->setFlashdata('success', 'Data Pasien Berhasil Diubah');
         return redirect()->to('admin/daftar_pasien/');
     }
 
@@ -189,7 +189,7 @@ class Admin extends BaseController
 
         $kontak = $this->M_Kontak->where(["idPasien" => $id])->first();
         $this->M_Kontak->delete($kontak['id']);
-        $session->setFlashdata('msg', 'Data Pasien Berhasil Dihapus!');
+        $session->setFlashdata('success', 'Data Pasien Berhasil Dihapus');
         return redirect()->to('admin/daftar_pasien/');
     }
 
@@ -201,7 +201,7 @@ class Admin extends BaseController
             'id' => $id,
             'terakhirDaftar' => date("Y-m-d H:i:s")
         ]);
-        $session->setFlashdata('msg', 'Pasien Berhasil Didaftarkan!');
+        $session->setFlashdata('success', 'Pasien Berhasil Didaftarkan');
         return redirect()->to('admin/daftar_pasien/');
     }
 
@@ -229,7 +229,7 @@ class Admin extends BaseController
             echo view('admin/daftar_dokter', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Dokter Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Dokter Tidak Ditemukan');
             return redirect()->to('admin/daftar_dokter');
         }
     }
@@ -294,7 +294,7 @@ class Admin extends BaseController
             'jabatan' => 'dokter',
             'id' => $id,
         ]);
-        $session->setFlashdata('msg', 'Data Dokter Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Data Dokter Berhasil Ditambahkan');
         return redirect()->to('admin/daftar_dokter/');
     }
 
@@ -339,7 +339,7 @@ class Admin extends BaseController
             'noHP' => $this->request->getVar('noHP'),
             'email' => $this->request->getVar('email')
         ]);
-        $session->setFlashdata('msg', 'Data Dokter Berhasil Diubah!');
+        $session->setFlashdata('success', 'Data Dokter Berhasil Diubah');
         return redirect()->to('admin/daftar_dokter/');
     }
 
@@ -350,7 +350,7 @@ class Admin extends BaseController
 
         $user = $this->M_User->where(["id" => $id])->first();
         $this->M_User->delete($user['id']);
-        $session->setFlashdata('msg', 'Data Dokter Berhasil Dihapus!');
+        $session->setFlashdata('success', 'Data Dokter Berhasil Dihapus');
         return redirect()->to('admin/daftar_dokter/');
     }
 
@@ -378,7 +378,7 @@ class Admin extends BaseController
             echo view('admin/daftar_perawat', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Perawat Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Perawat Tidak Ditemukan');
             return redirect()->to('admin/daftar_perawat');
         }
     }
@@ -444,7 +444,7 @@ class Admin extends BaseController
             'jabatan' => 'perawat',
             'id' => $id,
         ]);
-        $session->setFlashdata('msg', 'Data Perawat Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Data Perawat Berhasil Ditambahkan');
         return redirect()->to('admin/daftar_perawat/');
     }
 
@@ -488,7 +488,7 @@ class Admin extends BaseController
             'noHP' => $this->request->getVar('noHP'),
             'email' => $this->request->getVar('email')
         ]);
-        $session->setFlashdata('msg', 'Data Perawat Berhasil Diubah!');
+        $session->setFlashdata('success', 'Data Perawat Berhasil Diubah');
         return redirect()->to('admin/daftar_perawat/');
     }
 
@@ -499,7 +499,7 @@ class Admin extends BaseController
 
         $user = $this->M_User->where(["id" => $id])->first();
         $this->M_User->delete($user['id']);
-        $session->setFlashdata('msg', 'Data Perawat Berhasil Dihapus!');
+        $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
         return redirect()->to('admin/daftar_perawat/');
     }
 
@@ -537,7 +537,7 @@ class Admin extends BaseController
             echo view('admin/daftar_admin', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Admin Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Admin Tidak Ditemukan');
             return redirect()->to('admin/daftar_admin');
         }
     }
@@ -590,7 +590,7 @@ class Admin extends BaseController
             'jabatan' => 'admin',
             'id' => $id,
         ]);
-        $session->setFlashdata('msg', 'Data Administrator Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Data Administrator Berhasil Ditambahkan');
         return redirect()->to('admin/daftar_admin/');
     }
 
@@ -634,7 +634,7 @@ class Admin extends BaseController
             'noHP' => $this->request->getVar('noHP'),
             'email' => $this->request->getVar('email')
         ]);
-        $session->setFlashdata('msg', 'Data Administrator Berhasil Diubah!');
+        $session->setFlashdata('success', 'Data Administrator Berhasil Diubah');
         return redirect()->to('admin/daftar_admin/');
     }
 
@@ -645,7 +645,7 @@ class Admin extends BaseController
 
         $user = $this->M_User->where(["id" => $id])->first();
         $this->M_User->delete($user['id']);
-        $session->setFlashdata('msg', 'Data Administrator Berhasil Dihapus!');
+        $session->setFlashdata('success', 'Data Administrator Berhasil Dihapus');
         return redirect()->to('admin/daftar_admin/');
     }
 
@@ -674,7 +674,7 @@ class Admin extends BaseController
             echo view('admin/daftar_apoteker', $data);
             echo view('include/footer');
         } else {
-            $session->setFlashdata('msg', 'Apoteker Tidak Ditemukan!');
+            $session->setFlashdata('error', 'Apoteker Tidak Ditemukan');
             return redirect()->to('admin/daftar_apoteker');
         }
     }
@@ -739,7 +739,7 @@ class Admin extends BaseController
             'jabatan' => 'apoteker',
             'id' => $id,
         ]);
-        $session->setFlashdata('msg', 'Data Perawat Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Data Perawat Berhasil Ditambahkan');
         return redirect()->to('admin/daftar_apoteker/');
     }
 
@@ -783,7 +783,7 @@ class Admin extends BaseController
             'noHP' => $this->request->getVar('noHP'),
             'email' => $this->request->getVar('email')
         ]);
-        $session->setFlashdata('msg', 'Data Perawat Berhasil Diubah!');
+        $session->setFlashdata('success', 'Data Perawat Berhasil Diubah');
         return redirect()->to('admin/daftar_apoteker/');
     }
 
@@ -794,7 +794,7 @@ class Admin extends BaseController
 
         $user = $this->M_User->where(["id" => $id])->first();
         $this->M_User->delete($user['id']);
-        $session->setFlashdata('msg', 'Data Perawat Berhasil Dihapus!');
+        $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
         return redirect()->to('admin/daftar_apoteker/');
     }
 }

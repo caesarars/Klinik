@@ -3,25 +3,6 @@
         $('#myModal').modal('show');
     });
 </script>
-<?php if (session()->getFlashdata('msg')) : ?>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Pemberitahuan</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <?= session()->getFlashdata('msg') ?>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
 <div class="container mt-1 ms-4 me-0 mw-100">
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
@@ -62,7 +43,11 @@
                                 <h6 class="fw-bold" style="color: 2269D2;">Kata Kunci : <?= $template['keyword']; ?>
                                     <a href="<?= base_url('dokter/edit_template/' . $template['id']) ?>">
                                         <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                                    </a></h6>
+                                    </a>
+                                    <a class='btn-delete' href="<?= base_url('dokter/delete_template/' . $template['id']) ?>">
+                                        <img src="<?= base_url('images/delete-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                                    </a>
+                                </h6>
                             </div>
                             <!-- <div class="col pt-0 m-0">
                                 <h6></h6>
@@ -71,27 +56,30 @@
                         <div class="col">
                             <h5 class="fw-bold" style="color: 2269D2;">SUBJECTIVE</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $template['subjective']; ?>
+                                <?= nl2br($template['subjective']); ?>
                             </div>
                             <br>
                             <h5 class="fw-bold" style="color: 2269D2;">ASSESMENT</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $template['assesment']; ?>
+                                <?= nl2br($template['assesment']); ?>
                             </div>
                         </div>
                         <div class="col">
                             <h5 class="fw-bold" style="color: 2269D2;">OBJECTIVE</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $template['objective']; ?>
+                                <?= nl2br($template['objective']); ?>
                             </div>
                             <br>
                             <h5 class="fw-bold" style="color: 2269D2;">PLANNING</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= $template['planning']; ?>
+                                <?= nl2br($template['planning']); ?>
                             </div>
                         </div>
                         <div class="col">
-
+                            <h5 class="fw-bold" style="color: 2269D2;">RESEP</h5>
+                            <div class="border-2 p-1 overflow-auto" style="height: 507;">
+                                <?= nl2br($template['resep']); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="row bg-white">
