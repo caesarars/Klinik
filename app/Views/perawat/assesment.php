@@ -25,22 +25,32 @@
                 </div>
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
-                <h5 class="font-weight-bold" style="color: B02525;">Assesment Perawat</h5>
+                <h5 class="font-weight-bold" style="color: B02525;">Keluhan Utama</h5>
             </div>
             <div class="row px-0 bg-white">
                 <div class="col-100">
                     <hr style="color: #2269D2; height: 2px;">
                 </div>
             </div>
-            <div class="row bg-white justify-content-center py-1">
-                <div class="col-5" style="background-color: #E5E5E5;" align="center">
-                    <h6 class="fw-bold" style="color: #2269D2;">Tanda Vital</h6>
-                </div>
-                <div class="col-5" style="background-color: #E5E5E5;" align="center">
-                    <h6 class="fw-bold" style="color: #2269D2;">Nutrisi</h6>
-                </div>
-            </div>
+
             <form action="<?= base_url('perawat/insert_assesment/' . $pasien['id']) ?>" method="POST">
+                <textarea class="form-control border-2" id="keluhanUtama" name="keluhanUtama" rows="2" required></textarea>
+                <div class="row pt-3 p-0 bg-white mt-3">
+                    <h5 class="font-weight-bold" style="color: B02525;">Assesment Perawat</h5>
+                </div>
+                <div class="row px-0 bg-white">
+                    <div class="col-100">
+                        <hr style="color: #2269D2; height: 2px;">
+                    </div>
+                </div>
+                <div class="row bg-white justify-content-center py-1">
+                    <div class="col-5" style="background-color: #E5E5E5;" align="center">
+                        <h6 class="fw-bold" style="color: #2269D2;">Tanda Vital</h6>
+                    </div>
+                    <div class="col-5" style="background-color: #E5E5E5;" align="center">
+                        <h6 class="fw-bold" style="color: #2269D2;">Nutrisi</h6>
+                    </div>
+                </div>
                 <div class="row bg-white justify-content-center pt-2">
                     <div class="col-5">
                         <p class="fw-bold mb-0">Tekanan Darah</p>

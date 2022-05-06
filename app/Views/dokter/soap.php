@@ -55,8 +55,8 @@ function input_tempalte($data)
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
-                    <h5 class="font-weight-bold m-0" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: B02525;">
-                        ASSESMENT
+                    <h5 class="font-weight-bold m-0" role="button" data-toggle="collapse" data-parent="#accordion" href="#assesmentPerawat" aria-expanded="true" aria-controls="assesmentPerawat" style="color: B02525;">
+                        ASSESMENT PERAWAT
                     </h5>
                 </div>
             </div>
@@ -67,7 +67,7 @@ function input_tempalte($data)
             </div>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="assesmentPerawat" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="assesmentPerawat">
                         <div class="panel-body">
                             <div class="row px-0 bg-white justify-content-center">
                                 <div class="col-4">
@@ -85,7 +85,31 @@ function input_tempalte($data)
                     </div>
                 </div>
             </div>
-
+            <div class="row pt-3 p-0 bg-white mt-3">
+                <div class="col align-self-center">
+                    <h5 class="font-weight-bold m-0" role="button" data-toggle="collapse" data-parent="#accordion" href="#keluhanUtama" aria-expanded="true" aria-controls="keluhanUtama" style="color: B02525;">
+                        KELUHAN UTAMA
+                    </h5>
+                </div>
+            </div>
+            <div class="row px-0 bg-white">
+                <div class="col-100">
+                    <hr style="color: #2269D2; height: 2px;">
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div id="keluhanUtama" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="keluhanUtama">
+                        <div class="panel-body">
+                            <div class="row px-0 mx-2 bg-white justify-content-center">
+                                <div class="border-2 p-2 overflow-auto" style="height: 100; ">
+                                    <?= nl2br($assesment['keluhanUtama']); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
                     <h5 class="font-weight-bold m-0" style="color: B02525;">SOAP</h5>

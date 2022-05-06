@@ -7,5 +7,5 @@ use CodeIgniter\Model;
 class M_Assesment extends Model
 {
     protected $table = 'assesment';
-    protected $allowedFields = ['id', 'idPasien', 'idPerawat', 'tanggal', 'tekananDarah', 'frekuensiNadi', 'suhu', 'frekuensiNafas', 'skorNyeri', 'beratBadan', 'tinggiBadan', 'lingkarKepala'];
+    protected $allowedFields = ['id', 'idPasien', 'idPerawat', 'tanggal', 'keluhanUtama', 'tekananDarah', 'frekuensiNadi', 'suhu', 'frekuensiNafas', 'skorNyeri', 'beratBadan', 'tinggiBadan', 'lingkarKepala'];
 }

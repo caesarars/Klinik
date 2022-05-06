@@ -51,6 +51,7 @@ class Perawat extends BaseController
             'idPasien' => $id,
             'idPerawat' => $_SESSION['id'],
             'tanggal' => date("Y-m-d H:i:s"),
+            'keluhanUtama' => $this->request->getVar('keluhanUtama'),
             'tekananDarah' => $this->request->getVar('tekananDarah'),
             'frekuensiNadi' => $this->request->getVar('frekuensiNadi'),
             'suhu' => $this->request->getVar('suhu'),
