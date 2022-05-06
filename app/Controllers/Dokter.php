@@ -53,6 +53,15 @@ class Dokter extends BaseController
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
         if ($data['assesment']) {
+            $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
+            $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+            // dd($tinggiBadan);
+            if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
+                $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+                $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+            } else {
+                $data['assesment']['IMT'] = '';
+            }
             echo view('include/header', $user);
             echo view('dokter/soap', $data);
             echo view('include/footer');
@@ -108,7 +117,14 @@ class Dokter extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
-        $data['soap'] = $this->M_Soap->getData($id);
+        $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
+        $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+        if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
+            $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+            $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+        } else {
+            $data['assesment']['IMT'] = '';
+        }
         // dd($data['soap']);
         echo view('include/header', $user);
         echo view('dokter/riwayat', $data);
@@ -131,9 +147,22 @@ class Dokter extends BaseController
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->where(["id" => $data['soap']['idAssesment']])->orderBy('tanggal', 'desc')->first();
-        echo view('include/header', $user);
-        echo view('dokter/edit_soap', $data);
-        echo view('include/footer');
+        if ($data['assesment']) {
+            $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
+            $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+            if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
+                $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+                $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+            } else {
+                $data['assesment']['IMT'] = '';
+            }
+            echo view('include/header', $user);
+            echo view('dokter/edit_soap', $data);
+            echo view('include/footer');
+        } else {
+            $session->setFlashdata('msg', 'Riwayat Assesment Tidak Ada!');
+            return redirect()->to('Dokter/daftar_pasien');
+        }
     }
 
     public function update_soap($id)

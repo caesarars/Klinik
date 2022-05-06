@@ -13,9 +13,7 @@ class Apoteker extends BaseController
         date_default_timezone_set('Asia/Jakarta');
         $user = $this->M_Apoteker->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "APOTEKER";
-        $data['pasien'] = $this->M_Pasien
-            ->where('terakhirDaftar >=', date("Y-m-d"))
-            ->orderBy('terakhirDaftar', 'desc')->findAll();
+        $data['pasien'] = $this->M_Resep->getPasien(date("Y-m-d"));
         echo view('include/header', $user);
         echo view('apoteker/daftar_pasien', $data);
         echo view('include/footer');
@@ -53,6 +51,14 @@ class Apoteker extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
+        $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+        if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
+            $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+            $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+        } else {
+            $data['assesment']['IMT'] = '';
+        }
         $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
             ->orderBy("id", 'DESC')->first();
         // dd($data['resep']);
