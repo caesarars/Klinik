@@ -1,6 +1,7 @@
 const success = $('.flash-data-success').data('flashdata');
 const error = $('.flash-data-error').data('flashdata');
 
+console.log(success);
 if (success) {
     Swal.fire({
         position: 'top-end',

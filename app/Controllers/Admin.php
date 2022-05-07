@@ -349,7 +349,7 @@ class Admin extends BaseController
         $this->M_Dokter->delete($id);
 
         $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->delete($user['id']);
+        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'dokter'])->delete();
         $session->setFlashdata('success', 'Data Dokter Berhasil Dihapus');
         return redirect()->to('admin/daftar_dokter/');
     }
@@ -498,7 +498,7 @@ class Admin extends BaseController
         $this->M_Perawat->delete($id);
 
         $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->delete($user['id']);
+        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'perawat'])->delete();
         $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
         return redirect()->to('admin/daftar_perawat/');
     }
@@ -644,7 +644,7 @@ class Admin extends BaseController
         $this->M_Admin->delete($id);
 
         $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->delete($user['id']);
+        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'admin'])->delete();
         $session->setFlashdata('success', 'Data Administrator Berhasil Dihapus');
         return redirect()->to('admin/daftar_admin/');
     }
@@ -793,7 +793,7 @@ class Admin extends BaseController
         $this->M_Apoteker->delete($id);
 
         $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->delete($user['id']);
+        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'apoteker'])->delete();
         $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
         return redirect()->to('admin/daftar_apoteker/');
     }

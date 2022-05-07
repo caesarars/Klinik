@@ -125,6 +125,7 @@ class Dokter extends BaseController
         } else {
             $data['assesment']['IMT'] = '';
         }
+        $data['soap'] = $this->M_Soap->getData($id);
         // dd($data['soap']);
         echo view('include/header', $user);
         echo view('dokter/riwayat', $data);
@@ -138,15 +139,19 @@ class Dokter extends BaseController
         $user["jabatan"] = "DOKTER";
 
         $data['soap'] = $this->M_Soap->where(["id" => $id])->first();
-        $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+        $data['pasien'] = $this->M_Pasien->where(["id" => $data['soap']['idPasien']])->first();
         $data['resep'] = $this->M_Resep->where(["idSOAP" => $id])->first();
+        if (!$data['resep']) {
+            $data['resep']['resep'] = '';
+        }
+        // dd($data['resep']);
         date_default_timezone_set('Asia/Jakarta');
         $currentDate = new DateTime();
         $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
-        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->where(["id" => $data['soap']['idAssesment']])->orderBy('tanggal', 'desc')->first();
+        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $data['soap']['idPasien'], "id" => $data['soap']['idAssesment']])->orderBy('tanggal', 'desc')->first();
         if ($data['assesment']) {
             $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
             $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
@@ -179,12 +184,21 @@ class Dokter extends BaseController
         $soap = $this->M_Soap->where(["id" => $id])->first();
         $resep = $this->M_Resep->where(["idSOAP" => $id])->first();
         // dd($resep);
-        $this->M_Resep->save([
-            'id' => $resep['id'],
-            'idDokter' => $_SESSION['id'],
-            'idSOAP' => $id,
-            'resep' => $this->request->getVar('resep'),
-        ]);
+        if ($resep) {
+            $this->M_Resep->save([
+                'id' => $resep['id'],
+                'idDokter' => $_SESSION['id'],
+                'idSOAP' => $id,
+                'resep' => $this->request->getVar('resep'),
+            ]);
+        } else {
+            $this->M_Resep->save([
+                'idDokter' => $_SESSION['id'],
+                'idSOAP' => $id,
+                'resep' => $this->request->getVar('resep'),
+            ]);
+        }
+
         $session->setFlashdata('success', 'Data Rekam Medis Berhasil Diubah');
         return redirect()->to('dokter/riwayat/' . $soap['idPasien']);
     }
@@ -226,7 +240,7 @@ class Dokter extends BaseController
             'resep' => $this->request->getVar('resep'),
         ]);
 
-        $session->setFlashdata('success', 'Template Berhasil Ditambahkan');
+        $session->setFlashdata('success', 'Template Berhasil Diubah');
         return redirect()->to('dokter/template');
     }
 
