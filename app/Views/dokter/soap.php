@@ -1,11 +1,12 @@
 <?php
-$keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = '';
+$keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = $selectedResep = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keyword = input_tempalte($_POST['keyword']);
     $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
     $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
     $selectedAssesment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
     $selectedPlanning = $template[array_search($keyword, array_column($template, 'id'))]['planning'];
+    $selectedResep = $template[array_search($keyword, array_column($template, 'id'))]['resep'];
 }
 
 function input_tempalte($data)
@@ -193,7 +194,7 @@ function input_tempalte($data)
                             </div>
                             <div class="modal-body">
                                 <div class="row g-3 align-items-center m-3">
-                                    <textarea class="form-control border-2" id="resep" name="resep" rows="10"></textarea>
+                                    <textarea class="form-control border-2" id="resep" name="resep" rows="10"><?= $selectedResep; ?></textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <input type="" class="btn btn-primary" data-bs-dismiss="modal" value="Tambah Resep">

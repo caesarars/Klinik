@@ -1,11 +1,12 @@
 <?php
-$keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = '';
+$keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = $selectedResep = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keyword = input_tempalte($_POST['keyword']);
     $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
     $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
     $selectedAssesment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
     $selectedPlanning = $template[array_search($keyword, array_column($template, 'id'))]['planning'];
+    $selectedResep = $template[array_search($keyword, array_column($template, 'id'))]['resep'];
 }
 
 function input_tempalte($data)
@@ -108,7 +109,7 @@ function input_tempalte($data)
                                             <div class="col-auto align-self-center">
                                                 <select name="keyword" id="keyword" class="custom-select">
                                                     <?php foreach ($template as $template) : ?>
-                                                        <option value="<?= $template['id']; ?>"><?= $template['id']; ?><?= $template['keyword']; ?></option>
+                                                        <option value="<?= $template['id']; ?>"><?= $template['keyword']; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -144,7 +145,7 @@ function input_tempalte($data)
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESMENT</label>
                         <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required><?php
-                                                                                                                    if ($selectedSubjective == '') {
+                                                                                                                    if ($selectedAssesment == '') {
                                                                                                                         echo $soap['assesment'];
                                                                                                                     } else {
                                                                                                                         echo $selectedAssesment;
@@ -156,7 +157,7 @@ function input_tempalte($data)
                     <div class="form-group col-5">
                         <label class="fw-bold" style="color: 2269D2;" for="objective">OBJECTIVE</label>
                         <textarea class="form-control border-2" id="objective" name="objective" rows="10" required><?php
-                                                                                                                    if ($selectedSubjective == '') {
+                                                                                                                    if ($selectedObjective == '') {
                                                                                                                         echo $soap['objective'];
                                                                                                                     } else {
                                                                                                                         echo $selectedObjective;
@@ -165,7 +166,7 @@ function input_tempalte($data)
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="planning">PLANNING</label>
                         <textarea class="form-control border-2" id="planning" name="planning" rows="10" required><?php
-                                                                                                                    if ($selectedSubjective == '') {
+                                                                                                                    if ($selectedPlanning == '') {
                                                                                                                         echo $soap['planning'];
                                                                                                                     } else {
                                                                                                                         echo $selectedPlanning;
@@ -188,7 +189,13 @@ function input_tempalte($data)
                             </div>
                             <div class="modal-body">
                                 <div class="row g-3 align-items-center m-3">
-                                    <textarea class="form-control border-2" id="resep" name="resep" rows="10"><?= $resep['resep']; ?></textarea>
+                                    <textarea class="form-control border-2" id="resep" name="resep" rows="10"><?php
+                                                                                                                if ($selectedResep == '') {
+                                                                                                                    echo $resep['resep'];
+                                                                                                                } else {
+                                                                                                                    echo $selectedResep;
+                                                                                                                }
+                                                                                                                ?></textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <input type="" class="btn btn-primary" data-bs-dismiss="modal" value="Edit Resep">
