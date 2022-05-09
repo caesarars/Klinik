@@ -10970,7 +10970,7 @@ td {
   font-family: Lato-Bold;
   font-size: 18px;
   color: #000;
-  line-height: 1.4;
+  /* line-height: 1.4; */
 
   background-color: #e79e5a;
 }
