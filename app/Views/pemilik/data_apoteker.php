@@ -12,13 +12,13 @@
             <div class="container">
                 <div class="row align-content-left">
                     <div class="col-3">
-                        <a href="<?= base_url('admin/edit_apoteker/' . $apoteker['id']) ?>" class="btn-primary p-2">
+                        <a href="<?= base_url('pemilik/edit_apoteker/' . $apoteker['id']) ?>" class="btn-primary p-2">
                             <img src="<?= base_url('images/edit-white.png') ?>" class="img-thumbnail bg-transparent border-0" style="height: 30px;" alt="">
                             Ubah Apoteker
                         </a>
                     </div>
                     <div class="col-3">
-                        <a class="btn-delete btn-primary p-2" href="<?= base_url('admin/delete_apoteker/' . $apoteker['id']) ?>">
+                        <a class="btn-delete btn-primary p-2" href="<?= base_url('pemilik/delete_apoteker/' . $apoteker['id']) ?>">
                             <img src="<?= base_url('images/delete-white.png') ?>" class="img-thumbnail bg-transparent border-0" style="height: 30px;" alt="">
                             Hapus Apoteker
                         </a>

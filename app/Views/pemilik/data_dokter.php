@@ -12,15 +12,15 @@
             <div class="container">
                 <div class="row align-content-left">
                     <div class="col-3">
-                        <a href="<?= base_url('admin/edit_perawat/' . $perawat['id']) ?>" class="btn-primary p-2">
+                        <a href="<?= base_url('pemilik/edit_dokter/' . $dokter['id']) ?>" class="btn-primary p-2">
                             <img src="<?= base_url('images/edit-white.png') ?>" class="img-thumbnail bg-transparent border-0" style="height: 30px;" alt="">
-                            Ubah Perawat
+                            Ubah Dokter
                         </a>
                     </div>
                     <div class="col-3">
-                        <a class="btn-delete btn-primary p-2" href="<?= base_url('admin/delete_perawat/' . $perawat['id']) ?>">
+                        <a class="btn-delete btn-primary p-2" href="<?= base_url('pemilik/delete_dokter/' . $dokter['id']) ?>">
                             <img src="<?= base_url('images/delete-white.png') ?>" class="img-thumbnail bg-transparent border-0" style="height: 30px;" alt="">
-                            Hapus Perawat
+                            Hapus Dokter
                         </a>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     </div>
                     <div class="col ps-0">
-                        <h6>Informasi Perawat</h6>
+                        <h6>Informasi Dokter</h6>
                     </div>
                 </div>
                 <div class="row">
@@ -40,111 +40,115 @@
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Nama Lengkap</p>
-                        <p><?= $perawat['nama']; ?></p>
+                        <p><?= $dokter['nama']; ?></p>
                     </div>
                     <div class="col pe-0">
                         <p class="fw-bold mb-0">NIK</p>
-                        <p><?= $perawat['nik']; ?></p>
+                        <p><?= $dokter['nik']; ?></p>
+                    </div>
+                    <div class="col pe-0">
+                        <p class="fw-bold mb-0">Jenis Dokter</p>
+                        <p><?= $dokter['jenis']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Tempat Lahir</p>
-                        <p><?= $perawat['tempatLahir']; ?></p>
+                        <p><?= $dokter['tempatLahir']; ?></p>
                     </div>
                     <div class="col">
                         <p class="fw-bold mb-0">Tanggal Lahir</p>
-                        <p><?= $perawat['tanggalLahir']; ?></p>
+                        <p><?= $dokter['tanggalLahir']; ?></p>
                     </div>
                     <div class="col pe-0">
                         <p class="fw-bold mb-0">Umur</p>
-                        <p><?= $perawat['umur']; ?></p>
+                        <p><?= $dokter['umur']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Jenis Kelamin</p>
-                        <p><?php if ($perawat['jenisKelamin'] == "P") {
+                        <p><?php if ($dokter['jenisKelamin'] == "P") {
                                 echo "Perempuan";
-                            } elseif ($perawat['jenisKelamin'] == "L") {
+                            } elseif ($dokter['jenisKelamin'] == "L") {
                                 echo "Laki-laki";
                             } ?></p>
                     </div>
                     <div class="col">
                         <p class="fw-bold mb-0">Kewarganegaraan</p>
-                        <p><?= $perawat['kewarganegaraan']; ?></p>
+                        <p><?= $dokter['kewarganegaraan']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Agama</p>
-                        <p><?= $perawat['agama']; ?></p>
+                        <p><?= $dokter['agama']; ?></p>
                     </div>
                     <div class="col">
                         <p class="fw-bold mb-0">Status Pernikahan</p>
-                        <p><?= $perawat['statusPernikahan']; ?></p>
+                        <p><?= $dokter['statusPernikahan']; ?></p>
                     </div>
                     <div class="col pe-0">
-                        <p class="fw-bold mb-0">Pendidikan Terakhir</p>
-                        <p><?= $perawat['pendidikan']; ?></p>
+                        <p class="fw-bold mb-0">pendidikan Terakhir</p>
+                        <p><?= $dokter['pendidikan']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Golongan Darah</p>
-                        <p><?= $perawat['golonganDarah']; ?></p>
+                        <p><?= $dokter['golonganDarah']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Alamat</p>
-                        <p><?= $perawat['alamat']; ?></p>
+                        <p><?= $dokter['alamat']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Kelurahan</p>
-                        <p><?= $perawat['kelurahan']; ?></p>
+                        <p><?= $dokter['kelurahan']; ?></p>
                     </div>
                     <div class="col">
                         <p class="fw-bold mb-0">Kecamatan</p>
-                        <p><?= $perawat['kecamatan']; ?></p>
+                        <p><?= $dokter['kecamatan']; ?></p>
                     </div>
                     <div class="col pe-0">
                         <p class="fw-bold mb-0">Kabupaten/Kota</p>
-                        <p><?= $perawat['kabupaten']; ?></p>
+                        <p><?= $dokter['kabupaten']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Provinsi</p>
-                        <p><?= $perawat['provinsi']; ?></p>
+                        <p><?= $dokter['provinsi']; ?></p>
                     </div>
                     <div class="col">
                         <p class="fw-bold mb-0">Kode Pos</p>
-                        <p><?= $perawat['kodePos']; ?></p>
+                        <p><?= $dokter['kodePos']; ?></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-4 ps-0">
                         <p class="fw-bold mb-0">Nomor Telepon</p>
-                        <p><?= $perawat['noTelp']; ?></p>
+                        <p><?= $dokter['noTelp']; ?></p>
                     </div>
                     <div class="col">
                         <p class="fw-bold mb-0">Nomor Handphone</p>
-                        <p><?= $perawat['noHP']; ?></p>
+                        <p><?= $dokter['noHP']; ?></p>
                     </div>
                     <div class="col pe-0">
                         <p class="fw-bold mb-0">Email</p>
-                        <p><?= $perawat['email']; ?></p>
+                        <p><?= $dokter['email']; ?></p>
                     </div>
                 </div>
                 <br>

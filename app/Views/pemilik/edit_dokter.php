@@ -2,27 +2,19 @@
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
-                <a href="<?= base_url('admin/tambah_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/add-person-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Tambah Pasien
-                </a>
-                <a href="<?= base_url('admin/daftar_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/daftar-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Daftar Pasien
-                </a>
-                <a href="<?= base_url('admin/daftar_dokter') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
+                <a href="<?= base_url('pemilik/daftar_dokter') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
                     <img src="<?= base_url('images/doctor-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Dokter
                 </a>
-                <a href="<?= base_url('admin/daftar_perawat') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_perawat') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Perawat
                 </a>
-                <a href="<?= base_url('admin/daftar_admin') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_admin') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Administrator
                 </a>
-                <a href="<?= base_url('admin/daftar_apoteker') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_apoteker') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Apoteker
                 </a>
@@ -44,7 +36,7 @@
                     </div>
                 </div>
 
-                <form action="<?= base_url('Admin/update_dokter/' . $dokter['id']) ?>" method="POST">
+                <form action="<?= base_url('pemilik/update_dokter/' . $dokter['id']) ?>" method="POST">
                     <!-- <div class="row form-group">
                         <p>Username</p>
                         <input type="text" class="form-control" name="username" id="username" autocomplete="off">

@@ -60,6 +60,10 @@
 				<a href="<?= base_url('apoteker/daftar_pasien') ?>">
 					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
 				</a>
+			<?php elseif ($jabatan == 'PEMILIK') : ?>
+				<a href="<?= base_url('pemilik/daftar_dokter') ?>">
+					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
+				</a>
 			<?php endif; ?>
 		</div>
 	</nav>

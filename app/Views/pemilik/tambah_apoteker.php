@@ -2,28 +2,20 @@
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
-                <a href="<?= base_url('admin/tambah_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/add-person-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Tambah Pasien
-                </a>
-                <a href="<?= base_url('admin/daftar_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/daftar-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Daftar Pasien
-                </a>
-                <a href="<?= base_url('admin/daftar_dokter') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_dokter') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Dokter
                 </a>
-                <a href="<?= base_url('admin/daftar_perawat') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_perawat') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Perawat
                 </a>
-                <a href="<?= base_url('admin/daftar_admin') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
-                    <img src="<?= base_url('images/doctor-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                <a href="<?= base_url('pemilik/daftar_admin') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Administrator
                 </a>
-                <a href="<?= base_url('admin/daftar_apoteker') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                <a href="<?= base_url('pemilik/daftar_apoteker') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
+                    <img src="<?= base_url('images/doctor-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Apoteker
                 </a>
             </div>
@@ -35,7 +27,7 @@
                         <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     </div>
                     <div class="col ps-0">
-                        <h6>Informasi Administrator</h6>
+                        <h6>Informasi Apoteker</h6>
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +35,7 @@
                         <hr style="color: #2269D2; height: 2px;">
                     </div>
                 </div>
-                <form action="<?= base_url('Admin/insert_admin') ?>" method="POST">
+                <form action="<?= base_url('pemilik/insert_apoteker') ?>" method="POST">
                     <div class="row form-group">
                         <p>Username</p>
                         <input type="text" class="form-control" name="username" id="username" autocomplete="off" required>
@@ -58,7 +50,7 @@
                     <label class="form-check-label" for="showPassword">Show Password</label>
                     <br>
                     <br>
-                    <div class="row form-group">
+                    <div class="row">
                         <p>Nama Lengkap</p>
                         <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" required>
                     </div>
@@ -150,11 +142,11 @@
                             <button type="submit" class="btn btn-primary text-center px-3 py-2" name="simpan">SIMPAN</button>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     function myFunction() {
         var x = document.getElementById("password");

@@ -64,7 +64,7 @@ class Perawat extends BaseController
             'lingkarKepala' => $this->request->getVar('lingkarKepala'),
         ]);
 
-        $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan!');
+        $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan');
         return redirect()->to('perawat/daftar_pasien/');
     }
 

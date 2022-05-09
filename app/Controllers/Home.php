@@ -41,6 +41,9 @@ class Home extends BaseController
                 } elseif ($ses_data['jabatan'] == 'apoteker') {
                     $apoteker = $this->M_Apoteker->where('id', $ses_data['id'])->first();
                     return redirect()->to('apoteker/daftar_pasien/');
+                } elseif ($ses_data['jabatan'] == 'pemilik') {
+                    $apoteker = $this->M_Apoteker->where('id', $ses_data['id'])->first();
+                    return redirect()->to('pemilik/daftar_dokter/');
                 }
             } else {
                 $session->setFlashdata('msg', 'Password Anda Salah');

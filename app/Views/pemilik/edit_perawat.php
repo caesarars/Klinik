@@ -2,27 +2,19 @@
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
-                <a href="<?= base_url('admin/tambah_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/add-person-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Tambah Pasien
-                </a>
-                <a href="<?= base_url('admin/daftar_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/daftar-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Daftar Pasien
-                </a>
-                <a href="<?= base_url('admin/daftar_dokter') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_dokter') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Dokter
                 </a>
-                <a href="<?= base_url('admin/daftar_perawat') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                <a href="<?= base_url('pemilik/daftar_perawat') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
+                    <img src="<?= base_url('images/doctor-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Perawat
                 </a>
-                <a href="<?= base_url('admin/daftar_admin') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
-                    <img src="<?= base_url('images/doctor-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                <a href="<?= base_url('pemilik/daftar_admin') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Administrator
                 </a>
-                <a href="<?= base_url('admin/daftar_apoteker') ?>" class="list-group-item list-group-item-action fw-bold">
+                <a href="<?= base_url('pemilik/daftar_apoteker') ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Apoteker
                 </a>
@@ -35,7 +27,7 @@
                         <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     </div>
                     <div class="col ps-0">
-                        <h6>Informasi Administrator</h6>
+                        <h6>Informasi Perawat</h6>
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +35,7 @@
                         <hr style="color: #2269D2; height: 2px;">
                     </div>
                 </div>
-                <form action="<?= base_url('Admin/update_admin/' . $admin['id']) ?>" method="POST">
+                <form action="<?= base_url('pemilik/update_perawat/' . $perawat['id']) ?>" method="POST">
                     <!-- <div class="row form-group">
                         <p>Username</p>
                         <input type="text" class="form-control" name="username" id="username" autocomplete="off">
@@ -59,89 +51,89 @@
                     <br> -->
                     <div class="row form-group">
                         <p>Nama Lengkap</p>
-                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="<?= $admin['nama']; ?>" required>
+                        <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="<?= $perawat['nama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>NIK</p>
-                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" value="<?= $admin['nik']; ?>" required>
+                        <input type="text" class="form-control" name="nik" id="nik" autocomplete="off" value="<?= $perawat['nik']; ?>" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Tempat Lahir</p>
-                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" value="<?= $admin['tempatLahir']; ?>" required>
+                            <input type="text" class="form-control" name="tempatLahir" id="tempatLahir" autocomplete="off" value="<?= $perawat['tempatLahir']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Tanggal Lahir</p>
-                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" value="<?= $admin['tanggalLahir']; ?>" required>
+                            <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir" autocomplete="off" value="<?= $perawat['tanggalLahir']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <p>Jenis Kelamin</p>
-                        <select name="jenisKelamin" id="jenisKelamin" class="custom-select" required>
-                            <option value="P" <?php if ($admin['jenisKelamin'] == "P") : ?> selected <?php endif; ?>>Perempuan</option>
-                            <option value="L" <?php if ($admin['jenisKelamin'] == "L") : ?> selected <?php endif; ?>>Laki-laki</option>
+                        <select name="jenisKelamin" id="jenisKelamin" class="custom-select">
+                            <option value="P" <?php if ($perawat['jenisKelamin'] == "P") : ?> selected <?php endif; ?>>Perempuan</option>
+                            <option value="L" <?php if ($perawat['jenisKelamin'] == "L") : ?> selected <?php endif; ?>>Laki-laki</option>
                         </select>
                     </div>
                     <div class="row">
                         <p>Kewarganegaraan</p>
-                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" value="<?= $admin['kewarganegaraan']; ?>" required>
+                        <input type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" value="<?= $perawat['kewarganegaraan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Agama</p>
-                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $admin['agama']; ?>" required>
+                        <input type="text" class="form-control" name="agama" id="agama" autocomplete="off" value="<?= $perawat['agama']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Status Pernikahan</p>
-                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $admin['statusPernikahan']; ?>" required>
+                        <input type="text" class="form-control" name="statusPernikahan" id="statusPernikahan" autocomplete="off" value="<?= $perawat['statusPernikahan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Golongan Darah</p>
-                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" value="<?= $admin['golonganDarah']; ?>" required>
+                        <input type="text" class="form-control" name="golonganDarah" id="golonganDarah" autocomplete="off" value="<?= $perawat['golonganDarah']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Pendidikan Terakhir</p>
-                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" value="<?= $admin['pendidikan']; ?>" required>
+                        <input type="text" class="form-control" name="pendidikan" id="pendidikan" autocomplete="off" value="<?= $perawat['pendidikan']; ?>" required>
                     </div>
                     <div class="row">
                         <p>Alamat</p>
-                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" value="<?= $admin['alamat']; ?>" required>
+                        <input type="text" class="form-control" name="alamat" id="alamat" autocomplete="off" value="<?= $perawat['alamat']; ?>" required>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Kelurahan</p>
-                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" value="<?= $admin['kelurahan']; ?>" required>
+                            <input type="text" class="form-control" name="kelurahan" id="kelurahan" autocomplete="off" value="<?= $perawat['kelurahan']; ?>" required>
                         </div>
                         <div class="col">
                             <p>kecamatan</p>
-                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" value="<?= $admin['kecamatan']; ?>" required>
+                            <input type="text" class="form-control" name="kecamatan" id="kecamatan" autocomplete="off" value="<?= $perawat['kecamatan']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kabupaten/Kota</p>
-                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" value="<?= $admin['kabupaten']; ?>" required>
+                            <input type="text" class="form-control" name="kabupaten" id="kabupaten" autocomplete="off" value="<?= $perawat['kabupaten']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Provinsi</p>
-                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" value="<?= $admin['provinsi']; ?>" required>
+                            <input type="text" class="form-control" name="provinsi" id="provinsi" autocomplete="off" value="<?= $perawat['provinsi']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Kode Pos</p>
-                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" value="<?= $admin['kodePos']; ?>" required>
+                            <input type="text" class="form-control" name="kodePos" id="kodePos" autocomplete="off" value="<?= $perawat['kodePos']; ?>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col ps-0">
                             <p>Nomor Telepon</p>
-                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" value="<?= $admin['noTelp']; ?>" required>
+                            <input type="text" class="form-control" name="noTelp" id="noTelp" autocomplete="off" value="<?= $perawat['noTelp']; ?>" required>
                         </div>
                         <div class="col">
                             <p>Nomor Handphone</p>
-                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" value="<?= $admin['noHP']; ?>" required>
+                            <input type="text" class="form-control" name="noHP" id="noHP" autocomplete="off" value="<?= $perawat['noHP']; ?>" required>
                         </div>
                         <div class="col pe-0">
                             <p>Email</p>
-                            <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="<?= $admin['email']; ?>" required>
+                            <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="<?= $perawat['email']; ?>" required>
                         </div>
                     </div>
                     <div class="row justify-content-end mt-4">
@@ -149,11 +141,11 @@
                             <button type="submit" class="btn btn-primary text-center px-3 py-2" name="simpan">SIMPAN</button>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     function myFunction() {
         var x = document.getElementById("password");
