@@ -1,7 +1,13 @@
 const success = $('.flash-data-success').data('flashdata');
 const error = $('.flash-data-error').data('flashdata');
 
-console.log(success);
+$('.cell100').on('click', function(e){
+  e.preventDefault();
+  const href = $(this).attr('href');
+  document.location.href = href;
+})
+
+// console.log(success);
 if (success) {
     Swal.fire({
         position: 'top-end',

@@ -21,7 +21,7 @@ class Perawat extends BaseController
         echo view('include/footer');
     }
 
-    public function Assesment($id)
+    public function Assessment($id)
     {
         $session = session();
         $user = $this->M_Perawat->where('id', $_SESSION['id'])->first();
@@ -34,11 +34,11 @@ class Perawat extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         echo view('include/header', $user);
-        echo view('perawat/assesment', $data);
+        echo view('perawat/assessment', $data);
         echo view('include/footer');
     }
 
-    public function insert_assesment($id)
+    public function insert_assessment($id)
     {
         $session = session();
         date_default_timezone_set('Asia/Jakarta');
@@ -47,7 +47,7 @@ class Perawat extends BaseController
         // $tinggiBadan = $this->request->getVar('tinggiBadan');
         // $imt = floatval($beratBadan) / floatval($tinggiBadan);
         // dd($imt);
-        $this->M_Assesment->save([
+        $this->M_Assessment->save([
             'idPasien' => $id,
             'idPerawat' => $_SESSION['id'],
             'tanggal' => date("Y-m-d H:i:s"),
@@ -64,7 +64,7 @@ class Perawat extends BaseController
             'lingkarKepala' => $this->request->getVar('lingkarKepala'),
         ]);
 
-        $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan');
+        $session->setFlashdata('success', 'Assessment Berhasil Ditambahkan');
         return redirect()->to('perawat/daftar_pasien/');
     }
 

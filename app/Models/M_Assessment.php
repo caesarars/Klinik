@@ -4,8 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_Assesment extends Model
+class M_Assessment extends Model
 {
-    protected $table = 'assesment';
+    protected $table = 'assessment';
     protected $allowedFields = ['id', 'idPasien', 'idPerawat', 'tanggal', 'keluhanUtama', 'tekananDarah', 'frekuensiNadi', 'suhu', 'frekuensiNafas', 'skorNyeri', 'beratBadan', 'tinggiBadan', 'lingkarKepala'];
 }

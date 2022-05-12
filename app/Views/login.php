@@ -49,7 +49,7 @@
 						</div>
 						<div class="row justify-content-center py-4 bg-white">
 							<div class="col text-center">
-								<button type="submit" class="btn btn-primary text-center px-3 py-2" name="simpan">SIMPAN</button>
+								<button type="submit" class="btn btn-primary text-center px-3 py-2" name="simpan">LOGIN</button>
 							</div>
 						</div>
 

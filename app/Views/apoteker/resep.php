@@ -25,9 +25,9 @@
                 </div>
                 <div class="col ">
                     <h6 class="fw-bold">Berat Badan</h6>
-                    <p><?= $assesment['beratBadan']; ?> Kg</p>
+                    <p><?= $assessment['beratBadan']; ?> Kg</p>
                     <h6 class="fw-bold">Tinggi Badan</h6>
-                    <p class="mb-0"><?= $assesment['tinggiBadan']; ?> Cm</p>
+                    <p class="mb-0"><?= $assessment['tinggiBadan']; ?> Cm</p>
                 </div>
             </div>
             <div class="row pt-3 p-0 bg-white mt-3">
@@ -48,14 +48,14 @@
                         <div class="panel-body">
                             <div class="row px-0 bg-white justify-content-center">
                                 <div class="col-4">
-                                    <h6 class="">Tekanan Darah :<?= $assesment['tekananDarah']; ?> MmHg</h6>
-                                    <h6 class="">Frekuensi Nadi :<?= $assesment['frekuensiNadi']; ?> X/Menit</h6>
-                                    <h6 class="">Suhu :<?= $assesment['suhu']; ?> C</h6>
+                                    <h6 class="">Tekanan Darah :<?= $assessment['tekananDarah']; ?> MmHg</h6>
+                                    <h6 class="">Frekuensi Nadi :<?= $assessment['frekuensiNadi']; ?> X/Menit</h6>
+                                    <h6 class="">Suhu :<?= $assessment['suhu']; ?> C</h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6 class="">Frekuensi Nafas :<?= $assesment['frekuensiNafas']; ?></h6>
-                                    <h6 class="">Skor Nyeri :<?= $assesment['skorNyeri']; ?> MmHg</h6>
-                                    <h6 class="">IMT :<?= $assesment['IMT']; ?> Kg/M2</h6>
+                                    <h6 class="">Frekuensi Nafas :<?= $assessment['frekuensiNafas']; ?></h6>
+                                    <h6 class="">Skor Nyeri :<?= $assessment['skorNyeri']; ?> MmHg</h6>
+                                    <h6 class="">IMT :<?= $assessment['IMT']; ?> Kg/M2</h6>
                                 </div>
                             </div>
                         </div>

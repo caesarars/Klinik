@@ -50,14 +50,14 @@ class Apoteker extends BaseController
         $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
-        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
-        $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
-        $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+        $data['assessment'] = $this->M_Assessment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $beratBadan = (float)str_replace(",", ".", $data['assessment']['beratBadan']);
+        $tinggiBadan = (float)str_replace(",", ".", $data['assessment']['tinggiBadan']);
         if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
             $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
-            $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+            $data['assessment']['IMT'] = number_format($IMT, 2, ',');
         } else {
-            $data['assesment']['IMT'] = '';
+            $data['assessment']['IMT'] = '';
         }
         $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
             ->orderBy("id", 'DESC')->first();
@@ -108,7 +108,7 @@ class Apoteker extends BaseController
         $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
-        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $data['assessment'] = $this->M_Assessment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
         $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
             ->orderBy("id", 'DESC')->first();
 
@@ -194,7 +194,7 @@ class MYPDF extends TCPDF
     {
         // Logo
         // $image_file = K_PATH_IMAGES . 'logo_example.jpg';
-        $this->Image('images/Old_Nike_logo.jpg', 5, 10, 20, '', 'JPG', '', 'T', false, 100, '', false, false, 0, false, false, false);
+        // $this->Image('images/Old_Nike_logo.jpg', 5, 10, 20, '', 'JPG', '', 'T', false, 100, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('helvetica', 'B', 10);
         // Title
@@ -202,7 +202,7 @@ class MYPDF extends TCPDF
         // Set font
         $this->SetFont('helvetica', '', 10);
         // Title
-        $this->Cell(0, 8, 'Ruko Peson View Blok i no 3', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Ruko Pesona View Blok i no 3', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 8, 'Jl. Ir. H Juanda Mekarjaya Sukmajaya Depok', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 8, 'Telephone : 08-11111-6504', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
     }
@@ -211,14 +211,14 @@ class MYPDF extends TCPDF
     public function Footer()
     {
         $M_Pasien = model('App\Models\M_pasien');
-        $M_Assesment = model('App\Models\M_Assesment');
+        $M_Assessment = model('App\Models\M_Assessment');
 
         $pasien = $M_Pasien->where(["id" => $this->id])->first();
         date_default_timezone_set('Asia/Jakarta');
         $currentDate = new DateTime();
         $tanggalLahir = new DateTime($pasien['tanggalLahir']);
         $pasien['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
-        $assesment = $M_Assesment->where(["idPasien" => $this->id])->orderBy('tanggal', 'desc')->first();
+        $assessment = $M_Assessment->where(["idPasien" => $this->id])->orderBy('tanggal', 'desc')->first();
 
         // Position at 15 mm from bottom
         $this->SetY(-25);
@@ -228,7 +228,7 @@ class MYPDF extends TCPDF
         $style = array('width' => 0.8, 'color' => array(0, 0, 0));
         $this->Line(3, 115, 102, 115, $style);
         $this->Cell(0, 8, "Pro              : " . $pasien['nama'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
-        $this->Cell(0, 8, 'Umur /BB    : ' . $pasien['umur'] . " /" . $assesment['beratBadan'] . " Kg", 0, 2, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 8, 'Umur /BB    : ' . $pasien['umur'] . " /" . $assessment['beratBadan'] . " Kg", 0, 2, 'L', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 20, 'Alamat         : ' . $pasien['alamat'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
 
         // Set font

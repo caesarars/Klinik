@@ -61,7 +61,7 @@
                             <br>
                             <h5 class="fw-bold" style="color: 2269D2;">ASSESMENT</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= nl2br($template['assesment']); ?>
+                                <?= nl2br($template['assessment']); ?>
                             </div>
                         </div>
                         <div class="col">
