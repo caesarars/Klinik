@@ -67,16 +67,16 @@
                             foreach ($apoteker as $data) :
                             ?>
                                 <tbody>
-                                    <tr class="row100 body">
-                                        <td class="cell100 column1" href='<?= base_url('pemilik/data_apoteker/' . $data['id']) ?>'><?php
-                                                                                                                                    echo $index;
-                                                                                                                                    $index++;
-                                                                                                                                    ?>
+                                    <tr class="row100 body" data-href='<?= base_url('pemilik/data_apoteker/' . $data['id']) ?>'>
+                                        <td class="cell100 column1"><?php
+                                                                    echo $index;
+                                                                    $index++;
+                                                                    ?>
                                         </td>
-                                        <td class="cell100 column2" href='<?= base_url('pemilik/data_apoteker/' . $data['id']) ?>'><?= $data['nama']; ?></td>
-                                        <td class="cell100 column3" href='<?= base_url('pemilik/data_apoteker/' . $data['id']) ?>'><?= $data['nik']; ?></td>
-                                        <td class="cell100 column4" href='<?= base_url('pemilik/data_apoteker/' . $data['id']) ?>'><?= $data['noHP']; ?></td>
-                                        <td class="cell column5">
+                                        <td class="cell100 column2"><?= $data['nama']; ?></td>
+                                        <td class="cell100 column3"><?= $data['nik']; ?></td>
+                                        <td class="cell100 column4"><?= $data['noHP']; ?></td>
+                                        <td class="cell100 column5">
                                             <a href="<?= base_url('pemilik/edit_apoteker/' . $data['id']) ?>">
                                                 <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                             </a>

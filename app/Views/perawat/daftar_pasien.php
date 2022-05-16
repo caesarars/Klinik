@@ -54,14 +54,23 @@
                                     $tanggalLahir = new DateTime($ps['tanggalLahir']);
                                     $umur = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
                                 ?>
-                                    <tr class="row100 body">
+                                    <tr class="row100 body" data-href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'>
 
+<<<<<<< HEAD
                                         <td class="cell100 column1" href='<?= base_url('perawat/assessment/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
                                         <td class="cell100 column2" href='<?= base_url('perawat/assessment/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
                                         <td class="cell100 column3" href='<?= base_url('perawat/assessment/' . $ps['id']) ?>'><?= $ps['nik']; ?></td>
                                         <td class="cell100 column4" href='<?= base_url('perawat/assessment/' . $ps['id']) ?>'><?= $ps['jenisKelamin']; ?></td>
                                         <td class="cell100 column5" href='<?= base_url('perawat/assessment/' . $ps['id']) ?>'><?= $umur; ?></td>
                                         <td class="cell100 column6" href='<?= base_url('perawat/assessment/' . $ps['id']) ?>'><?= $ps['terakhirDaftar']; ?></td>
+=======
+                                        <td class="cell100 column1"><?= $ps['id']; ?></td>
+                                        <td class="cell100 column2"><?= $ps['nama']; ?></td>
+                                        <td class="cell100 column3"><?= $ps['nik']; ?></td>
+                                        <td class="cell100 column4"><?= $ps['jenisKelamin']; ?></td>
+                                        <td class="cell100 column5"><?= $umur; ?></td>
+                                        <td class="cell100 column6"><?= $ps['terakhirDaftar']; ?></td>
+>>>>>>> parent of 654dd2e (finalisasi)
                                     </tr>
                                 <?php endforeach; ?>
 

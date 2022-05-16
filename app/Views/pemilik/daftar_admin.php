@@ -67,16 +67,16 @@
                                 $index = 1;
                                 foreach ($admin as $adm) :
                                 ?>
-                                    <tr class="row100 body">
-                                        <td class="cell100 column1" href='<?= base_url('pemilik/data_admin/' . $adm['id']) ?>'><?php
-                                                                                                                                echo $index;
-                                                                                                                                $index++;
-                                                                                                                                ?>
+                                    <tr class="row100 body" data-href='<?= base_url('pemilik/data_admin/' . $adm['id']) ?>'>
+                                        <td class="cell100 column1"><?php
+                                                                    echo $index;
+                                                                    $index++;
+                                                                    ?>
                                         </td>
-                                        <td class="cell100 column2" href='<?= base_url('pemilik/data_admin/' . $adm['id']) ?>'><?= $adm['nama']; ?></td>
-                                        <td class="cell100 column3" href='<?= base_url('pemilik/data_admin/' . $adm['id']) ?>'><?= $adm['nik']; ?></td>
-                                        <td class="cell100 column4" href='<?= base_url('pemilik/data_admin/' . $adm['id']) ?>'><?= $adm['noHP']; ?></td>
-                                        <td class="cell column5">
+                                        <td class="cell100 column2"><?= $adm['nama']; ?></td>
+                                        <td class="cell100 column3"><?= $adm['nik']; ?></td>
+                                        <td class="cell100 column4"><?= $adm['noHP']; ?></td>
+                                        <td class="cell100 column5">
                                             <a href="<?= base_url('pemilik/edit_admin/' . $adm['id']) ?>">
                                                 <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                             </a>

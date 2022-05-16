@@ -1,10 +1,10 @@
 <?php
-$keyword = $selectedSubjective = $selectedObjective = $selectedAssessment = $selectedPlanning = $selectedResep = '';
+$keyword = $selectedSubjective = $selectedObjective = $selectedAssesment = $selectedPlanning = $selectedResep = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keyword = input_tempalte($_POST['keyword']);
     $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
     $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
-    $selectedAssessment = $template[array_search($keyword, array_column($template, 'id'))]['assessment'];
+    $selectedAssesment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
     $selectedPlanning = $template[array_search($keyword, array_column($template, 'id'))]['planning'];
     $selectedResep = $template[array_search($keyword, array_column($template, 'id'))]['resep'];
 }
@@ -44,9 +44,9 @@ function input_tempalte($data)
 
                 <div class="col ">
                     <h6 class="fw-bold">Berat Badan</h6>
-                    <p><?= $assessment['beratBadan']; ?> Kg</p>
+                    <p><?= $assesment['beratBadan']; ?> Kg</p>
                     <h6 class="fw-bold">Tinggi Badan</h6>
-                    <p class="mb-0"><?= $assessment['tinggiBadan']; ?> Cm</p>
+                    <p class="mb-0"><?= $assesment['tinggiBadan']; ?> Cm</p>
 
                 </div>
             </div>
@@ -68,14 +68,14 @@ function input_tempalte($data)
                         <div class="panel-body">
                             <div class="row px-0 bg-white justify-content-center">
                                 <div class="col-4">
-                                    <h6 class="">Tekanan Darah :<?= $assessment['tekananDarah']; ?> MmHg</h6>
-                                    <h6 class="">Frekuensi Nadi :<?= $assessment['frekuensiNadi']; ?> X/Menit</h6>
-                                    <h6 class="">Suhu :<?= $assessment['suhu']; ?> C</h6>
+                                    <h6 class="">Tekanan Darah :<?= $assesment['tekananDarah']; ?> MmHg</h6>
+                                    <h6 class="">Frekuensi Nadi :<?= $assesment['frekuensiNadi']; ?> X/Menit</h6>
+                                    <h6 class="">Suhu :<?= $assesment['suhu']; ?> C</h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6 class="">Frekuensi Nafas :<?= $assessment['frekuensiNafas']; ?></h6>
-                                    <h6 class="">Skor Nyeri :<?= $assessment['skorNyeri']; ?> MmHg</h6>
-                                    <h6 class="">IMT :<?= $assessment['IMT']; ?> Kg/M2</h6>
+                                    <h6 class="">Frekuensi Nafas :<?= $assesment['frekuensiNafas']; ?></h6>
+                                    <h6 class="">Skor Nyeri :<?= $assesment['skorNyeri']; ?> MmHg</h6>
+                                    <h6 class="">IMT :<?= $assesment['IMT']; ?> Kg/M2</h6>
                                 </div>
                             </div>
                         </div>
@@ -143,14 +143,14 @@ function input_tempalte($data)
                                                                                                                         }
                                                                                                                         ?></textarea>
                         <br>
-                        <label class="fw-bold" style="color: 2269D2;" for="assessment">ASSESMENT</label>
-                        <textarea class="form-control border-2" id="assessment" name="assessment" rows="10" required><?php
-                                                                                                                        if ($selectedAssessment == '') {
-                                                                                                                            echo $soap['assessment'];
-                                                                                                                        } else {
-                                                                                                                            echo $selectedAssessment;
-                                                                                                                        }
-                                                                                                                        ?></textarea>
+                        <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESMENT</label>
+                        <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required><?php
+                                                                                                                    if ($selectedAssesment == '') {
+                                                                                                                        echo $soap['assesment'];
+                                                                                                                    } else {
+                                                                                                                        echo $selectedAssesment;
+                                                                                                                    }
+                                                                                                                    ?></textarea>
                     </div>
                     <div class="col-sm-1">
                     </div>

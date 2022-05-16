@@ -34,8 +34,8 @@
                         <label class="fw-bold" style="color: 2269D2;" for="subjective">SUBJECTIVE</label>
                         <textarea class="form-control border-2" id="subjective" name="subjective" rows="10" required><?= $template['subjective']; ?></textarea>
                         <br>
-                        <label class="fw-bold" style="color: 2269D2;" for="assessment">ASSESMENT</label>
-                        <textarea class="form-control border-2" id="assessment" name="assessment" rows="10" required><?= $template['assessment']; ?></textarea>
+                        <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESMENT</label>
+                        <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required><?= $template['assesment']; ?></textarea>
                     </div>
                     <div class="col-sm-1">
                     </div>
