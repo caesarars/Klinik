@@ -56,7 +56,7 @@ class BaseController extends Controller
         $this->M_Kontak = new \App\Models\M_Kontak();
         $this->M_User = new \App\Models\M_User();
         $this->M_Soap = new \App\Models\M_Soap();
-        $this->M_Assessment = new \App\Models\M_Assessment();
+        $this->M_Assesment = new \App\Models\M_Assesment();
         $this->M_Template = new \App\Models\M_Template();
         $this->M_Apoteker = new \App\Models\M_Apoteker();
         $this->M_Resep = new \App\Models\M_Resep();
