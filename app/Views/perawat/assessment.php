@@ -2,7 +2,7 @@
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
-                <a href="<?= base_url('perawat/assesment/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
+                <a href="<?= base_url('perawat/assessment/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
                     <img src=" <?= base_url('images/cardiograph-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Assessment Perawat
                 </a>
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <form action="<?= base_url('perawat/insert_assesment/' . $pasien['id']) ?>" method="POST">
+            <form action="<?= base_url('perawat/insert_assessment/' . $pasien['id']) ?>" method="POST">
                 <textarea class="form-control border-2" id="keluhanUtama" name="keluhanUtama" rows="2" required></textarea>
                 <div class="row pt-3 p-0 bg-white mt-3">
                     <h5 class="font-weight-bold" style="color: B02525;">Assessment Perawat</h5>

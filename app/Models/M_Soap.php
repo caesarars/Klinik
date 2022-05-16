@@ -14,8 +14,8 @@ class M_Soap extends Model
     {
         return $this->select('*, soap.id, soap.idPasien, soap.idAssesment, soap.idDokter, soap.tanggal')
             ->join('tb_dokter', 'tb_dokter.id=soap.idDokter')
-            ->join('assesment', 'assesment.id=soap.idAssesment')
-            ->where(["soap.idPasien" => $id])
+            ->join('tb_assessment', 'tb_assessment.id=soap.idAssesment')
+            ->where("soap.idPasien=", $id)
             ->orderBy('soap.tanggal', 'desc')
             ->get()->getResultArray();
     }

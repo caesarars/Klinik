@@ -126,7 +126,7 @@ class Dokter extends BaseController
             $data['assessment']['IMT'] = '';
         }
         $data['soap'] = $this->M_Soap->getData($id);
-        // dd($data['soap']);
+
         echo view('include/header', $user);
         echo view('dokter/riwayat', $data);
         echo view('include/footer');

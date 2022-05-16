@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keyword = input_tempalte($_POST['keyword']);
     $selectedSubjective = $template[array_search($keyword, array_column($template, 'id'))]['subjective'];
     $selectedObjective = $template[array_search($keyword, array_column($template, 'id'))]['objective'];
-    $selectedAssessment = $template[array_search($keyword, array_column($template, 'id'))]['assessment'];
+    $selectedAssessment = $template[array_search($keyword, array_column($template, 'id'))]['assesment'];
     $selectedPlanning = $template[array_search($keyword, array_column($template, 'id'))]['planning'];
     $selectedResep = $template[array_search($keyword, array_column($template, 'id'))]['resep'];
 }
