@@ -10,6 +10,10 @@
                     <img src=" <?= base_url('images/template-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Template SOAP
                 </a>
+                <a href="<?= base_url('dokter/template_resep') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src=" <?= base_url('images/template-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    Template Resep
+                </a>
             </div>
         </div>
         <div class="col ms-2 bg-white">
@@ -34,7 +38,7 @@
                         <label class="fw-bold" style="color: 2269D2;" for="subjective">SUBJECTIVE</label>
                         <textarea class="form-control border-2" id="subjective" name="subjective" rows="10" required></textarea>
                         <br>
-                        <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESMENT</label>
+                        <label class="fw-bold" style="color: 2269D2;" for="assesment">ASSESSMENT</label>
                         <textarea class="form-control border-2" id="assesment" name="assesment" rows="10" required></textarea>
                     </div>
                     <div class="col-sm-1">
@@ -45,10 +49,6 @@
                         <br>
                         <label class="fw-bold" style="color: 2269D2;" for="planning">PLANNING</label>
                         <textarea class="form-control border-2" id="planning" name="planning" rows="10" required></textarea>
-                    </div>
-                    <div class="form-group col-11 text-center">
-                        <label class="fw-bold " style="color: 2269D2;" for="resep">RESEP</label>
-                        <textarea class="form-control border-2" id="resep" name="resep" rows="10" required></textarea>
                     </div>
                 </div>
                 <div class="row justify-content-center py-4 bg-white">

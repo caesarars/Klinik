@@ -38,7 +38,7 @@
                                 <?= nl2br($soap['subjective']); ?>
                             </div>
                             <br>
-                            <h5 class="fw-bold" style="color: 2269D2;">ASSESMENT</h5>
+                            <h5 class="fw-bold" style="color: 2269D2;">ASSESSMENT</h5>
                             <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
                                 <?= nl2br($soap['assesment']); ?>
                             </div>
@@ -61,7 +61,7 @@
                             </a>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['tanggal']; ?></p>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['nama']; ?></p>
-                            <hr style="color: #2269D2; height: 2px;">
+                            <!-- <hr style="color: #2269D2; height: 2px;">
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Tekanan Darah</h5>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['tekananDarah']; ?> MmHg</p>
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Frekuensi Nadi</h5>
@@ -71,7 +71,7 @@
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Frekuensi Nafas</h5>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['frekuensiNafas']; ?>/Menit</p>
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Skor Nyeri</h5>
-                            <p class="m-0" style="color: 2269D2;"><?= $soap['skorNyeri']; ?></p>
+                            <p class="m-0" style="color: 2269D2;"><?= $soap['skorNyeri']; ?></p> -->
                         </div>
                     </div>
                     <div class="row bg-white">

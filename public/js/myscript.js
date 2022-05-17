@@ -39,6 +39,4 @@ $('.btn-delete').on('click', function (e){
           document.location.href = href;
         }
       })
-
-
 })

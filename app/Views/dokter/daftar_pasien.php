@@ -15,6 +15,10 @@
                     <img src=" <?= base_url('images/template-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Template SOAP
                 </a>
+                <a href="<?= base_url('dokter/template_resep') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src=" <?= base_url('images/template-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    Template Resep
+                </a>
             </div>
         </div>
         <div class="col bg-white py-3 ms-2">

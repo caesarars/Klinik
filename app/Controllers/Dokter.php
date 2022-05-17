@@ -51,6 +51,7 @@ class Dokter extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
+        $data['templateResep'] = $this->M_TemplateResep->where(["idDokter" => $_SESSION['id']])->findAll();
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
         if ($data['assesment']) {
             $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
@@ -151,6 +152,7 @@ class Dokter extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['template'] = $this->M_Template->where(["idDokter" => $_SESSION['id']])->findAll();
+        $data['templateResep'] = $this->M_TemplateResep->where(["idDokter" => $_SESSION['id']])->findAll();
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $data['soap']['idPasien'], "id" => $data['soap']['idAssesment']])->orderBy('tanggal', 'desc')->first();
         if ($data['assesment']) {
             $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
@@ -237,7 +239,6 @@ class Dokter extends BaseController
             'objective' => $this->request->getVar('objective'),
             'assesment' => $this->request->getVar('assesment'),
             'planning' => $this->request->getVar('planning'),
-            'resep' => $this->request->getVar('resep'),
         ]);
 
         $session->setFlashdata('success', 'Template Berhasil Diubah');
@@ -267,7 +268,6 @@ class Dokter extends BaseController
             'objective' => $this->request->getVar('objective'),
             'assesment' => $this->request->getVar('assesment'),
             'planning' => $this->request->getVar('planning'),
-            'resep' => $this->request->getVar('resep'),
         ]);
 
         $session->setFlashdata('success', 'Template Berhasil Diubah');
@@ -281,5 +281,77 @@ class Dokter extends BaseController
 
         $session->setFlashdata('success', 'Template Berhasil Dihapus');
         return redirect()->to('dokter/template');
+    }
+
+    public function template_resep()
+    {
+        $session = session();
+        $user = $this->M_Dokter->where('id', $_SESSION['id'])->first();
+        $user["jabatan"] = "DOKTER";
+
+        $data['template'] = $this->M_TemplateResep->where('idDokter', $_SESSION['id'])->findAll();
+        echo view('include/header', $user);
+        echo view('dokter/template_resep', $data);
+        echo view('include/footer');
+    }
+
+    public function tambah_template_resep()
+    {
+        $session = session();
+        $user = $this->M_Dokter->where('id', $_SESSION['id'])->first();
+        $user["jabatan"] = "DOKTER";
+
+        // $data['template'] = $this->M_Template->where('idDokter', $_SESSION['id'])->first();
+        echo view('include/header', $user);
+        echo view('dokter/tambah_template_resep');
+        echo view('include/footer');
+    }
+
+    public function insert_template_resep()
+    {
+        $session = session();
+        $this->M_TemplateResep->save([
+            'idDokter' => $_SESSION['id'],
+            'keyword' => $this->request->getVar('keyword'),
+            'resep' => $this->request->getVar('resep'),
+        ]);
+
+        $session->setFlashdata('success', 'Template Resep Berhasil Diubah');
+        return redirect()->to('dokter/template_resep');
+    }
+
+    public function edit_template_resep($id)
+    {
+        $session = session();
+        $user = $this->M_Dokter->where('id', $_SESSION['id'])->first();
+        $user["jabatan"] = "DOKTER";
+
+        $data['template'] = $this->M_TemplateResep->where('id', $id)->first();
+        echo view('include/header', $user);
+        echo view('dokter/edit_template_resep', $data);
+        echo view('include/footer');
+    }
+
+    public function update_template_resep($id)
+    {
+        $session = session();
+        $this->M_TemplateResep->save([
+            'id' => $id,
+            'idDokter' => $_SESSION['id'],
+            'keyword' => $this->request->getVar('keyword'),
+            'resep' => $this->request->getVar('resep'),
+        ]);
+
+        $session->setFlashdata('success', 'Template Resep Berhasil Diubah');
+        return redirect()->to('dokter/template_resep');
+    }
+
+    public function delete_template_resep($id)
+    {
+        $session = session();
+        $this->M_TemplateResep->delete($id);
+
+        $session->setFlashdata('success', 'Template Resep Berhasil Dihapus');
+        return redirect()->to('dokter/template_resep');
     }
 }

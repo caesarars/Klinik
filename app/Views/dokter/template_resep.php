@@ -11,12 +11,12 @@
                     <img src=" <?= base_url('images/daftar-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Daftar Pasien
                 </a>
-                <a href="<?= base_url('dokter/template') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
-                    <img src=" <?= base_url('images/template-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                <a href="<?= base_url('dokter/template') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src=" <?= base_url('images/template-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Template SOAP
                 </a>
-                <a href="<?= base_url('dokter/template_resep') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/template-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                <a href="<?= base_url('dokter/template_resep') ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
+                    <img src=" <?= base_url('images/template-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Template Resep
                 </a>
             </div>
@@ -24,10 +24,10 @@
         <div class="col ms-2 bg-white">
             <div class="row pt-3 p-0 bg-white mt-3">
                 <div class="col align-self-center">
-                    <h5 class="font-weight-bold m-0" style="color: B02525;">Template SOAP</h5>
+                    <h5 class="font-weight-bold m-0" style="color: B02525;">Template Resep</h5>
                 </div>
                 <div class="col text-right">
-                    <a href="<?= base_url('dokter/tambah_template') ?>" type="submit" class="btn btn-primary text-center px-3 py-2" name="template">Tambah Template</a>
+                    <a href="<?= base_url('dokter/tambah_template_resep') ?>" type="submit" class="btn btn-primary text-center px-3 py-2" name="template">Tambah Template</a>
                 </div>
             </div>
             <div class="row px-0">
@@ -45,10 +45,10 @@
                         <div class="row p-0 m-0">
                             <div class="col">
                                 <h6 class="fw-bold" style="color: 2269D2;">Kata Kunci : <?= $template['keyword']; ?>
-                                    <a href="<?= base_url('dokter/edit_template/' . $template['id']) ?>">
+                                    <a href="<?= base_url('dokter/edit_template_resep/' . $template['id']) ?>">
                                         <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                     </a>
-                                    <a class='btn-delete' href="<?= base_url('dokter/delete_template/' . $template['id']) ?>">
+                                    <a class='btn-delete' href="<?= base_url('dokter/delete_template_resep/' . $template['id']) ?>">
                                         <img src="<?= base_url('images/delete-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                     </a>
                                 </h6>
@@ -58,25 +58,9 @@
                             </div> -->
                         </div>
                         <div class="col">
-                            <h5 class="fw-bold" style="color: 2269D2;">SUBJECTIVE</h5>
-                            <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= nl2br($template['subjective']); ?>
-                            </div>
-                            <br>
-                            <h5 class="fw-bold" style="color: 2269D2;">ASSESSMENT</h5>
-                            <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= nl2br($template['assesment']); ?>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <h5 class="fw-bold" style="color: 2269D2;">OBJECTIVE</h5>
-                            <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= nl2br($template['objective']); ?>
-                            </div>
-                            <br>
-                            <h5 class="fw-bold" style="color: 2269D2;">PLANNING</h5>
-                            <div class="border-2 p-1 overflow-auto" style="height: 220; width: 300;">
-                                <?= nl2br($template['planning']); ?>
+                            <h5 class="fw-bold" style="color: 2269D2;">RESEP</h5>
+                            <div class="border-2 p-1 overflow-auto" style="height: 507;">
+                                <?= nl2br($template['resep']); ?>
                             </div>
                         </div>
                     </div>

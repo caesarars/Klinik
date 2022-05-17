@@ -194,7 +194,7 @@ class MYPDF extends TCPDF
     {
         // Logo
         // $image_file = K_PATH_IMAGES . 'logo_example.jpg';
-        $this->Image('images/Old_Nike_logo.jpg', 5, 10, 20, '', 'JPG', '', 'T', false, 100, '', false, false, 0, false, false, false);
+        $this->Image('images/logo-klinik.jpeg', 5, 10, 20, '', 'JPG', '', 'T', false, 100, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('helvetica', 'B', 10);
         // Title
