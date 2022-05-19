@@ -63,7 +63,10 @@ class Perawat extends BaseController
             // 'khususPediatri' => $this->request->getVar('pediatri'),
             'lingkarKepala' => $this->request->getVar('lingkarKepala'),
         ]);
-
+        $this->M_Pasien->save([
+            'id' => $id,
+            'assesment' => date("Y-m-d H:i:s")
+        ]);
         $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan');
         return redirect()->to('perawat/daftar_pasien/');
     }

@@ -59,15 +59,21 @@
                                     $currentDate = new DateTime();
                                     $tanggalLahir = new DateTime($ps['tanggalLahir']);
                                     $umur = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
+                                    if ($ps['soap']) {
                                 ?>
-                                    <tr class="row100 body" data-href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'>
 
-                                        <td class="cell100 column1"><?= $ps['id']; ?></td>
-                                        <td class="cell100 column2"><?= $ps['nama']; ?></td>
-                                        <td class="cell100 column3"><?= $ps['nik']; ?></td>
-                                        <td class="cell100 column4"><?= $umur ?></td>
-                                        <td class="cell100 column5"><?= $ps['terakhirDaftar']; ?></td>
-                                        <td class="cell100 column6">
+                                        <tr class="row100 body" style="background-color: #96b4e1;">
+                                        <?php } elseif ($ps['assesment']) { ?>
+                                        <tr class="row100 body" style="background-color: #fce303;">
+                                        <?php } else { ?>
+                                        <tr class="row100 body">
+                                        <?php } ?>
+                                        <td class="cell100 column1" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
+                                        <td class="cell100 column2" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
+                                        <td class="cell100 column3" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['nik']; ?></td>
+                                        <td class="cell100 column4" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $umur ?></td>
+                                        <td class="cell100 column5" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['terakhirDaftar']; ?></td>
+                                        <td class="cell column6">
                                             <a href="<?= base_url('admin/edit_pasien/' . $ps['id']) ?>">
                                                 <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                             </a>
@@ -75,8 +81,8 @@
                                                 <img src="<?= base_url('images/delete-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                             </a>
                                         </td>
-                                    </tr>
-                                <?php endforeach; ?>
+                                        </tr>
+                                    <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

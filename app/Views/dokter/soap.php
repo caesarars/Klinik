@@ -291,10 +291,10 @@
 <script>
     $('.btn-modal-resep').on('click', function(e) {
         e.preventDefault();
-
+        var resep = document.getElementById('resep').innerHTML;
         var selected = document.getElementById('keywordResep').value;
         let template = templateResep.find(template => template.id === selected);
-        document.getElementById('resep').innerHTML = template.resep;
+        document.getElementById('resep').innerHTML = resep + "\n" + template.resep;
         $('#modalResep').modal('hide');
     })
 

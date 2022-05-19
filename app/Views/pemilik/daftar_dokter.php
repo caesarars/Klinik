@@ -67,16 +67,16 @@
                                 $index = 1;
                                 foreach ($dokter as $dok) :
                                 ?>
-                                    <tr class="row100 body" data-href='<?= base_url('pemilik/data_dokter/' . $dok['id']) ?>'>
-                                        <td class="cell100 column1"><?php
-                                                                    echo $index;
-                                                                    $index++;
-                                                                    ?>
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1" href='<?= base_url('pemilik/data_dokter/' . $dok['id']) ?>'><?php
+                                                                                                                                echo $index;
+                                                                                                                                $index++;
+                                                                                                                                ?>
                                         </td>
-                                        <td class="cell100 column2"><?= $dok['nama']; ?></td>
-                                        <td class="cell100 column3"><?= $dok['nik']; ?></td>
-                                        <td class="cell100 column4"><?= $dok['jenis']; ?></td>
-                                        <td class="cell100 column5">
+                                        <td class="cell100 column2" href='<?= base_url('pemilik/data_dokter/' . $dok['id']) ?>'><?= $dok['nama']; ?></td>
+                                        <td class="cell100 column3" href='<?= base_url('pemilik/data_dokter/' . $dok['id']) ?>'><?= $dok['nik']; ?></td>
+                                        <td class="cell100 column4" href='<?= base_url('pemilik/data_dokter/' . $dok['id']) ?>'><?= $dok['jenis']; ?></td>
+                                        <td class="cell column5">
                                             <a href="<?= base_url('pemilik/edit_dokter/' . $dok['id']) ?>">
                                                 <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                             </a>

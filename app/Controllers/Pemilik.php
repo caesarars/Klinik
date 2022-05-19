@@ -11,7 +11,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['dokter'] = $this->M_Dokter->findAll();
         echo view('include/header', $user);
         echo view('pemilik/daftar_dokter', $data);
@@ -22,7 +22,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $keyword =  $this->request->getVar('keyword');
         $data['dokter'] = $this->M_Dokter->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
@@ -40,7 +40,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         echo view('include/header', $user);
         echo view('pemilik/tambah_dokter');
         echo view('include/footer');
@@ -50,7 +50,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
 
         $data['dokter'] = $this->M_Dokter->where(["id" => $id])->first();
         date_default_timezone_set('Asia/Jakarta');
@@ -104,7 +104,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
 
 
         $data['dokter'] = $this->M_Dokter->where(["id" => $id])->first();
@@ -160,7 +160,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['perawat'] = $this->M_Perawat->findAll();
         echo view('include/header', $user);
         echo view('pemilik/daftar_perawat', $data);
@@ -171,7 +171,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $keyword =  $this->request->getVar('keyword');
         $data['perawat'] = $this->M_Perawat->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
@@ -189,7 +189,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['pasien'] = $this->M_Pasien->findAll();
         echo view('include/header', $user);
         echo view('pemilik/tambah_perawat', $data);
@@ -200,7 +200,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
 
         $data['perawat'] = $this->M_Perawat->where(["id" => $id])->first();
         date_default_timezone_set('Asia/Jakarta');
@@ -254,7 +254,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
 
         $data['perawat'] = $this->M_Perawat->where(["id" => $id])->first();
         echo view('include/header', $user);
@@ -309,7 +309,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['admin'] = $this->M_Admin->findAll();
         echo view('include/header', $user);
         echo view('pemilik/daftar_admin', $data);
@@ -320,7 +320,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         echo view('include/header', $user);
         echo view('pemilik/tambah_admin');
         echo view('include/footer');
@@ -330,7 +330,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $keyword =  $this->request->getVar('keyword');
         $data['admin'] = $this->M_Admin->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
@@ -348,7 +348,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['admin'] = $this->M_Admin->where(["id" => $id])->first();
         date_default_timezone_set('Asia/Jakarta');
         $currentDate = new DateTime();
@@ -400,7 +400,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
 
 
         $data['admin'] = $this->M_Admin->where(["id" => $id])->first();
@@ -456,7 +456,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['apoteker'] = $this->M_Apoteker->findAll();
         echo view('include/header', $user);
         echo view('pemilik/daftar_apoteker', $data);
@@ -467,7 +467,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $keyword =  $this->request->getVar('keyword');
         $data['apoteker'] = $this->M_Apoteker->like('nama', $keyword)
             ->orLike('nik', $keyword)->findAll();
@@ -485,7 +485,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['apoteker'] = $this->M_Apoteker->findAll();
         echo view('include/header', $user);
         echo view('pemilik/tambah_apoteker', $data);
@@ -496,7 +496,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
         $data['apoteker'] = $this->M_Apoteker->where(["id" => $id])->first();
         date_default_timezone_set('Asia/Jakarta');
         $currentDate = new DateTime();
@@ -549,7 +549,7 @@ class Pemilik extends BaseController
     {
         $session = session();
         $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "PEMILIK";
+        $user["jabatan"] = "SUPER ADMIN";
 
         $data['apoteker'] = $this->M_Apoteker->where(["id" => $id])->first();
         echo view('include/header', $user);

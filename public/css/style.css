@@ -10982,9 +10982,9 @@ td {
   line-height: 1.4;
 }
 
-.table100.ver1 .table100-body tr:nth-child(even) {
+/* .table100.ver1 .table100-body tr:nth-child(even) {
   background-color: #96b4e1;
-}
+} */
 
 table tr[data-href] {
   cursor: pointer;

@@ -99,6 +99,10 @@ class Dokter extends BaseController
                 'tanggal' => date("Y-m-d H:i:s"),
             ]);
         }
+        $this->M_Pasien->save([
+            'id' => $id,
+            'soap' => date("Y-m-d H:i:s")
+        ]);
 
 
         $session->setFlashdata('success', 'Data Rekam Medis Berhasil Ditambahkan');

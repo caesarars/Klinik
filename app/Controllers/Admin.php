@@ -93,7 +93,9 @@ class Admin extends BaseController
             'noTelp' => $this->request->getVar('noTelp'),
             'noHP' => $this->request->getVar('noHP'),
             'email' => $this->request->getVar('email'),
-            'terakhirDaftar' => date("Y-m-d H:i:s")
+            'terakhirDaftar' => date("Y-m-d H:i:s"),
+            'assesment' => null,
+            'soap' => null
         ]);
         $id = $this->M_Pasien->getInsertID();
         $this->M_Kontak->insert([
@@ -199,7 +201,9 @@ class Admin extends BaseController
         date_default_timezone_set('Asia/Jakarta');
         $this->M_Pasien->save([
             'id' => $id,
-            'terakhirDaftar' => date("Y-m-d H:i:s")
+            'terakhirDaftar' => date("Y-m-d H:i:s"),
+            'assesment' => null,
+            'soap' => null
         ]);
         $session->setFlashdata('success', 'Pasien Berhasil Didaftarkan');
         return redirect()->to('admin/daftar_pasien/');
