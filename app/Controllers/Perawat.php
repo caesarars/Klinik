@@ -24,12 +24,21 @@ class Perawat extends BaseController
     public function Assesment($id)
     {
         $session = session();
+        date_default_timezone_set('Asia/Jakarta');
+        $currentDate = new DateTime();
         $user = $this->M_Perawat->where('id', $_SESSION['id'])->first();
         $user["jabatan"] = "PERAWAT";
 
         $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
-        date_default_timezone_set('Asia/Jakarta');
-        $currentDate = new DateTime();
+        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+        $terakhirDaftar = date_format(new DateTime($data['assesment']['tanggal']), 'd/m/Y');
+        $now = date("d/m/Y");
+        if ($data['assesment']) {
+            if ($now == $terakhirDaftar) {
+                $data['sameDay'] = true;
+            }
+        }
+
         $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");

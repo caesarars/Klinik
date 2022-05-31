@@ -34,7 +34,9 @@
             </div>
 
             <form action="<?= base_url('perawat/insert_assesment/' . $pasien['id']) ?>" method="POST">
-                <textarea class="form-control border-2" id="keluhanUtama" name="keluhanUtama" rows="2" required></textarea>
+                <textarea class="form-control border-2" id="keluhanUtama" name="keluhanUtama" rows="2" required><?php if ($sameDay) {
+                                                                                                                    echo $assesment['keluhanUtama'];
+                                                                                                                } ?></textarea>
                 <div class="row pt-3 p-0 bg-white mt-3">
                     <h5 class="font-weight-bold" style="color: B02525;">Assessment Perawat</h5>
                 </div>
@@ -56,7 +58,9 @@
                         <p class="fw-bold mb-0">Tekanan Darah</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="tekananDarah" id="tekananDarah" autocomplete="off" required>
+                                <input type="text" class="form-control" name="tekananDarah" id="tekananDarah" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                        echo $assesment['tekananDarah'];
+                                                                                                                                                    } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>MmHg</p>
@@ -65,7 +69,9 @@
                         <p class="fw-bold mb-0">Frekuensi Nadi</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="frekuensiNadi" id="frekuensiNadi" autocomplete="off" required>
+                                <input type="text" class="form-control" name="frekuensiNadi" id="frekuensiNadi" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                        echo $assesment['frekuensiNadi'];
+                                                                                                                                                    } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>X/Menit</p>
@@ -74,7 +80,9 @@
                         <p class="fw-bold mb-0">Suhu</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="suhu" id="suhu" autocomplete="off" required>
+                                <input type="text" class="form-control" name="suhu" id="suhu" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                        echo $assesment['suhu'];
+                                                                                                                                    } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>C</p>
@@ -83,7 +91,9 @@
                         <p class="fw-bold mb-0">Frekuensi Nafas</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="frekuensiNafas" id="frekuensiNafas" autocomplete="off" required>
+                                <input type="text" class="form-control" name="frekuensiNafas" id="frekuensiNafas" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                            echo $assesment['frekuensiNafas'];
+                                                                                                                                                        } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>X/Menit</p>
@@ -92,7 +102,9 @@
                         <p class="fw-bold mb-0">Skor Nyeri</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="skorNyeri" id="skorNyeri" autocomplete="off" required>
+                                <input type="text" class="form-control" name="skorNyeri" id="skorNyeri" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                echo $assesment['skorNyeri'];
+                                                                                                                                            } ?>">
                             </div>
                             <div class="col-2 px-0">
                             </div>
@@ -104,7 +116,9 @@
                         <p class="fw-bold mb-0">Berat Badan</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="beratBadan" id="beratBadan" autocomplete="off" required>
+                                <input type="text" class="form-control" name="beratBadan" id="beratBadan" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                    echo $assesment['beratBadan'];
+                                                                                                                                                } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>Kg</p>
@@ -113,7 +127,9 @@
                         <p class="fw-bold mb-0">Tinggi Badan</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="tinggiBadan" id="tinggiBadan" autocomplete="off" required>
+                                <input type="text" class="form-control" name="tinggiBadan" id="tinggiBadan" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                    echo $assesment['tinggiBadan'];
+                                                                                                                                                } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>Cm</p>
@@ -139,7 +155,9 @@
                         <p class="fw-bold mb-0">Lingkar Kepala</p>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" name="lingkarKepala" id="lingkarKepala" autocomplete="off" required>
+                                <input type="text" class="form-control" name="lingkarKepala" id="lingkarKepala" autocomplete="off" required value="<?php if ($sameDay) {
+                                                                                                                                                        echo $assesment['lingkarKepala'];
+                                                                                                                                                    } ?>">
                             </div>
                             <div class="col-2 px-0">
                                 <p>Cm</p>

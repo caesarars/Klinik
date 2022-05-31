@@ -38,24 +38,24 @@
 			</div>
 			<?php if ($jabatan == 'ADMINISTRATOR') : ?>
 				<a href="<?= base_url('admin/tambah_pasien') ?>">
-					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
+					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0 rounded" value="Beranda" style="background-color: #E79E5A;">
 				</a>
 
 			<?php elseif ($jabatan == 'PERAWAT') : ?>
 				<a href="<?= base_url('perawat/daftar_pasien') ?>">
-					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
+					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0 rounded" value="Beranda" style="background-color: #E79E5A;">
 				</a>
 			<?php elseif ($jabatan == 'DOKTER') : ?>
 				<a href="<?= base_url('dokter/daftar_pasien') ?>">
-					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
+					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0 rounded" value="Beranda" style="background-color: #E79E5A;">
 				</a>
 			<?php elseif ($jabatan == 'APOTEKER') : ?>
 				<a href="<?= base_url('apoteker/daftar_pasien') ?>">
-					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
+					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0 rounded" value="Beranda" style="background-color: #E79E5A;">
 				</a>
 			<?php elseif ($jabatan == 'SUPER ADMIN') : ?>
 				<a href="<?= base_url('pemilik/daftar_dokter') ?>">
-					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0" value="Beranda" style="background-color: #2269D2;">
+					<input type="button" class="text-white fw-bold mb-0 ms-3 border-0 rounded" value="Beranda" style="background-color: #E79E5A;">
 				</a>
 			<?php endif; ?>
 		</div>
