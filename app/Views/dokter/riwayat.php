@@ -3,7 +3,7 @@
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
                 <a href="<?= base_url('dokter/soap/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src=" <?= base_url('images/cardiograph-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    <img src=" <?= base_url('images/Cardiograph-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Rekam Medis
                 </a>
                 <a href="<?= base_url('dokter/riwayat/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
