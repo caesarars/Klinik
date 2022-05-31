@@ -73,7 +73,7 @@
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
                 <a href="" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
-                    <img src=" <?= base_url('images/cardiograph-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    <img src=" <?= base_url('images/Cardiograph-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Edit SOAP
                 </a>
             </div>
