@@ -77,9 +77,9 @@
                                             <a href="<?= base_url('admin/edit_pasien/' . $ps['id']) ?>">
                                                 <img src="<?= base_url('images/edit-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                                             </a>
-                                            <a class="btn-delete" href="<?= base_url('admin/delete_pasien/' . $ps['id']) ?>">
+                                            <!-- <a class="btn-delete" href="<?= base_url('admin/delete_pasien/' . $ps['id']) ?>">
                                                 <img src="<?= base_url('images/delete-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                                            </a>
+                                            </a> -->
                                         </td>
                                         </tr>
                                     <?php endforeach; ?>

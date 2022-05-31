@@ -17,12 +17,12 @@
                             Ubah Pasien
                         </a>
                     </div>
-                    <div class="col-3">
+                    <!-- <div class="col-3">
                         <a class="btn-delete btn-primary p-2" href="<?= base_url('admin/delete_pasien/' . $pasien['id']) ?>">
                             <img src="<?= base_url('images/delete-white.png') ?>" class="img-thumbnail bg-transparent border-0" style="height: 30px;" alt="">
                             Hapus Pasien
                         </a>
-                    </div>
+                    </div> -->
                     <div class="col-3">
                         <a href="<?= base_url('admin/pasien_masuk/' . $pasien['id']) ?>" class="btn-primary p-2">
                             Daftar

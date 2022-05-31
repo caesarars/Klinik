@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use DateTime;
+use PhpParser\Node\Stmt\Finally_;
 
 class Dokter extends BaseController
 {
@@ -78,35 +79,47 @@ class Dokter extends BaseController
         $session = session();
         date_default_timezone_set('Asia/Jakarta');
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
-        $this->M_Soap->insert([
-            'idPasien' => $id,
-            'idAssesment' => $data['assesment']['id'],
-            'idDokter' => $_SESSION['id'],
-            'tanggal' => date("Y-m-d H:i:s"),
-            'subjective' => $this->request->getVar('subjective'),
-            'objective' => $this->request->getVar('objective'),
-            'assesment' => $this->request->getVar('assesment'),
-            'planning' => $this->request->getVar('planning'),
-        ]);
-        if ($this->request->getVar('resep') != '') {
-
-            $id_soap = $this->M_Soap->getInsertID();
-            $this->M_Resep->insert([
+        try {
+            $this->M_Soap->insert([
                 'idPasien' => $id,
+                'idAssesment' => $data['assesment']['id'],
                 'idDokter' => $_SESSION['id'],
-                'idSOAP' => $id_soap,
-                'resep' => $this->request->getVar('resep'),
                 'tanggal' => date("Y-m-d H:i:s"),
+                'subjective' => $this->request->getVar('subjective'),
+                'objective' => $this->request->getVar('objective'),
+                'assesment' => $this->request->getVar('assesment'),
+                'planning' => $this->request->getVar('planning'),
             ]);
+            if ($this->request->getVar('resep') != '') {
+
+                $id_soap = $this->M_Soap->getInsertID();
+                $this->M_Resep->insert([
+                    'idPasien' => $id,
+                    'idDokter' => $_SESSION['id'],
+                    'idSOAP' => $id_soap,
+                    'resep' => $this->request->getVar('resep'),
+                    'tanggal' => date("Y-m-d H:i:s"),
+                ]);
+            }
+            $this->M_Pasien->save([
+                'id' => $id,
+                'soap' => date("Y-m-d H:i:s")
+            ]);
+            $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+            $log = 'Menambahkan Rekam Medis Pasien dengan id ' . $id . ' a/n ' .  $data['pasien']['nama'];
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Rekam Medis Berhasil Ditambahkan');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Rekam Medis Gagal Ditambahkan\n" . $ex);
+        } finally {
+            return redirect()->to('dokter/daftar_pasien/');
         }
-        $this->M_Pasien->save([
-            'id' => $id,
-            'soap' => date("Y-m-d H:i:s")
-        ]);
-
-
-        $session->setFlashdata('success', 'Data Rekam Medis Berhasil Ditambahkan');
-        return redirect()->to('dokter/daftar_pasien/');
     }
 
     public function Riwayat($id)
@@ -180,33 +193,46 @@ class Dokter extends BaseController
     {
 
         $session = session();
-        $this->M_Soap->save([
-            'id' => $id,
-            'subjective' => $this->request->getVar('subjective'),
-            'objective' => $this->request->getVar('objective'),
-            'assesment' => $this->request->getVar('assesment'),
-            'planning' => $this->request->getVar('planning'),
-        ]);
-        $soap = $this->M_Soap->where(["id" => $id])->first();
-        $resep = $this->M_Resep->where(["idSOAP" => $id])->first();
-        // dd($resep);
-        if ($resep) {
-            $this->M_Resep->save([
-                'id' => $resep['id'],
-                'idDokter' => $_SESSION['id'],
-                'idSOAP' => $id,
-                'resep' => $this->request->getVar('resep'),
+        try {
+            $this->M_Soap->save([
+                'id' => $id,
+                'subjective' => $this->request->getVar('subjective'),
+                'objective' => $this->request->getVar('objective'),
+                'assesment' => $this->request->getVar('assesment'),
+                'planning' => $this->request->getVar('planning'),
             ]);
-        } else {
-            $this->M_Resep->save([
-                'idDokter' => $_SESSION['id'],
-                'idSOAP' => $id,
-                'resep' => $this->request->getVar('resep'),
-            ]);
-        }
+            $soap = $this->M_Soap->where(["id" => $id])->first();
+            $resep = $this->M_Resep->where(["idSOAP" => $id])->first();
+            // dd($resep);
+            if ($resep) {
+                $this->M_Resep->save([
+                    'id' => $resep['id'],
+                    'idDokter' => $_SESSION['id'],
+                    'idSOAP' => $id,
+                    'resep' => $this->request->getVar('resep'),
+                ]);
+            } else {
+                $this->M_Resep->save([
+                    'idDokter' => $_SESSION['id'],
+                    'idSOAP' => $id,
+                    'resep' => $this->request->getVar('resep'),
+                ]);
+            }
+            $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+            $log = 'Menambahkan Rekam Medis Pasien dengan id ' . $id . ' a/n ' .  $data['pasien']['nama'];
 
-        $session->setFlashdata('success', 'Data Rekam Medis Berhasil Diubah');
-        return redirect()->to('dokter/riwayat/' . $soap['idPasien']);
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Rekam Medis Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Rekam Medis Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('dokter/riwayat/' . $soap['idPasien']);
+        }
     }
 
     public function template()
@@ -236,17 +262,30 @@ class Dokter extends BaseController
     public function insert_template()
     {
         $session = session();
-        $this->M_Template->save([
-            'idDokter' => $_SESSION['id'],
-            'keyword' => $this->request->getVar('keyword'),
-            'subjective' => $this->request->getVar('subjective'),
-            'objective' => $this->request->getVar('objective'),
-            'assesment' => $this->request->getVar('assesment'),
-            'planning' => $this->request->getVar('planning'),
-        ]);
+        try {
+            $this->M_Template->save([
+                'idDokter' => $_SESSION['id'],
+                'keyword' => $this->request->getVar('keyword'),
+                'subjective' => $this->request->getVar('subjective'),
+                'objective' => $this->request->getVar('objective'),
+                'assesment' => $this->request->getVar('assesment'),
+                'planning' => $this->request->getVar('planning'),
+            ]);
+            $log = 'Menambahkan template rekam medis dengan keyword = ' . $this->request->getVar('keyword');
 
-        $session->setFlashdata('success', 'Template Berhasil Diubah');
-        return redirect()->to('dokter/template');
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Template Berhasil Diubah');
+        } catch (\Exception $ex) {
+
+            $session->setFlashdata('error', "Template Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('dokter/template');
+        }
     }
 
     public function edit_template($id)
@@ -264,27 +303,53 @@ class Dokter extends BaseController
     public function update_template($id)
     {
         $session = session();
-        $this->M_Template->save([
-            'id' => $id,
-            'idDokter' => $_SESSION['id'],
-            'keyword' => $this->request->getVar('keyword'),
-            'subjective' => $this->request->getVar('subjective'),
-            'objective' => $this->request->getVar('objective'),
-            'assesment' => $this->request->getVar('assesment'),
-            'planning' => $this->request->getVar('planning'),
-        ]);
+        try {
+            $this->M_Template->save([
+                'id' => $id,
+                'idDokter' => $_SESSION['id'],
+                'keyword' => $this->request->getVar('keyword'),
+                'subjective' => $this->request->getVar('subjective'),
+                'objective' => $this->request->getVar('objective'),
+                'assesment' => $this->request->getVar('assesment'),
+                'planning' => $this->request->getVar('planning'),
+            ]);
 
-        $session->setFlashdata('success', 'Template Berhasil Diubah');
-        return redirect()->to('dokter/template');
+            $log = 'Mengubah template soap dengan id = ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Template Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Template Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('dokter/template');
+        }
     }
 
     public function delete_template($id)
     {
         $session = session();
-        $this->M_Template->delete($id);
+        try {
 
-        $session->setFlashdata('success', 'Template Berhasil Dihapus');
-        return redirect()->to('dokter/template');
+            $this->M_Template->delete($id);
+            $log = 'Menghapus template rekam medis dengan id = ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Template Berhasil Dihapus');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Template Gagal Dihapus\n" . $ex);
+        } finally {
+            return redirect()->to('dokter/template');
+        }
     }
 
     public function template_resep()
@@ -314,14 +379,27 @@ class Dokter extends BaseController
     public function insert_template_resep()
     {
         $session = session();
-        $this->M_TemplateResep->save([
-            'idDokter' => $_SESSION['id'],
-            'keyword' => $this->request->getVar('keyword'),
-            'resep' => $this->request->getVar('resep'),
-        ]);
+        try {
 
-        $session->setFlashdata('success', 'Template Resep Berhasil Diubah');
-        return redirect()->to('dokter/template_resep');
+            $this->M_TemplateResep->save([
+                'idDokter' => $_SESSION['id'],
+                'keyword' => $this->request->getVar('keyword'),
+                'resep' => $this->request->getVar('resep'),
+            ]);
+            $log = 'Menambahkan template resep dengan keyword = ' . $this->request->getVar('keyword');
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Template Resep Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('success', "Template Resep Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('dokter/template_resep');
+        }
     }
 
     public function edit_template_resep($id)
@@ -339,23 +417,49 @@ class Dokter extends BaseController
     public function update_template_resep($id)
     {
         $session = session();
-        $this->M_TemplateResep->save([
-            'id' => $id,
-            'idDokter' => $_SESSION['id'],
-            'keyword' => $this->request->getVar('keyword'),
-            'resep' => $this->request->getVar('resep'),
-        ]);
+        try {
+            $this->M_TemplateResep->save([
+                'id' => $id,
+                'idDokter' => $_SESSION['id'],
+                'keyword' => $this->request->getVar('keyword'),
+                'resep' => $this->request->getVar('resep'),
+            ]);
+            $log = 'mengubah template resep dengan id = ' . $id;
 
-        $session->setFlashdata('success', 'Template Resep Berhasil Diubah');
-        return redirect()->to('dokter/template_resep');
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Template Resep Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Template Resep Gagal Diubah\n" . $ex);
+        } finally {
+
+            return redirect()->to('dokter/template_resep');
+        }
     }
 
     public function delete_template_resep($id)
     {
         $session = session();
-        $this->M_TemplateResep->delete($id);
+        try {
+            $this->M_TemplateResep->delete($id);
+            $log = 'Menghapus template resep dengan id = ' . $id;
 
-        $session->setFlashdata('success', 'Template Resep Berhasil Dihapus');
-        return redirect()->to('dokter/template_resep');
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Dokter',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Template Resep Berhasil Dihapus');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Template Resep Gagal Dihapus\n" . $ex);
+        } finally {
+
+            return redirect()->to('dokter/template_resep');
+        }
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use DateTime;
+use finfo;
 
 class Pemilik extends BaseController
 {
@@ -65,39 +66,58 @@ class Pemilik extends BaseController
     public function insert_dokter()
     {
         $session = session();
-        $this->M_Dokter->insert([
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'jenis' => $this->request->getVar('jenisDokter'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $id = $this->M_Dokter->getInsertID();
-        $this->M_User->insert([
-            'username' => $this->request->getVar('username'),
-            'password' => $this->request->getVar('password'),
-            'jabatan' => 'dokter',
-            'id' => $id,
-        ]);
-        $session->setFlashdata('success', 'Data Dokter Berhasil Ditambahkan');
-        return redirect()->to('pemilik/daftar_dokter/');
+        if ($this->M_User->where(["username" => $this->request->getVar('username')])->first()) {
+            $session->setFlashdata('error', 'Username Sudah Terdaftar');
+            return redirect()->back()->withInput();
+        } else {
+            try {
+                $this->M_Dokter->insert([
+                    'nama' => $this->request->getVar('nama'),
+                    'nik' => $this->request->getVar('nik'),
+                    'jenis' => $this->request->getVar('jenisDokter'),
+                    'tempatLahir' => $this->request->getVar('tempatLahir'),
+                    'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                    'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                    'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                    'agama' => $this->request->getVar('agama'),
+                    // 'umur' => $this->request->getVar('umur'),
+                    'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                    'golonganDarah' => $this->request->getVar('golonganDarah'),
+                    'pendidikan' => $this->request->getVar('pendidikan'),
+                    'alamat' => $this->request->getVar('alamat'),
+                    'kelurahan' => $this->request->getVar('kelurahan'),
+                    'kecamatan' => $this->request->getVar('kecamatan'),
+                    'kabupaten' => $this->request->getVar('kabupaten'),
+                    'provinsi' => $this->request->getVar('provinsi'),
+                    'kodePos' => $this->request->getVar('kodepos'),
+                    'kodePos' => $this->request->getVar('kodePos'),
+                    'noTelp' => $this->request->getVar('noTelp'),
+                    'noHP' => $this->request->getVar('noHP'),
+                    'email' => $this->request->getVar('email')
+                ]);
+                $id = $this->M_Dokter->getInsertID();
+                $this->M_User->insert([
+                    'username' => $this->request->getVar('username'),
+                    'password' => $this->request->getVar('password'),
+                    'jabatan' => 'dokter',
+                    'id' => $id,
+                ]);
+                $log = 'Menambahkan data dokter dengan id ' . $id . ' a/n ' .  $this->request->getVar('nama');
+
+                $this->M_Log->insert([
+                    'idUser' => $_SESSION['id'],
+                    'jabatan' => 'Super Admin',
+                    'log' => $log,
+                    'tanggal' => date("Y-m-d H:i:s")
+                ]);
+                $session->setFlashdata('success', 'Data Dokter Berhasil Ditambahkan');
+            } catch (\Exception $ex) {
+                $session->setFlashdata('error', "Data Dokter Gagal Ditambahkan\n" . $ex);
+            } finally {
+
+                return redirect()->to('pemilik/daftar_dokter/');
+            }
+        }
     }
 
     public function edit_dokter($id)
@@ -116,44 +136,73 @@ class Pemilik extends BaseController
     public function update_dokter($id)
     {
         $session = session();
-        $this->M_Dokter->save([
-            'id' => $id,
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'jenis' => $this->request->getVar('jenisDokter'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $session->setFlashdata('success', 'Data Dokter Berhasil Diubah');
-        return redirect()->to('pemilik/daftar_dokter/');
+        try {
+            $this->M_Dokter->save([
+                'id' => $id,
+                'nama' => $this->request->getVar('nama'),
+                'nik' => $this->request->getVar('nik'),
+                'jenis' => $this->request->getVar('jenisDokter'),
+                'tempatLahir' => $this->request->getVar('tempatLahir'),
+                'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                'agama' => $this->request->getVar('agama'),
+                // 'umur' => $this->request->getVar('umur'),
+                'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                'golonganDarah' => $this->request->getVar('golonganDarah'),
+                'pendidikan' => $this->request->getVar('pendidikan'),
+                'alamat' => $this->request->getVar('alamat'),
+                'kelurahan' => $this->request->getVar('kelurahan'),
+                'kecamatan' => $this->request->getVar('kecamatan'),
+                'kabupaten' => $this->request->getVar('kabupaten'),
+                'provinsi' => $this->request->getVar('provinsi'),
+                'kodePos' => $this->request->getVar('kodepos'),
+                'kodePos' => $this->request->getVar('kodePos'),
+                'noTelp' => $this->request->getVar('noTelp'),
+                'noHP' => $this->request->getVar('noHP'),
+                'email' => $this->request->getVar('email')
+            ]);
+            $log = 'Mengubah data dokter dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Dokter Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Dokter Gagal Diubah\n" . $ex);
+        } finally {
+
+            return redirect()->to('pemilik/daftar_dokter/');
+        }
     }
 
     public function delete_dokter($id)
     {
         $session = session();
-        $this->M_Dokter->delete($id);
+        try {
+            $this->M_Dokter->delete($id);
 
-        $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'dokter'])->delete();
-        $session->setFlashdata('success', 'Data Dokter Berhasil Dihapus');
-        return redirect()->to('pemilik/daftar_dokter/');
+            $user = $this->M_User->where(["id" => $id])->first();
+            $this->M_User->where(['id' => $user['id'], 'jabatan' => 'dokter'])->delete();
+
+            $log = 'Menghapus data dokter dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Dokter Berhasil Dihapus');
+        } catch (\Exception $ex) {
+
+            $session->setFlashdata('error', "Data Dokter Gagal Dihapus\n" . $ex);
+        } finally {
+            return redirect()->to('pemilik/daftar_dokter/');
+        }
     }
 
     public function daftar_perawat()
@@ -215,39 +264,58 @@ class Pemilik extends BaseController
     public function insert_perawat()
     {
         $session = session();
-        $this->M_Perawat->insert([
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'jenis' => $this->request->getVar('jenisDokter'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $id = $this->M_Perawat->getInsertID();
-        $this->M_User->insert([
-            'username' => $this->request->getVar('username'),
-            'password' => $this->request->getVar('password'),
-            'jabatan' => 'perawat',
-            'id' => $id,
-        ]);
-        $session->setFlashdata('success', 'Data Perawat Berhasil Ditambahkan');
-        return redirect()->to('pemilik/daftar_perawat/');
+        if ($this->M_User->where(["username" => $this->request->getVar('username')])->first()) {
+            $session->setFlashdata('error', 'Username Sudah Terdaftar');
+            return redirect()->back()->withInput();
+        } else {
+            try {
+                $this->M_Perawat->insert([
+                    'nama' => $this->request->getVar('nama'),
+                    'nik' => $this->request->getVar('nik'),
+                    'jenis' => $this->request->getVar('jenisDokter'),
+                    'tempatLahir' => $this->request->getVar('tempatLahir'),
+                    'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                    'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                    'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                    'agama' => $this->request->getVar('agama'),
+                    // 'umur' => $this->request->getVar('umur'),
+                    'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                    'golonganDarah' => $this->request->getVar('golonganDarah'),
+                    'pendidikan' => $this->request->getVar('pendidikan'),
+                    'alamat' => $this->request->getVar('alamat'),
+                    'kelurahan' => $this->request->getVar('kelurahan'),
+                    'kecamatan' => $this->request->getVar('kecamatan'),
+                    'kabupaten' => $this->request->getVar('kabupaten'),
+                    'provinsi' => $this->request->getVar('provinsi'),
+                    'kodePos' => $this->request->getVar('kodepos'),
+                    'kodePos' => $this->request->getVar('kodePos'),
+                    'noTelp' => $this->request->getVar('noTelp'),
+                    'noHP' => $this->request->getVar('noHP'),
+                    'email' => $this->request->getVar('email')
+                ]);
+                $id = $this->M_Perawat->getInsertID();
+                $this->M_User->insert([
+                    'username' => $this->request->getVar('username'),
+                    'password' => $this->request->getVar('password'),
+                    'jabatan' => 'perawat',
+                    'id' => $id,
+                ]);
+                $log = 'Menambahkan data Perawat dengan id ' . $id . ' a/n ' . $this->request->getVar('nama');
+
+                $this->M_Log->insert([
+                    'idUser' => $_SESSION['id'],
+                    'jabatan' => 'Super Admin',
+                    'log' => $log,
+                    'tanggal' => date("Y-m-d H:i:s")
+                ]);
+                $session->setFlashdata('success', 'Data Perawat Berhasil Ditambahkan');
+            } catch (\Exception $ex) {
+                $session->setFlashdata('error', "Data Perawat Gagal Ditambahkan\n" . $ex);
+            } finally {
+
+                return redirect()->to('pemilik/daftar_perawat/');
+            }
+        }
     }
 
     public function edit_perawat($id)
@@ -265,44 +333,72 @@ class Pemilik extends BaseController
     public function update_perawat($id)
     {
         $session = session();
-        $this->M_Perawat->save([
-            'id' => $id,
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'jenis' => $this->request->getVar('jenisDokter'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $session->setFlashdata('success', 'Data Perawat Berhasil Diubah');
-        return redirect()->to('pemilik/daftar_perawat/');
+        try {
+            $this->M_Perawat->save([
+                'id' => $id,
+                'nama' => $this->request->getVar('nama'),
+                'nik' => $this->request->getVar('nik'),
+                'jenis' => $this->request->getVar('jenisDokter'),
+                'tempatLahir' => $this->request->getVar('tempatLahir'),
+                'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                'agama' => $this->request->getVar('agama'),
+                // 'umur' => $this->request->getVar('umur'),
+                'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                'golonganDarah' => $this->request->getVar('golonganDarah'),
+                'pendidikan' => $this->request->getVar('pendidikan'),
+                'alamat' => $this->request->getVar('alamat'),
+                'kelurahan' => $this->request->getVar('kelurahan'),
+                'kecamatan' => $this->request->getVar('kecamatan'),
+                'kabupaten' => $this->request->getVar('kabupaten'),
+                'provinsi' => $this->request->getVar('provinsi'),
+                'kodePos' => $this->request->getVar('kodepos'),
+                'kodePos' => $this->request->getVar('kodePos'),
+                'noTelp' => $this->request->getVar('noTelp'),
+                'noHP' => $this->request->getVar('noHP'),
+                'email' => $this->request->getVar('email')
+            ]);
+            $log = 'Mengubah data Perawat dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Perawat Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Perawat Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('pemilik/daftar_perawat/');
+        }
     }
 
     public function delete_perawat($id)
     {
         $session = session();
-        $this->M_Perawat->delete($id);
+        try {
+            $this->M_Perawat->delete($id);
 
-        $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'perawat'])->delete();
-        $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
-        return redirect()->to('pemilik/daftar_perawat/');
+            $user = $this->M_User->where(["id" => $id])->first();
+            $this->M_User->where(['id' => $user['id'], 'jabatan' => 'perawat'])->delete();
+
+            $log = 'Menghapus data Perawat dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Perawat Gagal Dihapus\n" . $ex);
+        } finally {
+
+            return redirect()->to('pemilik/daftar_perawat/');
+        }
     }
 
     public function daftar_admin()
@@ -362,38 +458,58 @@ class Pemilik extends BaseController
     public function insert_admin()
     {
         $session = session();
-        $this->M_Admin->insert([
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $id = $this->M_Admin->getInsertID();
-        $this->M_User->insert([
-            'username' => $this->request->getVar('username'),
-            'password' => $this->request->getVar('password'),
-            'jabatan' => 'admin',
-            'id' => $id,
-        ]);
-        $session->setFlashdata('success', 'Data Administrator Berhasil Ditambahkan');
-        return redirect()->to('pemilik/daftar_admin/');
+
+        if ($this->M_User->where(["username" => $this->request->getVar('username')])->first()) {
+            $session->setFlashdata('error', 'Username Sudah Terdaftar');
+            return redirect()->back()->withInput();
+        } else {
+            try {
+                $this->M_Admin->insert([
+                    'nama' => $this->request->getVar('nama'),
+                    'nik' => $this->request->getVar('nik'),
+                    'tempatLahir' => $this->request->getVar('tempatLahir'),
+                    'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                    'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                    'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                    'agama' => $this->request->getVar('agama'),
+                    // 'umur' => $this->request->getVar('umur'),
+                    'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                    'golonganDarah' => $this->request->getVar('golonganDarah'),
+                    'pendidikan' => $this->request->getVar('pendidikan'),
+                    'alamat' => $this->request->getVar('alamat'),
+                    'kelurahan' => $this->request->getVar('kelurahan'),
+                    'kecamatan' => $this->request->getVar('kecamatan'),
+                    'kabupaten' => $this->request->getVar('kabupaten'),
+                    'provinsi' => $this->request->getVar('provinsi'),
+                    'kodePos' => $this->request->getVar('kodepos'),
+                    'kodePos' => $this->request->getVar('kodePos'),
+                    'noTelp' => $this->request->getVar('noTelp'),
+                    'noHP' => $this->request->getVar('noHP'),
+                    'email' => $this->request->getVar('email')
+                ]);
+                $id = $this->M_Admin->getInsertID();
+                $this->M_User->insert([
+                    'username' => $this->request->getVar('username'),
+                    'password' => $this->request->getVar('password'),
+                    'jabatan' => 'admin',
+                    'id' => $id,
+                ]);
+                $log = 'Menambahkan data Administrator dengan id ' . $id . ' a/n ' . $this->request->getVar('nama');
+
+                $this->M_Log->insert([
+                    'idUser' => $_SESSION['id'],
+                    'jabatan' => 'Super Admin',
+                    'log' => $log,
+                    'tanggal' => date("Y-m-d H:i:s")
+                ]);
+                $session->setFlashdata('success', 'Data Administrator Berhasil Ditambahkan');
+            } catch (\Exception $ex) {
+                $session->setFlashdata('error', "Data Administrator Gagal Ditambahkan\n" . $ex);
+            } finally {
+
+                return redirect()->to('pemilik/daftar_admin/');
+            }
+        }
     }
 
     public function edit_admin($id)
@@ -412,43 +528,70 @@ class Pemilik extends BaseController
     public function update_admin($id)
     {
         $session = session();
-        $this->M_Admin->save([
-            'id' => $id,
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $session->setFlashdata('success', 'Data Administrator Berhasil Diubah');
-        return redirect()->to('pemilik/daftar_admin/');
+        try {
+            $this->M_Admin->save([
+                'id' => $id,
+                'nama' => $this->request->getVar('nama'),
+                'nik' => $this->request->getVar('nik'),
+                'tempatLahir' => $this->request->getVar('tempatLahir'),
+                'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                'agama' => $this->request->getVar('agama'),
+                // 'umur' => $this->request->getVar('umur'),
+                'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                'golonganDarah' => $this->request->getVar('golonganDarah'),
+                'pendidikan' => $this->request->getVar('pendidikan'),
+                'alamat' => $this->request->getVar('alamat'),
+                'kelurahan' => $this->request->getVar('kelurahan'),
+                'kecamatan' => $this->request->getVar('kecamatan'),
+                'kabupaten' => $this->request->getVar('kabupaten'),
+                'provinsi' => $this->request->getVar('provinsi'),
+                'kodePos' => $this->request->getVar('kodepos'),
+                'kodePos' => $this->request->getVar('kodePos'),
+                'noTelp' => $this->request->getVar('noTelp'),
+                'noHP' => $this->request->getVar('noHP'),
+                'email' => $this->request->getVar('email')
+            ]);
+            $log = 'Mengubah data Administrator dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Administrator Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Administrator Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('pemilik/daftar_admin/');
+        }
     }
 
     public function delete_admin($id)
     {
         $session = session();
-        $this->M_Admin->delete($id);
+        try {
+            $this->M_Admin->delete($id);
 
-        $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'admin'])->delete();
-        $session->setFlashdata('success', 'Data Administrator Berhasil Dihapus');
-        return redirect()->to('pemilik/daftar_admin/');
+            $user = $this->M_User->where(["id" => $id])->first();
+            $this->M_User->where(['id' => $user['id'], 'jabatan' => 'admin'])->delete();
+            $log = 'Menghapus data Administrator dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Administrator Berhasil Dihapus');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Administrator gagal Dihapus\n" . $ex);
+        } finally {
+
+            return redirect()->to('pemilik/daftar_admin/');
+        }
     }
 
 
@@ -510,39 +653,58 @@ class Pemilik extends BaseController
     public function insert_apoteker()
     {
         $session = session();
-        $this->M_Apoteker->insert([
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'jenis' => $this->request->getVar('jenisDokter'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $id = $this->M_Apoteker->getInsertID();
-        $this->M_User->insert([
-            'username' => $this->request->getVar('username'),
-            'password' => $this->request->getVar('password'),
-            'jabatan' => 'apoteker',
-            'id' => $id,
-        ]);
-        $session->setFlashdata('success', 'Data Perawat Berhasil Ditambahkan');
-        return redirect()->to('pemilik/daftar_apoteker/');
+
+        if ($this->M_User->where(["username" => $this->request->getVar('username')])->first()) {
+            $session->setFlashdata('error', 'Username Sudah Terdaftar');
+            return redirect()->back()->withInput();
+        } else {
+            try {
+                $this->M_Apoteker->insert([
+                    'nama' => $this->request->getVar('nama'),
+                    'nik' => $this->request->getVar('nik'),
+                    'jenis' => $this->request->getVar('jenisDokter'),
+                    'tempatLahir' => $this->request->getVar('tempatLahir'),
+                    'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                    'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                    'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                    'agama' => $this->request->getVar('agama'),
+                    // 'umur' => $this->request->getVar('umur'),
+                    'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                    'golonganDarah' => $this->request->getVar('golonganDarah'),
+                    'pendidikan' => $this->request->getVar('pendidikan'),
+                    'alamat' => $this->request->getVar('alamat'),
+                    'kelurahan' => $this->request->getVar('kelurahan'),
+                    'kecamatan' => $this->request->getVar('kecamatan'),
+                    'kabupaten' => $this->request->getVar('kabupaten'),
+                    'provinsi' => $this->request->getVar('provinsi'),
+                    'kodePos' => $this->request->getVar('kodepos'),
+                    'kodePos' => $this->request->getVar('kodePos'),
+                    'noTelp' => $this->request->getVar('noTelp'),
+                    'noHP' => $this->request->getVar('noHP'),
+                    'email' => $this->request->getVar('email')
+                ]);
+                $id = $this->M_Apoteker->getInsertID();
+                $this->M_User->insert([
+                    'username' => $this->request->getVar('username'),
+                    'password' => $this->request->getVar('password'),
+                    'jabatan' => 'apoteker',
+                    'id' => $id,
+                ]);
+                $log = 'Menambahkan data Perawat dengan id ' . $id . ' a/n ' . $this->request->getVar('nama');
+
+                $this->M_Log->insert([
+                    'idUser' => $_SESSION['id'],
+                    'jabatan' => 'Super Admin',
+                    'log' => $log,
+                    'tanggal' => date("Y-m-d H:i:s")
+                ]);
+                $session->setFlashdata('success', 'Data Perawat Berhasil Ditambahkan');
+            } catch (\Exception $ex) {
+                $session->setFlashdata('error', "Data Perawat Gagal Ditambahkan\n" . $ex);
+            } finally {
+                return redirect()->to('pemilik/daftar_apoteker/');
+            }
+        }
     }
 
     public function edit_apoteker($id)
@@ -560,43 +722,70 @@ class Pemilik extends BaseController
     public function update_apoteker($id)
     {
         $session = session();
-        $this->M_Apoteker->save([
-            'id' => $id,
-            'nama' => $this->request->getVar('nama'),
-            'nik' => $this->request->getVar('nik'),
-            'jenis' => $this->request->getVar('jenisDokter'),
-            'tempatLahir' => $this->request->getVar('tempatLahir'),
-            'tanggalLahir' => $this->request->getVar('tanggalLahir'),
-            'jenisKelamin' => $this->request->getVar('jenisKelamin'),
-            'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
-            'agama' => $this->request->getVar('agama'),
-            // 'umur' => $this->request->getVar('umur'),
-            'statusPernikahan' => $this->request->getVar('statusPernikahan'),
-            'golonganDarah' => $this->request->getVar('golonganDarah'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'alamat' => $this->request->getVar('alamat'),
-            'kelurahan' => $this->request->getVar('kelurahan'),
-            'kecamatan' => $this->request->getVar('kecamatan'),
-            'kabupaten' => $this->request->getVar('kabupaten'),
-            'provinsi' => $this->request->getVar('provinsi'),
-            'kodePos' => $this->request->getVar('kodepos'),
-            'kodePos' => $this->request->getVar('kodePos'),
-            'noTelp' => $this->request->getVar('noTelp'),
-            'noHP' => $this->request->getVar('noHP'),
-            'email' => $this->request->getVar('email')
-        ]);
-        $session->setFlashdata('success', 'Data Perawat Berhasil Diubah');
-        return redirect()->to('pemilik/daftar_apoteker/');
+        try {
+            $this->M_Apoteker->save([
+                'id' => $id,
+                'nama' => $this->request->getVar('nama'),
+                'nik' => $this->request->getVar('nik'),
+                'jenis' => $this->request->getVar('jenisDokter'),
+                'tempatLahir' => $this->request->getVar('tempatLahir'),
+                'tanggalLahir' => $this->request->getVar('tanggalLahir'),
+                'jenisKelamin' => $this->request->getVar('jenisKelamin'),
+                'kewarganegaraan' => $this->request->getVar('kewarganegaraan'),
+                'agama' => $this->request->getVar('agama'),
+                // 'umur' => $this->request->getVar('umur'),
+                'statusPernikahan' => $this->request->getVar('statusPernikahan'),
+                'golonganDarah' => $this->request->getVar('golonganDarah'),
+                'pendidikan' => $this->request->getVar('pendidikan'),
+                'alamat' => $this->request->getVar('alamat'),
+                'kelurahan' => $this->request->getVar('kelurahan'),
+                'kecamatan' => $this->request->getVar('kecamatan'),
+                'kabupaten' => $this->request->getVar('kabupaten'),
+                'provinsi' => $this->request->getVar('provinsi'),
+                'kodePos' => $this->request->getVar('kodepos'),
+                'kodePos' => $this->request->getVar('kodePos'),
+                'noTelp' => $this->request->getVar('noTelp'),
+                'noHP' => $this->request->getVar('noHP'),
+                'email' => $this->request->getVar('email')
+            ]);
+            $log = 'Mengubah data Perawat dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Perawat Berhasil Diubah');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Perawat Gagal Diubah\n" . $ex);
+        } finally {
+            return redirect()->to('pemilik/daftar_apoteker/');
+        }
     }
 
     public function delete_apoteker($id)
     {
         $session = session();
-        $this->M_Apoteker->delete($id);
+        try {
+            $this->M_Apoteker->delete($id);
 
-        $user = $this->M_User->where(["id" => $id])->first();
-        $this->M_User->where(['id' => $user['id'], 'jabatan' => 'apoteker'])->delete();
-        $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
-        return redirect()->to('pemilik/daftar_apoteker/');
+            $user = $this->M_User->where(["id" => $id])->first();
+            $this->M_User->where(['id' => $user['id'], 'jabatan' => 'apoteker'])->delete();
+            $log = 'Menghapus data Perawat dengan id ' . $id;
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Super Admin',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Data Perawat Berhasil Dihapus');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('error', "Data Perawat Gagal Dihapus\n" . $ex);
+        } finally {
+
+            return redirect()->to('pemilik/daftar_apoteker/');
+        }
     }
 }

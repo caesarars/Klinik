@@ -23,7 +23,7 @@ class FilterAdmin implements FilterInterface
             // dd(session()->get('jabatan'));
 
             // session()->setFlashdata('msg', 'Anda Belum Login, Silahkan Login Dulu !');
-            return redirect()->to('/admin/tambah_pasien');
+            return redirect()->to('admin/tambah_pasien');
         }
     }
 }

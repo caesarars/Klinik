@@ -47,28 +47,43 @@ class Perawat extends BaseController
         // $tinggiBadan = $this->request->getVar('tinggiBadan');
         // $imt = floatval($beratBadan) / floatval($tinggiBadan);
         // dd($imt);
-        $this->M_Assesment->save([
-            'idPasien' => $id,
-            'idPerawat' => $_SESSION['id'],
-            'tanggal' => date("Y-m-d H:i:s"),
-            'keluhanUtama' => $this->request->getVar('keluhanUtama'),
-            'tekananDarah' => $this->request->getVar('tekananDarah'),
-            'frekuensiNadi' => $this->request->getVar('frekuensiNadi'),
-            'suhu' => $this->request->getVar('suhu'),
-            'frekuensiNafas' => $this->request->getVar('frekuensiNafas'),
-            'skorNyeri' => $this->request->getVar('skorNyeri'),
-            'beratBadan' => $this->request->getVar('beratBadan'),
-            'tinggiBadan' => $this->request->getVar('tinggiBadan'),
-            // 'IMT' => $this->request->getVar('imt'),
-            // 'khususPediatri' => $this->request->getVar('pediatri'),
-            'lingkarKepala' => $this->request->getVar('lingkarKepala'),
-        ]);
-        $this->M_Pasien->save([
-            'id' => $id,
-            'assesment' => date("Y-m-d H:i:s")
-        ]);
-        $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan');
-        return redirect()->to('perawat/daftar_pasien/');
+        try {
+            $this->M_Assesment->save([
+                'idPasien' => $id,
+                'idPerawat' => $_SESSION['id'],
+                'tanggal' => date("Y-m-d H:i:s"),
+                'keluhanUtama' => $this->request->getVar('keluhanUtama'),
+                'tekananDarah' => $this->request->getVar('tekananDarah'),
+                'frekuensiNadi' => $this->request->getVar('frekuensiNadi'),
+                'suhu' => $this->request->getVar('suhu'),
+                'frekuensiNafas' => $this->request->getVar('frekuensiNafas'),
+                'skorNyeri' => $this->request->getVar('skorNyeri'),
+                'beratBadan' => $this->request->getVar('beratBadan'),
+                'tinggiBadan' => $this->request->getVar('tinggiBadan'),
+                // 'IMT' => $this->request->getVar('imt'),
+                // 'khususPediatri' => $this->request->getVar('pediatri'),
+                'lingkarKepala' => $this->request->getVar('lingkarKepala'),
+            ]);
+            $this->M_Pasien->save([
+                'id' => $id,
+                'assesment' => date("Y-m-d H:i:s")
+            ]);
+            $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+            $log = 'Melakukan assessment perawat kepada pasien dengan id ' . $id . ' a/n ' .  $data['pasien']['nama'];
+
+            $this->M_Log->insert([
+                'idUser' => $_SESSION['id'],
+                'jabatan' => 'Perawat',
+                'log' => $log,
+                'tanggal' => date("Y-m-d H:i:s")
+            ]);
+            $session->setFlashdata('success', 'Assesment Berhasil Ditambahkan');
+        } catch (\Exception $ex) {
+            $session->setFlashdata('success', "Assesment Gagal Ditambahkan\n" . $ex);
+        } finally {
+
+            return redirect()->to('perawat/daftar_pasien/');
+        }
     }
 
     public function search_pasien()

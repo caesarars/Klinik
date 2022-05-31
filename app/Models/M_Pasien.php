@@ -11,6 +11,9 @@ class M_Pasien extends Model
 
     public  function getSearch($keyword)
     {
+        if (!$keyword) {
+            $keyword = '';
+        }
         return $this->select('*')
             ->where('id =', $keyword)
             ->orlike('nama', $keyword)

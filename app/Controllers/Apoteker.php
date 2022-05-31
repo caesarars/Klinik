@@ -51,24 +51,31 @@ class Apoteker extends BaseController
         $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
         $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
         $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
-        $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
-        $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
-        if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
-            $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
-            $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+        if ($data['assesment']) {
+            $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
+            $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+            // dd($tinggiBadan);
+            if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
+                $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+                $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+            } else {
+                $data['assesment']['IMT'] = '';
+            }
+
+            $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
+                ->orderBy("id", 'DESC')->first();
+            // dd($data['resep']);
+            if (!$data['resep']) {
+                $session->setFlashdata('error', 'Belum Ada Resep');
+                return redirect()->to('/apoteker/daftar_pasien');
+            }
+            echo view('include/header', $user);
+            echo view('apoteker/resep', $data);
+            echo view('include/footer');
         } else {
-            $data['assesment']['IMT'] = '';
+            $session->setFlashdata('error', 'Pasien Belum Melakukan Assesment Perawat');
+            return redirect()->to('apoteker/daftar_pasien');
         }
-        $data['resep'] = $this->M_Resep->where(["idPasien" => $id])
-            ->orderBy("id", 'DESC')->first();
-        // dd($data['resep']);
-        if (!$data['resep']) {
-            $session->setFlashdata('error', 'Belum Ada Resep');
-            return redirect()->to('/apoteker/daftar_pasien');
-        }
-        echo view('include/header', $user);
-        echo view('apoteker/resep', $data);
-        echo view('include/footer');
     }
 
     // public function printResep($id)
@@ -134,12 +141,12 @@ class Apoteker extends BaseController
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
         // set margins
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT, true);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
         $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
         // set auto page breaks
-        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM + 10);
 
         // set image scale factor
         $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
@@ -155,7 +162,10 @@ class Apoteker extends BaseController
         // set font
         $pdf->SetFont('times', '', 10);
         $pdf->setCellHeightRatio(0.8);
-        $pdf->SetMargins(2, 5, 2, 5,  false);
+        $pdf->SetMargins(5, 35, 2, 5,  true);
+
+        // set auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM + 10);
         //load the html
         $html =  view('apoteker/resepHTML', $data);
 
@@ -163,7 +173,7 @@ class Apoteker extends BaseController
         $pdf->AddPage('P', 'A6');
 
         // print the HTML
-        $pdf->writeHTML($html, true, true, true, true, '');
+        $pdf->writeHTML($html, true, true, false, true, '');
 
         // // print a block of text using Write()
         // $pdf->Write(0, $txt, '', 0, 'C', true, 0, false, false, 0);
@@ -192,6 +202,10 @@ class MYPDF extends TCPDF
     //Page header
     public function Header()
     {
+        $M_Resep = model('App\Models\M_Resep');
+
+        $resep = $M_Resep->where(["idPasien" => $this->id])->orderBy('tanggal', 'desc')->first();
+        $date = date_create($resep['tanggal']);
         // Logo
         // $image_file = K_PATH_IMAGES . 'logo_example.jpg';
         $this->Image('images/logo-klinik.jpeg', 5, 10, 20, '', 'JPG', '', 'T', false, 100, '', false, false, 0, false, false, false);
@@ -205,6 +219,12 @@ class MYPDF extends TCPDF
         $this->Cell(0, 8, 'Ruko Peson View Blok i no 3', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 8, 'Jl. Ir. H Juanda Mekarjaya Sukmajaya Depok', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 8, 'Telephone : 08-11111-6504', 0, 2, 'C', 0, '', 0, false, 'M', 'M');
+        $style = array('width' => 0.5, 'color' => array(0, 0, 0));
+        $this->Line(3, 25, 102, 25, $style);
+        $this->Cell(0, 8, '', 0, 2, 'R', 0, '', 0, false, 'M', 'B');
+        $this->SetFont('helvetica', 'B', 10);
+        $this->Cell(10, 8, 'Nomor Resep : ' . $resep['id'], 0, 0, 'R', 0, '', 0, false, 'M', 'B');
+        $this->Cell(0, 8, 'Depok, ' . date_format($date, "d M Y"), 0, 0, 'R', 0, '', 0, false, 'M', 'B');
     }
 
     // Page footer
@@ -225,14 +245,14 @@ class MYPDF extends TCPDF
         // Set font
         $this->SetFont('helvetica', '', 10);
 
-        $style = array('width' => 0.8, 'color' => array(0, 0, 0));
-        $this->Line(3, 115, 102, 115, $style);
+        $style = array('width' => 0.5, 'color' => array(0, 0, 0));
+        $this->Line(3, 120, 102, 120, $style);
         $this->Cell(0, 8, "Pro              : " . $pasien['nama'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 8, 'Umur /BB    : ' . $pasien['umur'] . " /" . $assesment['beratBadan'] . " Kg", 0, 2, 'L', 0, '', 0, false, 'M', 'M');
         $this->Cell(0, 20, 'Alamat         : ' . $pasien['alamat'], 0, 2, 'L', 0, '', 0, false, 'M', 'M');
 
         // Set font
         $this->SetFont('helvetica', 'I', 8);
-        $this->Cell(0, 15, 'Klinik dr. Farabi - www.klinikdokterfarabi.com', 0, 2, 'R', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 15, $this->getAliasNumPage() . ' - Klinik dr. Farabi - www.klinikdokterfarabi.com', 0, 2, 'R', 0, '', 0, false, 'M', 'M');
     }
 }
