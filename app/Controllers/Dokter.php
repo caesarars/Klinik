@@ -218,7 +218,7 @@ class Dokter extends BaseController
                     'resep' => $this->request->getVar('resep'),
                 ]);
             }
-            $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+            $data['pasien'] = $this->M_Pasien->where(["id" => $soap['idPasien']])->first();
             $log = 'Menambahkan Rekam Medis Pasien dengan id ' . $id . ' a/n ' .  $data['pasien']['nama'];
 
             $this->M_Log->insert([
