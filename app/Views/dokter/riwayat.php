@@ -65,11 +65,11 @@
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Tekanan Darah</h5>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['tekananDarah']; ?> MmHg</p>
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Frekuensi Nadi</h5>
-                            <p class="m-0" style="color: 2269D2;"><?= $soap['frekuensiNadi']; ?>/Menit</p>
+                            <p class="m-0" style="color: 2269D2;"><?= $soap['frekuensiNadi']; ?> X/Menit</p>
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Suhu</h5>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['suhu']; ?> C</p>
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Frekuensi Nafas</h5>
-                            <p class="m-0" style="color: 2269D2;"><?= $soap['frekuensiNafas']; ?>/Menit</p>
+                            <p class="m-0" style="color: 2269D2;"><?= $soap['frekuensiNafas']; ?> X/Menit</p>
                             <h5 class="fw-bold m-0" style="color: 2269D2;">Skor Nyeri</h5>
                             <p class="m-0" style="color: 2269D2;"><?= $soap['skorNyeri']; ?></p>
                         </div>

@@ -63,7 +63,6 @@
                                     $umur = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
                                     if ($ps['soap']) {
                                 ?>
-
                                         <tr class="row100 body" style="background-color: #96b4e1;">
                                         <?php } elseif ($ps['assesment']) { ?>
                                         <tr class="row100 body" style="background-color: #fce303;">

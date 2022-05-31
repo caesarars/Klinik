@@ -59,7 +59,7 @@ class Dokter extends BaseController
             $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
             // dd($tinggiBadan);
             if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
-                $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+                $IMT = $beratBadan / (pow($tinggiBadan / 100, 2));
                 $data['assesment']['IMT'] = number_format($IMT, 2, ',');
             } else {
                 $data['assesment']['IMT'] = '';
@@ -138,7 +138,7 @@ class Dokter extends BaseController
         $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
         $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
         if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
-            $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+            $IMT = $beratBadan / (pow($tinggiBadan / 100, 2));
             $data['assesment']['IMT'] = number_format($IMT, 2, ',');
         } else {
             $data['assesment']['IMT'] = '';
@@ -175,7 +175,7 @@ class Dokter extends BaseController
             $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
             $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
             if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
-                $IMT = $beratBadan / (sqrt($tinggiBadan / 100));
+                $IMT = $beratBadan / (pow($tinggiBadan / 100, 2));
                 $data['assesment']['IMT'] = number_format($IMT, 2, ',');
             } else {
                 $data['assesment']['IMT'] = '';

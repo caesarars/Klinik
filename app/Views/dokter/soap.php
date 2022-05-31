@@ -16,7 +16,7 @@
                 <form>
                     <div class="row g-3 align-items-center mb-3">
                         <div class="col-auto align-self-center">
-                            <label class="mb-0" for="jenisKelamin">Kata Kunci</label>
+                            <label class="mb-0">Kata Kunci</label>
                         </div>
                         <div class="col-auto align-self-center">
                             <input type="hidden" name="type" id="type" value="soap">
@@ -48,7 +48,7 @@
                 <form>
                     <div class="row g-3 align-items-center mb-3">
                         <div class="col-auto align-self-center">
-                            <label class="mb-0" for="jenisKelamin">Kata Kunci</label>
+                            <label class="mb-0">Kata Kunci</label>
                         </div>
                         <div class="col-auto align-self-center">
                             <input type="hidden" name="type" id="type" value="resep">
@@ -72,7 +72,7 @@
         <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
                 <a href="<?= base_url('dokter/soap/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold" style="color: #E79E5A;">
-                    <img src=" <?= base_url('images/cardiograph-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    <img src=" <?= base_url('images/Cardiograph-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Rekam Medis
                 </a>
                 <a href="<?= base_url('dokter/riwayat/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold">
@@ -214,13 +214,13 @@
                                                                                                                     echo "MmHg\n";
                                                                                                                     echo 'Frekuensi Nadi : ';
                                                                                                                     echo $assesment['frekuensiNadi'];
-                                                                                                                    echo "/Menit\n";
+                                                                                                                    echo " X/Menit\n";
                                                                                                                     echo 'Suhu : ';
                                                                                                                     echo $assesment['suhu'];
                                                                                                                     echo " C\n";
                                                                                                                     echo 'Frekuensi Nafas : ';
                                                                                                                     echo $assesment['frekuensiNafas'];
-                                                                                                                    echo "/Menit\n";
+                                                                                                                    echo " X/Menit\n";
                                                                                                                     echo 'Skor Nyeri :';
                                                                                                                     echo $assesment['skorNyeri'];
                                                                                                                     echo "\n";
@@ -291,10 +291,10 @@
 <script>
     $('.btn-modal-resep').on('click', function(e) {
         e.preventDefault();
-        var resep = document.getElementById('resep').innerHTML;
+        var resep = document.getElementById('resep').value;
         var selected = document.getElementById('keywordResep').value;
         let template = templateResep.find(template => template.id === selected);
-        document.getElementById('resep').innerHTML = resep + "\n" + template.resep;
+        document.getElementById('resep').value = resep + "\n" + template.resep;
         $('#modalResep').modal('hide');
     })
 
@@ -302,28 +302,28 @@
         e.preventDefault();
         var selected = document.getElementById('keywordSOAP').value;
         let template = templateSoap.find(template => template.id === selected);
-        document.getElementById('subjective').innerHTML = "Keluhan Utama :" +
+        document.getElementById('subjective').value = "Keluhan Utama :" +
             assesment.keluhanUtama +
             "\n\n" +
             template.subjective;
-        document.getElementById('objective').innerHTML = "Berat Badan :" +
+        document.getElementById('objective').value = "Berat Badan :" +
             assesment.beratBadan +
-            "Kg\n" +
+            " Kg\n" +
             "Tinggi Badan :" +
             assesment.tinggiBadan +
-            "Cm\n" +
+            " Cm\n" +
             "Tekanan Darah :" +
             assesment.tekananDarah +
-            "MmHg\n" +
+            " MmHg\n" +
             'Frekuensi Nadi : ' +
             assesment.frekuensiNadi +
-            "/Menit\n" +
+            " X/Menit\n" +
             'Suhu : ' +
             assesment.suhu +
             " C\n" +
             'Frekuensi Nafas : ' +
             assesment.frekuensiNafas +
-            "/Menit\n" +
+            " X/Menit\n" +
             'Skor Nyeri :' +
             assesment.skorNyeri +
             "\n" +
@@ -331,8 +331,8 @@
             assesment.IMT +
             " Kg/M2\n\n" +
             template.objective;
-        document.getElementById('assesment').innerHTML = template.assesment;
-        document.getElementById('planning').innerHTML = template.planning;
+        document.getElementById('assesment').value = template.assesment;
+        document.getElementById('planning').value = template.planning;
         $('#ModalSOAP').modal('hide');
     })
 </script>
