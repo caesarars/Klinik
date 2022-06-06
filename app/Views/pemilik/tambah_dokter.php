@@ -61,10 +61,11 @@
                     </div>
                     <div class="row">
                         <p>Jenis Dokter</p>
-                        <select name="jenisDokter" id="jenisDokter" class="custom-select">
+                        <input type="text" class="form-control" name="jenisDokter" id="jenisDokter" autocomplete="off" required>
+                        <!-- <select name="jenisDokter" id="jenisDokter" class="custom-select">
                             <option value="umum">Umum</option>
                             <option value="spesialis">Spesialis</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="row">
                         <div class="col ps-0">
