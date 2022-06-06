@@ -57,14 +57,16 @@
                                 ?>
                                     <tr class="row100 body">
 
-                                        <td class="cell100 column1" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
-                                        <td class="cell100 column2" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
-                                        <td class="cell100 column3" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['nik']; ?></td>
+                                        <td class="cell100 column1" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $index; ?></td>
+                                        <td class="cell100 column2" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
+                                        <td class="cell100 column3" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
+                                        <!-- <td class="cell100 column3" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['nik']; ?></td> -->
                                         <td class="cell100 column4" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['jenisKelamin']; ?></td>
                                         <td class="cell100 column5" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $umur; ?></td>
                                         <td class="cell100 column6" href='<?= base_url('apoteker/resep/' . $ps['id']) ?>'><?= $ps['terakhirDaftar']; ?></td>
                                     </tr>
-                                <?php endforeach; ?>
+                                <?php $index++;
+                                endforeach; ?>
 
                             </tbody>
                         </table>

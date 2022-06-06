@@ -6,7 +6,7 @@
 
 <!-- Modal Template SOAP -->
 <div class="modal fade" id="ModalSOAP" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="ModalLabel">Pilih template SOAP yang ingin dipakai</h5>
@@ -38,7 +38,7 @@
 
 <!-- Modal Template Resep -->
 <div class="modal fade" id="modalResep" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="ModalLabel">Pilih template Resep yang ingin dipakai</h5>
@@ -67,6 +67,22 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Template Riwayat -->
+<div class="modal fade" id="modalRiwayat" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Riwayat Rekam Medis</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <?php include('riwayat.php') ?>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container mt-1 ms-4 me-0 mw-100">
     <div class="row w-auto me-4">
         <div class="col-3 ps-0 bg-white me-2 p-2">
@@ -75,10 +91,10 @@
                     <img src=" <?= base_url('images/Cardiograph-orange.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Rekam Medis
                 </a>
-                <a href="<?= base_url('dokter/riwayat/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold">
+                <!-- <a href="<?= base_url('dokter/riwayat/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src=" <?= base_url('images/history-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Riwayat Rekam Medis
-                </a>
+                </a> -->
             </div>
         </div>
         <div class="col ms-2">
@@ -167,6 +183,9 @@
                 </div>
                 <div class="col text-right">
                     <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalRiwayat">
+                        Riwayat SOAP
+                    </button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSOAP">
                         Template SOAP
                     </button>

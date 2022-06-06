@@ -1,6 +1,6 @@
 <div class="container mt-1 ms-4 me-0 mw-100">
-    <div class="row w-auto me-4">
-        <div class="col-3 ps-0 bg-white me-2 p-2">
+    <div class="row me-4">
+        <!-- <div class="col-3 ps-0 bg-white me-2 p-2">
             <div class="list-group">
                 <a href="<?= base_url('dokter/soap/' . $pasien['id']) ?>" class="list-group-item list-group-item-action fw-bold">
                     <img src=" <?= base_url('images/Cardiograph-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
@@ -11,9 +11,9 @@
                     Riwayat Rekam Medis
                 </a>
             </div>
-        </div>
+        </div> -->
         <div class="col ms-2">
-            <div class="row py-3 bg-white">
+            <!-- <div class="row py-3 bg-white">
                 <div class="col-2">
                     <img src=" <?= base_url('images/profile.png') ?>" class="img-thumbnail border-0 p-0">
                 </div>
@@ -27,7 +27,7 @@
                     <h6><?= $pasien['tanggalLahir']; ?> - <?= $pasien['umur']; ?></h6>
                     <h6>No. Rekam Medis : <?= $pasien['id']; ?></h6>
                 </div>
-            </div>
+            </div> -->
             <div class="row p-3 bg-white mt-3">
 
                 <?php foreach ($soap as $soap) : ?>

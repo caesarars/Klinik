@@ -63,14 +63,16 @@
                                         <tr class="row100 body" data-href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'>
                                         <?php } ?>
 
-                                        <td class="cell100 column1" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
-                                        <td class="cell100 column2" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
-                                        <td class="cell100 column3" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['nik']; ?></td>
+                                        <td class="cell100 column1" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $index; ?></td>
+                                        <td class="cell100 column2" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
+                                        <td class="cell100 column3" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
+                                        <!-- <td class="cell100 column3" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['nik']; ?></td> -->
                                         <td class="cell100 column4" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['jenisKelamin']; ?></td>
                                         <td class="cell100 column5" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $umur; ?></td>
                                         <td class="cell100 column6" href='<?= base_url('perawat/assesment/' . $ps['id']) ?>'><?= $ps['terakhirDaftar']; ?></td>
                                         </tr>
-                                    <?php endforeach; ?>
+                                    <?php $index++;
+                                endforeach; ?>
 
                             </tbody>
                         </table>

@@ -64,6 +64,7 @@ class Dokter extends BaseController
             } else {
                 $data['assesment']['IMT'] = '';
             }
+            $data['soap'] = $this->M_Soap->getData($id);
             echo view('include/header', $user);
             echo view('dokter/soap', $data);
             echo view('include/footer');
@@ -122,33 +123,33 @@ class Dokter extends BaseController
         }
     }
 
-    public function Riwayat($id)
-    {
-        $session = session();
-        $user = $this->M_Dokter->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "DOKTER";
+    // public function Riwayat($id)
+    // {
+    //     $session = session();
+    //     $user = $this->M_Dokter->where('id', $_SESSION['id'])->first();
+    //     $user["jabatan"] = "DOKTER";
 
-        $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
-        date_default_timezone_set('Asia/Jakarta');
-        $currentDate = new DateTime();
-        $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
-        $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
-        $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
-        $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
-        $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
-        $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
-        if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
-            $IMT = $beratBadan / (pow($tinggiBadan / 100, 2));
-            $data['assesment']['IMT'] = number_format($IMT, 2, ',');
-        } else {
-            $data['assesment']['IMT'] = '';
-        }
-        $data['soap'] = $this->M_Soap->getData($id);
-        // dd($data['soap']);
-        echo view('include/header', $user);
-        echo view('dokter/riwayat', $data);
-        echo view('include/footer');
-    }
+    //     $data['pasien'] = $this->M_Pasien->where(["id" => $id])->first();
+    //     date_default_timezone_set('Asia/Jakarta');
+    //     $currentDate = new DateTime();
+    //     $tanggalLahir = new DateTime($data['pasien']['tanggalLahir']);
+    //     $data['pasien']['umur'] = $tanggalLahir->diff($currentDate)->format('%y Tahun %m Bulan %d Hari');
+    //     $data['pasien']['tanggalLahir'] = date_format($tanggalLahir, "d/m/Y");
+    //     $data['assesment'] = $this->M_Assesment->where(["idPasien" => $id])->orderBy('tanggal', 'desc')->first();
+    //     $beratBadan = (float)str_replace(",", ".", $data['assesment']['beratBadan']);
+    //     $tinggiBadan = (float)str_replace(",", ".", $data['assesment']['tinggiBadan']);
+    //     if ((is_numeric($beratBadan)) and (is_numeric($tinggiBadan)) and ($tinggiBadan > 0)) {
+    //         $IMT = $beratBadan / (pow($tinggiBadan / 100, 2));
+    //         $data['assesment']['IMT'] = number_format($IMT, 2, ',');
+    //     } else {
+    //         $data['assesment']['IMT'] = '';
+    //     }
+    //     $data['soap'] = $this->M_Soap->getData($id);
+    //     // dd($data['soap']);
+    //     echo view('include/header', $user);
+    //     echo view('dokter/riwayat', $data);
+    //     echo view('include/footer');
+    // }
 
     public function edit_soap($id)
     {

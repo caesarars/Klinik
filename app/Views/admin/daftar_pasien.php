@@ -37,9 +37,10 @@
                         <table>
                             <thead>
                                 <tr class="row100 head">
-                                    <th class="cell100 column1">No. RM</th>
-                                    <th class="cell100 column2">Nama Pasien</th>
-                                    <th class="cell100 column3">NIK</th>
+                                    <th class="cell100 column1">No.</th>
+                                    <th class="cell100 column2">No. RM</th>
+                                    <th class="cell100 column3">Nama Pasien</th>
+                                    <!-- <th class="cell100 column3">NIK</th> -->
                                     <th class="cell100 column4">Umur </th>
                                     <th class="cell100 column5">Terakhir Daftar</th>
                                     <th class="cell100 column6">Tindakan</th>
@@ -68,9 +69,10 @@
                                         <?php } else { ?>
                                         <tr class="row100 body">
                                         <?php } ?>
-                                        <td class="cell100 column1" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
-                                        <td class="cell100 column2" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
-                                        <td class="cell100 column3" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['nik']; ?></td>
+                                        <td class="cell100 column1" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $index; ?></td>
+                                        <td class="cell100 column2" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['id']; ?></td>
+                                        <td class="cell100 column3" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['nama']; ?></td>
+                                        <!-- <td class="cell100 column3" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['nik']; ?></td> -->
                                         <td class="cell100 column4" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $umur ?></td>
                                         <td class="cell100 column5" href='<?= base_url('admin/data_pasien/' . $ps['id']) ?>'><?= $ps['terakhirDaftar']; ?></td>
                                         <td class="cell column6">
@@ -82,7 +84,8 @@
                                             </a> -->
                                         </td>
                                         </tr>
-                                    <?php endforeach; ?>
+                                    <?php $index++;
+                                endforeach; ?>
                             </tbody>
                         </table>
                     </div>
