@@ -40,10 +40,9 @@
                         <table>
                             <thead>
                                 <tr class="row100 head">
-                                    <th class="cell100 column1">No.</th>
-                                    <th class="cell100 column2">No. RM</th>
-                                    <th class="cell100 column3">Nama Pasien</th>
-                                    <!-- <th class="cell100 column3">NIK</th> -->
+                                    <th class="cell100 column1">No. RM</th>
+                                    <th class="cell100 column2">Nama Pasien</th>
+                                    <th class="cell100 column3">NIK</th>
                                     <th class="cell100 column4">Jenis Kelamin</th>
                                     <th class="cell100 column5">Umur</th>
                                     <th class="cell100 column6">Terakhir Daftar</th>
