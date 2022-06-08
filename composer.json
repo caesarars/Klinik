@@ -9,7 +9,8 @@
         "codeigniter4/framework": "^4",
         "twbs/bootstrap": "5.0.2",
         "tecnickcom/tcpdf": "^6.4",
-        "myth/auth": "^1.0"
+        "myth/auth": "^1.0",
+        "phpoffice/phpspreadsheet": "^1.23"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
