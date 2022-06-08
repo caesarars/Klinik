@@ -788,14 +788,4 @@ class Pemilik extends BaseController
             return redirect()->to('pemilik/daftar_apoteker/');
         }
     }
-    public function export_rm()
-    {
-        $session = session();
-        $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
-        $user["jabatan"] = "SUPER ADMIN";
-        // $data['apoteker'] = $this->M_Apoteker->findAll();
-        echo view('include/header', $user);
-        echo view('pemilik/export_rm');
-        echo view('include/footer');
-    }
 }

@@ -23,10 +23,6 @@
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Apoteker
                 </a>
-                <a href="<?= base_url('pemilik/export_rm') ?>" class="list-group-item list-group-item-action fw-bold">
-                    <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
-                    Export Excel
-                </a>
             </div>
         </div>
         <div class="col bg-white py-3 ms-2">
