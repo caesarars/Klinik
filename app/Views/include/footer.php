@@ -2,7 +2,7 @@
 	<div class="my-auto text-center">
 		<small class="text-muted">&copy;<script>
 				document.write(new Date().getFullYear());
-			</script> All rights reserved to Diokta Redho</small>
+			</script> All rights reserved to Diokta Redho & dr. Farabi El Fouz, Sp.A, M.kes</small>
 	</div>
 </footer>
 

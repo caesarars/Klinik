@@ -19,4 +19,38 @@ class M_Soap extends Model
             ->orderBy('soap.tanggal', 'desc')
             ->get()->getResultArray();
     }
+    public  function getAllData($dari, $hingga)
+    {
+        return $this->select(
+            'tb_pasien.id as idPasien, ' .
+                'tb_pasien.nama as namaPasien, ' .
+                'assesment.idPerawat, ' .
+                'assesment.tanggal as tanggalAssesment, ' .
+                'assesment.keluhanUtama, ' .
+                'assesment.tekananDarah, ' .
+                'assesment.frekuensiNadi, ' .
+                'assesment.suhu, ' .
+                'assesment.frekuensiNafas, ' .
+                'assesment.skorNyeri, ' .
+                'assesment.beratBadan, ' .
+                'assesment.tinggiBadan, ' .
+                'assesment.lingkarKepala, ' .
+                'tb_dokter.nama as namaDokter, ' .
+                'soap.tanggal as tanggalSOAP, ' .
+                'soap.subjective, ' .
+                'soap.objective, ' .
+                'soap.assesment, ' .
+                'soap.planning, ' .
+                'resep.resep '
+        )
+            ->join('assesment', 'assesment.id=soap.idAssesment')
+            ->join('tb_pasien', 'tb_pasien.id=soap.idPasien')
+            ->join('tb_dokter', 'tb_dokter.id=soap.idDokter')
+            ->join('resep', 'resep.idSOAP=soap.id')
+            ->where('soap.tanggal >=', date($dari))
+            ->where('soap.tanggal <=', date($hingga))
+            // ->join('tb_perawat', 'tb_perawat.id=assesment.idPerawat')
+            ->orderBy('idPasien', 'asc')
+            ->get()->getResultArray();
+    }
 }

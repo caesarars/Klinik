@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use DateTime;
-use finfo;
+use PhpOffice\PhpSpreadsheet\IOFactory;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Pemilik extends BaseController
 {
@@ -787,5 +788,116 @@ class Pemilik extends BaseController
 
             return redirect()->to('pemilik/daftar_apoteker/');
         }
+    }
+    public function export_soap()
+    {
+        $session = session();
+        $user = $this->M_Pemilik->where('id', $_SESSION['id'])->first();
+        $user["jabatan"] = "SUPER ADMIN";
+        // $data['apoteker'] = $this->M_Apoteker->findAll();
+        echo view('include/header', $user);
+        echo view('pemilik/export_soap');
+        echo view('include/footer');
+    }
+
+
+    public function export_data_soap()
+    {
+        $dari = $this->request->getVar('tanggalDari');
+        $hingga = $this->request->getVar('tanggalHingga');
+        $namaFile = 'Data Rekam Medis ' . date_format(date_create($dari), 'dmY') . ' ' . date_format(date_create($hingga), 'dmY');
+        $inputFileType = 'xlsx'; // Xlsx - Xml - Ods - Slk - Gnumeric - Csv
+        $inputFileName = './format_excel/data_soap.xlsx';
+
+        $soap = $this->M_Soap->getAllData($dari, $hingga);
+        // dd($soap);
+        /**  Identify the type of $inputFileName  **/
+        $inputFileType = IOFactory::identify($inputFileName);
+        /**  Create a new Reader of the type defined in $inputFileType  **/
+        $reader = IOFactory::createReader($inputFileType);
+        /**  Load $inputFileName to a Spreadsheet Object  **/
+        $spreadsheet = $reader->load($inputFileName);
+
+        $sheet = $spreadsheet->getActiveSheet();
+        $numRow = 3;
+        foreach ($soap as $soap) {
+            $perawat = $this->M_Perawat->where('id', 1)->first();
+            $sheet->setCellValue('A' . $numRow, $soap['idPasien']);
+            $sheet->setCellValue('B' . $numRow, $soap['namaPasien']);
+            $sheet->setCellValue('C' . $numRow, $perawat['nama']);
+            $sheet->setCellValue('D' . $numRow, $soap['tanggalAssesment']);
+            $sheet->setCellValue('E' . $numRow, $soap['keluhanUtama']);
+            $sheet->setCellValue('F' . $numRow, $soap['tekananDarah']);
+            $sheet->setCellValue('G' . $numRow, $soap['frekuensiNadi']);
+            $sheet->setCellValue('H' . $numRow, $soap['suhu']);
+            $sheet->setCellValue('I' . $numRow, $soap['frekuensiNafas']);
+            $sheet->setCellValue('J' . $numRow, $soap['skorNyeri']);
+            $sheet->setCellValue('K' . $numRow, $soap['beratBadan']);
+            $sheet->setCellValue('L' . $numRow, $soap['tinggiBadan']);
+            $sheet->setCellValue('M' . $numRow, $soap['lingkarKepala']);
+            $sheet->setCellValue('N' . $numRow, $soap['namaDokter']);
+            $sheet->setCellValue('O' . $numRow, $soap['tanggalSOAP']);
+            $sheet->setCellValue('P' . $numRow, $soap['subjective']);
+            $sheet->setCellValue('Q' . $numRow, $soap['objective']);
+            $sheet->setCellValue('R' . $numRow, $soap['assesment']);
+            $sheet->setCellValue('S' . $numRow, $soap['planning']);
+            $sheet->setCellValue('T' . $numRow, $soap['resep']);
+            $numRow++;
+        }
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename=' . $namaFile . '.xlsx');
+        header('Cache-Control: max-age=0');
+
+        $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+        $writer->save('php://output');
+        die;
+    }
+
+    public function export_data_pasien()
+    {
+        $pasien = $this->M_Pasien->findAll();
+        $inputFileType = 'xlsx'; // Xlsx - Xml - Ods - Slk - Gnumeric - Csv
+        $inputFileName = './format_excel/data_pasien.xlsx';
+
+        /**  Identify the type of $inputFileName  **/
+        $inputFileType = IOFactory::identify($inputFileName);
+        /**  Create a new Reader of the type defined in $inputFileType  **/
+        $reader = IOFactory::createReader($inputFileType);
+        /**  Load $inputFileName to a Spreadsheet Object  **/
+        $spreadsheet = $reader->load($inputFileName);
+
+        $sheet = $spreadsheet->getActiveSheet();
+        $numRow = 2;
+        $no = 1;
+
+        foreach ($pasien as $pasien) {
+            $sheet->setCellValue('A' . $numRow, $pasien['id']);
+            $sheet->setCellValue('B' . $numRow, $pasien['nama']);
+            $sheet->setCellValue('C' . $numRow, $pasien['nik']);
+            $sheet->setCellValue('D' . $numRow, $pasien['tempatLahir']);
+            $sheet->setCellValue('E' . $numRow, $pasien['tanggalLahir']);
+            $sheet->setCellValue('F' . $numRow, $pasien['jenisKelamin']);
+            $sheet->setCellValue('G' . $numRow, $pasien['kewarganegaraan']);
+            $sheet->setCellValue('H' . $numRow, $pasien['agama']);
+            $sheet->setCellValue('I' . $numRow, $pasien['statusPernikahan']);
+            $sheet->setCellValue('J' . $numRow, $pasien['statusAsuransi']);
+            $sheet->setCellValue('K' . $numRow, $pasien['golonganDarah']);
+            $sheet->setCellValue('L' . $numRow, $pasien['pendidikan']);
+            $sheet->setCellValue('M' . $numRow, $pasien['alamat']);
+            $sheet->setCellValue('N' . $numRow, $pasien['kelurahan']);
+            $sheet->setCellValue('O' . $numRow, $pasien['kecamatan']);
+            $sheet->setCellValue('P' . $numRow, $pasien['kabupaten']);
+            $sheet->setCellValue('Q' . $numRow, $pasien['provinsi']);
+            $sheet->setCellValue('R' . $numRow, $pasien['kodePos']);
+
+            $numRow++;
+        }
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename=Data Pasien.xlsx');
+        header('Cache-Control: max-age=0');
+
+        $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+        $writer->save('php://output');
+        die;
     }
 }

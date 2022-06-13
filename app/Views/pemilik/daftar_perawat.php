@@ -23,6 +23,14 @@
                     <img src="<?= base_url('images/doctor-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
                     Apoteker
                 </a>
+                <a href="<?= base_url('pemilik/export_soap') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src="<?= base_url('images/export-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    Export Data Rekam Medis
+                </a>
+                <a href="<?= base_url('pemilik/export_data_pasien') ?>" class="list-group-item list-group-item-action fw-bold">
+                    <img src="<?= base_url('images/export-blue.png') ?>" class="img-thumbnail" style="height: 30px;" alt="">
+                    Export Data Pasien
+                </a>
             </div>
         </div>
         <div class="col bg-white py-3 ms-2">
