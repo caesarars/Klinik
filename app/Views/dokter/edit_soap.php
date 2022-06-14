@@ -231,7 +231,7 @@
         var selected = document.getElementById('keywordResep').value;
         let template = templateResep.find(template => template.id === selected);
         document.getElementById('resep').value = resep + "\n" + template.resep;
-        $('#modalResep').modal('hide');
+        // $('#modalResep').modal('hide');
     })
 
     $('.btn-modal-soap').on('click', function(e) {
